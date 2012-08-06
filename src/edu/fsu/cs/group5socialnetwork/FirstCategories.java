@@ -32,8 +32,8 @@ public class FirstCategories extends Activity {
 					case 3:  Intent myIntent3 = new Intent(getApplicationContext(), SecondHistoryCategories.class);
 					startActivity(myIntent3);
 					break;
-					case 4:  Intent myIntent4 = new Intent(getApplicationContext(), MainQuestionsActivity.class);
-					myIntent4.putExtra("subcat", "English");
+					case 4:  Intent myIntent4 = new Intent(getApplicationContext(), SecondLiteratureCategories.class);
+					//myIntent4.putExtra("subcat", "English");
 					//Literature ends after it is selected so it should go right to a page where questions
 					//will be displayed with Lit stuff and allow users to ask questions
 					startActivity(myIntent4);

@@ -39,25 +39,25 @@ public class RegisterActivity extends Activity {
 		GetRowData data = new GetRowData(TABLE_NAME);
 
 		final EditText mFirstName = (EditText)findViewById(R.id.firstName);
-		String first = mFirstName.getText().toString();
+		final String first = mFirstName.getText().toString();
 		invalid(mFirstName);
 		final EditText mLastName = (EditText)findViewById(R.id.lastName);
-		String last = mLastName.getText().toString();
+		final String last = mLastName.getText().toString();
 		invalid(mLastName);
 		final EditText mUsername = (EditText)findViewById(R.id.username);
-		String username = mUsername.getText().toString();
+		final String username = mUsername.getText().toString();
 		invalid(mUsername);
 		final EditText mPassword = (EditText)findViewById(R.id.password);
-		String password = mPassword.getText().toString();
+		final String password = mPassword.getText().toString();
 		invalid(mPassword);
 		final EditText mConfirmPassword = (EditText)findViewById(R.id.confirmPassword);
 		String confirm = mConfirmPassword.getText().toString();
 		invalid(mConfirmPassword);
 		final EditText mPhoneNumber = (EditText)findViewById(R.id.phoneNumber);
-		String phone = mPhoneNumber.getText().toString();
+		final String phone = mPhoneNumber.getText().toString();
 		invalid(mPhoneNumber);
 		final EditText mEmailAddress = (EditText)findViewById(R.id.emailAddress);
-		String email = mEmailAddress.getText().toString();
+		final String email = mEmailAddress.getText().toString();
 		invalid(mEmailAddress);
 
 		if (booly == true) {
@@ -68,9 +68,33 @@ public class RegisterActivity extends Activity {
 
 			MobDB.getInstance().execute(APP_KEY, data, null, false, new MobDBResponseListener() {
 				public void mobDBSuccessResponse() {
-					Toast.makeText(RegisterActivity.this, "Username already taken", Toast.LENGTH_SHORT).show();
+					//Toast.makeText(RegisterActivity.this, "Username already taken", Toast.LENGTH_SHORT).show();
 				}
-				public void mobDBResponse(Vector<HashMap<String, Object[]>> result) {}
+				public void mobDBResponse(Vector<HashMap<String, Object[]>> result) {
+					if (result.size() > 0)
+						Toast.makeText(RegisterActivity.this, "Username already taken", Toast.LENGTH_SHORT).show();
+					else {
+						InsertRowData insertRowData = new InsertRowData(TABLE_NAME);
+						insertRowData.setValue("firstname", first);
+						insertRowData.setValue("lastname",  last);
+						insertRowData.setValue("username",  username);
+						insertRowData.setValue("password",  password);
+						insertRowData.setValue("phonenum",  phone);
+						insertRowData.setValue("emailaddr", email);
+						MobDB.getInstance().execute(APP_KEY, insertRowData, null, false, new MobDBResponseListener() {
+							public void mobDBSuccessResponse() {}
+							public void mobDBResponse(Vector<HashMap<String, Object[]>> result) {}
+							public void mobDBResponse(String jsonObj) {}
+							public void mobDBFileResponse(String fileName, byte[] fileData) {}
+							public void mobDBErrorResponse(Integer errValue, String errMsg) {}
+						});
+
+						Toast.makeText(RegisterActivity.this, "Thanks for registering!", Toast.LENGTH_SHORT).show();
+
+						Intent myIntent = new Intent(RegisterActivity.this, MainActivity.class);
+						startActivity(myIntent);
+					}
+				}
 				public void mobDBResponse(String jsonObj) {}
 				public void mobDBFileResponse(String fileName, byte[] fileData) {}
 				public void mobDBErrorResponse(Integer errValue, String errMsg) {}
@@ -93,7 +117,7 @@ public class RegisterActivity extends Activity {
 			else if(email.length() == 0)
 				Toast.makeText(this, "Please fill in your email", Toast.LENGTH_SHORT).show();
 			else { 
-				InsertRowData insertRowData = new InsertRowData(TABLE_NAME);
+	/*			InsertRowData insertRowData = new InsertRowData(TABLE_NAME);
 				insertRowData.setValue("firstname", first);
 				insertRowData.setValue("lastname",  last);
 				insertRowData.setValue("username",  username);
@@ -111,7 +135,7 @@ public class RegisterActivity extends Activity {
 				Toast.makeText(this, "Thanks for registering!", Toast.LENGTH_SHORT).show();
 
 				Intent myIntent = new Intent(this, FirstCategories.class);
-				startService(myIntent);
+				startService(myIntent);*/
 			}
 		}
 	}

@@ -21,7 +21,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 
-public class SecondHistoryCategories extends Activity {
+public class SecondOtherCategories extends Activity {
 	String APP_KEY = "66TP6D-1Ss-00L7SKWoWLlKpaduIiUiUMIR-BLUuIiZxZpPSCIAeua";
 	String mCategory = "History";
 	String mNewCat;
@@ -37,6 +37,7 @@ public class SecondHistoryCategories extends Activity {
 	    mCatButton = (Button)findViewById(R.id.button1);
 	    mCatName = (EditText)findViewById(R.id.editText1);
 	    
+	    // populate the list view with questions
 	    populate();
 	    
 	    lv.setOnItemClickListener(new OnItemClickListener(){
@@ -51,7 +52,7 @@ public class SecondHistoryCategories extends Activity {
 	
 	public void myNewmCategoryHandler(View v){
 		if (mCatName.getText().toString() != null) {
-			Toast.makeText(SecondHistoryCategories.this, "New mCategory Added!", Toast.LENGTH_SHORT).show();
+			Toast.makeText(SecondOtherCategories.this, "New mCategory Added!", Toast.LENGTH_SHORT).show();
 
 			mNewCat = mCatName.getText().toString();
 
@@ -92,7 +93,7 @@ public class SecondHistoryCategories extends Activity {
 						count++;
 					} while (count < result.size());
 					
-					ArrayAdapter<String> adapter = new ArrayAdapter<String>(SecondHistoryCategories.this, android.R.layout.simple_list_item_1, android.R.id.text1, toAdd);
+					ArrayAdapter<String> adapter = new ArrayAdapter<String>(SecondOtherCategories.this, android.R.layout.simple_list_item_1, android.R.id.text1, toAdd);
 					lv.setAdapter(adapter);
 				}
 			}

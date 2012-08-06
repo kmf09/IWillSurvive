@@ -32,6 +32,7 @@
         <activity android:name="SecondLiteratureCategories"></activity>
         <activity android:name="MainQuestionsActivity"></activity>
         <activity android:name="AnswerQuestionPage"></activity>
+        <activity android:name="SecondOtherCategories"></activity>
     </application>
 
 </manifest>
