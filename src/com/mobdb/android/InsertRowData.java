@@ -13,6 +13,7 @@ import org.json.JSONObject;
  * This Class generate INSERT SQL query
  * Version 1.0
  */
+@SuppressWarnings({"rawtypes", "unchecked", "unused"})
 public class InsertRowData {
 
 	private String query = "INSERT INTO ";
@@ -135,7 +136,6 @@ public class InsertRowData {
 			file.put( SDKConstants.FILE_DATA, com.mobdb.android.Base64.encodeBytes(fileBytes) );
 		
 		} catch (JSONException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		fields.add( field );

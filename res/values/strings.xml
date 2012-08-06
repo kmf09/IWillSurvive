@@ -1,9 +1,7 @@
 <resources>
 
     <string name="app_name">BrainStorm</string>
-    <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
-    <string name="title_activity_main">BrainStorm</string>
     
     <string-array name="FirstCategoriesList">
 	<item>Computer Science</item>
@@ -39,5 +37,11 @@
     <item>World History</item>
     <item>History of the Americas</item>
     </string-array>
+    <string name="Logo">Logo</string>
+    <string name="Username">Username</string>
+    <string name="Password">Password</string>
+    <string name="Register">Register</string>
+    <string name="LogIn">Log In</string>
+    <string name="rememberMe">Remember Me</string>
 
 </resources>

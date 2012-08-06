@@ -16,8 +16,6 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.telephony.SmsManager;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -26,60 +24,58 @@ import android.widget.TextView;
 public class AnswerQuestionPage extends Activity {
 	final String APP_KEY = "66TP6D-1Ss-00L7SKWoWLlKpaduIiUiUMIR-BLUuIiZxZpPSCIAeua";
 
-	TextView topQuestion;
-	EditText answerbox;
-	Button answerButton;
-	String question, answer, username;
-	ListView listView;
+	String mQuestion, mAnswer, mUsername;
+	TextView mTopQuestion;
+	EditText mAnswerbox;
+	ListView mListView;
 
 	@Override public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.answerquestionpage);
 	    	    
+	    // get question
 	    Intent myIntent = getIntent();
 	    Bundle myBundle = myIntent.getExtras();
-	    
 	    if (myBundle != null)
-	    	question = myBundle.getString("question");
+	    	mQuestion = myBundle.getString("question");
 	    
-	    topQuestion = (TextView)findViewById(R.id.textView1);
-	    answerbox = (EditText)findViewById(R.id.editText1);
-	    listView = (ListView)findViewById(R.id.listView1);
+	    mTopQuestion = (TextView)findViewById(R.id.textView1);
+	    mAnswerbox = (EditText)findViewById(R.id.editText1);
+	    mListView = (ListView)findViewById(R.id.listView1);
 	    
 		SharedPreferences userDetails = AnswerQuestionPage.this.getSharedPreferences("userdetails", MODE_PRIVATE);
-		username = userDetails.getString("username", "");		
+		mUsername = userDetails.getString("username", "");		
 	    
-	    topQuestion.setText(question);
+		// main question
+	    mTopQuestion.setText(mQuestion);
 	    
+	    // populate the list view with the questions
 	    populate();
 	}
-	
 	
 	public void answerQuestionHandler(View v){
 		boolean testing = true;
 		
-		if(answerbox.getText().toString().contains("'"))
+		// mobDB does not accept these characters
+		if(mAnswerbox.getText().toString().contains("'"))
 		{
-			answer = answerbox.getText().toString().replace("'", "");
+			mAnswer = mAnswerbox.getText().toString().replace("'", "");
 			testing = false;
 		}
-		else if(answerbox.getText().toString().contains("\\"))
+		else if(mAnswerbox.getText().toString().contains("\\"))
 		{
-			answer = answerbox.getText().toString().replace("\\", "");
+			mAnswer = mAnswerbox.getText().toString().replace("\\", "");
 			testing = false;
 		}
 		
-		
-		if (!answerbox.getText().toString().equals("")) {
+		if (!mAnswerbox.getText().toString().equals("")) {
 			if(testing != false)
-			{
-			answer = answerbox.getText().toString();
-			}
+				mAnswer = mAnswerbox.getText().toString();
 
 			InsertRowData insertRowData = new InsertRowData("answers");
-			insertRowData.setValue("question", question);
-			insertRowData.setValue("username", username);
-			insertRowData.setValue("answer", answer);
+			insertRowData.setValue("question", mQuestion);
+			insertRowData.setValue("username", mUsername);
+			insertRowData.setValue("answer", mAnswer);
 			MobDB.getInstance().execute(APP_KEY, insertRowData, null, false, new MobDBResponseListener() {
 				public void mobDBSuccessResponse() {}
 				public void mobDBResponse(Vector<HashMap<String, Object[]>> result) {}
@@ -92,11 +88,10 @@ public class AnswerQuestionPage extends Activity {
 			sendSMS();
 		}
 		
-
- 
-		answerbox.setText("");
+		mAnswerbox.setText("");
 	}
 	
+	// populate the list view with the questions, answers, and username's
 	public void populate() {
 		GetRowData data = new GetRowData("answers");
 		data.getField("question");
@@ -115,7 +110,7 @@ public class AnswerQuestionPage extends Activity {
 				// [0] since it is a 2D array always have to have [0]
 				if (result.size() > 0) {  
 					do {
-						if (result.get(count).get("question")[0].toString().equals(question)) {
+						if (result.get(count).get("question")[0].toString().equals(mQuestion)) {
 							map = new HashMap<String, String>();
 							map.put("ans", result.get(count).get("answer")[0].toString());
 							map.put("name", result.get(count).get("username")[0].toString());
@@ -129,7 +124,7 @@ public class AnswerQuestionPage extends Activity {
 							android.R.layout.simple_list_item_2, 
 							new String[]{"ans","name"}, 
 							new int[] {android.R.id.text1, android.R.id.text2});
-					listView.setAdapter(adapter);
+					mListView.setAdapter(adapter);
 			    }
 				
 			}
@@ -143,7 +138,7 @@ public class AnswerQuestionPage extends Activity {
 	public void sendSMS() {		
 		GetRowData data = new GetRowData("questions");
 		data.getField("username");
-		data.whereEqualsTo("question", topQuestion.getText().toString());
+		data.whereEqualsTo("question", mTopQuestion.getText().toString());
 
 		MobDB.getInstance().execute(APP_KEY, data, null, false, new MobDBResponseListener() {
 			public void mobDBSuccessResponse() { }
@@ -169,7 +164,6 @@ public class AnswerQuestionPage extends Activity {
 			public void mobDBSuccessResponse() { }
 			public void mobDBResponse(Vector<HashMap<String, Object[]>> result) {
 				String number;
-				ArrayList<String> toAdd = new ArrayList<String>();
 				// result.get(0) = first row
 				// .get("question") = question attribute
 				// [0] since it is a 2D array always have to have [0]
@@ -177,14 +171,12 @@ public class AnswerQuestionPage extends Activity {
 					number = result.get(0).get("phonenum")[0].toString();
 					SmsManager sm = SmsManager.getDefault();
 					// HERE IS WHERE THE DESTINATION OF THE TEXT SHOULD GO
-					sm.sendTextMessage(number, null, answer, null, null);
+					sm.sendTextMessage(number, null, mAnswer, null, null);
 				}
 			}
 			public void mobDBResponse(String jsonObj) {}
 			public void mobDBFileResponse(String fileName, byte[] fileData) {}
 			public void mobDBErrorResponse(Integer errValue, String errMsg) {}
-		});
-		
+		});	
 	}
-
 }

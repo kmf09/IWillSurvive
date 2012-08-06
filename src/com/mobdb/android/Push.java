@@ -14,6 +14,7 @@ import org.json.JSONObject;
  * 
  * @version 1.0
  */
+@SuppressWarnings("rawtypes")
 public class Push {
 	
 	public static final String IOS  		 = "ios";
@@ -119,14 +120,13 @@ public class Push {
 			}
 			
 		} catch (JSONException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
 	}
 	
 	/**
-	 * Set iOS payload JSON Object, its required 
+	 * Set iOS pay load JSON Object, its required 
 	 * @param iosPayload JSON object
 	 * @throws InvalidParameterException
 	 */
@@ -143,7 +143,6 @@ public class Push {
 			this.iOSPayload = iosPayload;
 		
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -205,7 +204,6 @@ public class Push {
 
 
 		} catch (JSONException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 

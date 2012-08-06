@@ -13,6 +13,7 @@ import org.json.JSONObject;
  * 
  * @version 1.0
  */
+@SuppressWarnings("rawtypes")
 public class MobDBJSONHandler  { 
 
 	private MobDBResponseListener listner = null;
@@ -21,10 +22,7 @@ public class MobDBJSONHandler  {
 
 
 	public MobDBJSONHandler( MobDBResponseListener listner ) {
-		// TODO Auto-generated constructor stub
-
 		this.listner = listner;
-
 	}
 	
 	/**
@@ -36,7 +34,7 @@ public class MobDBJSONHandler  {
 		try {
 
 			JSONObject o = new JSONObject(jsonString);
-
+			
 			for ( Iterator iterator = o.keys(); iterator.hasNext(); ) {
 
 				String type = (String) iterator.next();
@@ -62,7 +60,6 @@ public class MobDBJSONHandler  {
 							
 						}
 						}catch (Exception e2) {
-							// TODO: handle exception
 							e2.printStackTrace();
 						}
 					}
@@ -133,7 +130,6 @@ public class MobDBJSONHandler  {
 			}
 
 		} catch ( Exception e ) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 

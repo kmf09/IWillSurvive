@@ -1,9 +1,6 @@
 package edu.fsu.cs.group5socialnetwork;
-
 import java.util.HashMap;
 import java.util.Vector;
-
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -13,17 +10,16 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.mobdb.android.GetRowData;
 import com.mobdb.android.MobDB;
 import com.mobdb.android.MobDBResponseListener;
 
-@SuppressLint("WorldReadableFiles")
 public class MainActivity extends Activity {
 	final String APP_KEY = "66TP6D-1Ss-00L7SKWoWLlKpaduIiUiUMIR-BLUuIiZxZpPSCIAeua";
 	final String TABLE_NAME = "users";
+	
 	EditText mUserName; EditText mPassword;
-	String password, username; Boolean booly; 
+	String mPass, mUser; Boolean mBooly; 
 	CheckBox mCheckBox; 
 
 	@Override public void onCreate(Bundle savedInstanceState) {
@@ -34,32 +30,32 @@ public class MainActivity extends Activity {
 		mCheckBox = (CheckBox)findViewById(R.id.rememberCheck);
 
 		SharedPreferences userDetails = MainActivity.this.getSharedPreferences("userdetails", MODE_WORLD_READABLE);
-		username = userDetails.getString("username", "");
-		mUserName.setText(username);
-		password = userDetails.getString("password", "");
-		mPassword.setText(password);
+		mUser = userDetails.getString("username", "");
+		mUserName.setText(mUser);
+		mPass = userDetails.getString("password", "");
+		mPassword.setText(mPass);
 		
-		if (!(username.equals("") && password.equals("")))
+		if (!(mUser.equals("") && mPass.equals("")))
 			mCheckBox.setChecked(true);
 
-		booly = true;
+		mBooly = true;
 	}
 
 	public void myLoginHandler(View v){
 		//Logs the person in if they have a valid username, if not then
 		//they are asked to register, we can test this with a query to the database
-		//we set up with the usernames and passwords.
-		username = mUserName.getText().toString();
-		password = mPassword.getText().toString();
+		//we set up with the username's and passwords.
+		mUser = mUserName.getText().toString();
+		mPass = mPassword.getText().toString();
 		invalid(mUserName);
 		invalid(mPassword);
 
-		if (booly == true) {
+		if (mBooly == true) {
 			//Where we check the two against one another to make sure they work
 			//Then proceed to the categories page
 			GetRowData data = new GetRowData(TABLE_NAME);
-			data.whereEqualsTo("username", username);
-			data.andEqualsTo("password", password);
+			data.whereEqualsTo("username", mUser);
+			data.andEqualsTo("password", mPass);
 
 			MobDB.getInstance().execute(APP_KEY, data, null, false, new MobDBResponseListener() {
 				public void mobDBSuccessResponse() { }
@@ -73,8 +69,8 @@ public class MainActivity extends Activity {
 							SharedPreferences userDetails = MainActivity.this.getSharedPreferences("userdetails", MODE_WORLD_READABLE);
 							Editor edit = userDetails.edit();
 							edit.clear();
-							edit.putString("username", username);
-							edit.putString("password", password);
+							edit.putString("username", mUser);
+							edit.putString("password", mPass);
 							edit.commit();
 						}
 						// otherwise don't save anything
@@ -104,11 +100,11 @@ public class MainActivity extends Activity {
 					(str.charAt(i) == '\\') || (str.charAt(i) == ';') || (str.charAt(i) == '-') || 
 					(str.charAt(i) == '#')) {
 				edit.setError("must not contain \', \", /, \\, ;, -, #");
-				booly = false; 
+				mBooly = false; 
 			}
 			else if (str.substring(0).equals("NULL")) {
 				edit.setError("must not contain NULL");
-				booly = false;
+				mBooly = false;
 			}
 		}
 	}
@@ -125,8 +121,8 @@ public class MainActivity extends Activity {
 			SharedPreferences userDetails = MainActivity.this.getSharedPreferences("userdetails", MODE_WORLD_READABLE);
 			Editor edit = userDetails.edit();
 			edit.clear();
-			edit.putString("username", username);
-			edit.putString("password", password);
+			edit.putString("username", mUser);
+			edit.putString("password", mPass);
 			edit.commit();
 		}
 		else {

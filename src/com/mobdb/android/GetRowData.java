@@ -7,6 +7,7 @@ import java.util.Vector;
  * This Class generate SELECT SQL query string
  * @version 1.0
  */
+@SuppressWarnings({"rawtypes", "unchecked"})
 public class GetRowData {
 
 	private String query = "SELECT * FROM ";
@@ -14,7 +15,6 @@ public class GetRowData {
 	private Vector andConditions = null;
 	private Vector orConditions = null;
 	private Vector fields = null;
-	
 	
 	public GetRowData(String tableName) {		
 		query = query + tableName;

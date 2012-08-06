@@ -6,6 +6,7 @@ import java.util.Vector;
  * @version 1.0
  */
 
+@SuppressWarnings({"rawtypes", "unchecked"})
 public class DeleteRowData {
 
 	private String query = "DELETE FROM ";
@@ -134,6 +135,7 @@ public class DeleteRowData {
 	 * @param field The field which needs to use for condition
 	 * @param value The int value for condition
 	 */
+	
 	public void andEqualsTo(String field, int value){
 		String condition = field + "=" + String.valueOf(value);
 		if(andConditions == null){

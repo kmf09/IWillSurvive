@@ -55,7 +55,8 @@ public class SDKConstants {
     // package
     public static final String PREFERENCE = "com.google.android.c2dm";
     
-    private static final long DEFAULT_BACKOFF = 30000;
+    @SuppressWarnings("unused")
+	private static final long DEFAULT_BACKOFF = 30000;
   //-------------------END------------------------
     
 }
