@@ -10,6 +10,7 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -23,18 +24,23 @@ public class MainActivity extends Activity {
 	final String TABLE_NAME = "users";
 	EditText mUserName; EditText mPassword;
 	String password, username; Boolean booly; 
+	CheckBox mCheckBox; 
 
 	@Override public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		mUserName = (EditText)findViewById(R.id.mainUsername);
 		mPassword = (EditText)findViewById(R.id.mainPassword);
+		mCheckBox = (CheckBox)findViewById(R.id.rememberCheck);
 
 		SharedPreferences userDetails = MainActivity.this.getSharedPreferences("userdetails", MODE_WORLD_READABLE);
 		username = userDetails.getString("username", "");
 		mUserName.setText(username);
 		password = userDetails.getString("password", "");
 		mPassword.setText(password);
+		
+		if (!(username.equals("") && password.equals("")))
+			mCheckBox.setChecked(true);
 
 		booly = true;
 	}
@@ -62,12 +68,22 @@ public class MainActivity extends Activity {
 						Intent myIntent = new Intent(MainActivity.this, FirstCategories.class);
 						startActivity(myIntent);	
 
-						SharedPreferences userDetails = MainActivity.this.getSharedPreferences("userdetails", MODE_WORLD_READABLE);
-						Editor edit = userDetails.edit();
-						edit.clear();
-						edit.putString("username", username);
-						edit.putString("password", password);
-						edit.commit();
+						// save preferences if "Remember Me" is checked
+						if (mCheckBox.isChecked()) {
+							SharedPreferences userDetails = MainActivity.this.getSharedPreferences("userdetails", MODE_WORLD_READABLE);
+							Editor edit = userDetails.edit();
+							edit.clear();
+							edit.putString("username", username);
+							edit.putString("password", password);
+							edit.commit();
+						}
+						// otherwise don't save anything
+						else {
+							SharedPreferences userDetails = MainActivity.this.getSharedPreferences("userdetails", MODE_WORLD_READABLE);
+							Editor edit = userDetails.edit();
+							edit.clear();
+							edit.commit();
+						}
 					}
 					else
 						Toast.makeText(MainActivity.this, "Invalid username/password. \n Please register or try again.", Toast.LENGTH_SHORT).show();
@@ -104,11 +120,20 @@ public class MainActivity extends Activity {
 	
 	@Override protected void onDestroy() {
 		super.onDestroy();
-		SharedPreferences userDetails = MainActivity.this.getSharedPreferences("userdetails", MODE_WORLD_READABLE);
-		Editor edit = userDetails.edit();
-		edit.clear();
-		edit.putString("username", username);
-		edit.putString("password", password);
-		edit.commit();
+		// save preferences if "Remember Me" is checked
+		if (mCheckBox.isChecked()) {
+			SharedPreferences userDetails = MainActivity.this.getSharedPreferences("userdetails", MODE_WORLD_READABLE);
+			Editor edit = userDetails.edit();
+			edit.clear();
+			edit.putString("username", username);
+			edit.putString("password", password);
+			edit.commit();
+		}
+		else {
+			SharedPreferences userDetails = MainActivity.this.getSharedPreferences("userdetails", MODE_WORLD_READABLE);
+			Editor edit = userDetails.edit();
+			edit.clear();
+			edit.commit();
+		}
 	}
 }

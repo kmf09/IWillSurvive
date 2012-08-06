@@ -56,7 +56,13 @@
                 android:text="Log In" />
 
         </LinearLayout>
-        
+
+        <CheckBox
+            android:id="@+id/rememberCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="Remember Me" />
 
     </LinearLayout>
 
