@@ -10,12 +10,12 @@
         android:orientation="vertical" >
 
         <ImageView
-            android:contentDescription="@string/Logo"
             android:id="@+id/imageView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="65dp"
             android:layout_marginTop="70dp"
+            android:contentDescription="@string/Logo"
             android:src="@drawable/brainstorm" />
 
         <EditText
@@ -24,8 +24,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="65dp"
             android:layout_marginTop="15dp"
-            android:inputType="textAutoComplete"
-            android:hint="@string/Username" />
+            android:hint="@string/Username"
+            android:inputType="textAutoComplete" />
 
         <EditText
             android:id="@+id/mainPassword"
@@ -54,7 +54,6 @@
                 android:layout_marginLeft="5dp"
                 android:onClick="myLoginHandler"
                 android:text="@string/LogIn" />
-
         </LinearLayout>
 
         <CheckBox
@@ -63,8 +62,6 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:text="@string/rememberMe" />
-
     </LinearLayout>
-
 
 </ScrollView>

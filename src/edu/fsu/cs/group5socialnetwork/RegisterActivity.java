@@ -5,6 +5,7 @@ import java.util.Vector;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -20,43 +21,38 @@ public class RegisterActivity extends Activity {
 	final String APP_KEY = "66TP6D-1Ss-00L7SKWoWLlKpaduIiUiUMIR-BLUuIiZxZpPSCIAeua";
 	final String TABLE_NAME = "users";
 
-	EditText mFirstName;
-	EditText mLastName;
-	EditText mUsername;
-	EditText mPassword;
-	EditText mConfirmPassword;
-	EditText mPhoneNumber;
-	EditText mEmailAddress;
+	EditText mFirstName, mLastName, mUsername, mPassword, mConfirmPassword, mPhoneNumber, mEmailAddress;
 	Boolean booly;
 
 	@Override public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.register_layout);
+		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 		booly = true;
 	}
 
 	public void myRegisterSubmitHandler(View v){
 		GetRowData data = new GetRowData(TABLE_NAME);
 
-		final EditText mFirstName = (EditText)findViewById(R.id.firstName);
+		mFirstName = (EditText)findViewById(R.id.firstName);
 		final String first = mFirstName.getText().toString();
 		invalid(mFirstName);
-		final EditText mLastName = (EditText)findViewById(R.id.lastName);
+		mLastName = (EditText)findViewById(R.id.lastName);
 		final String last = mLastName.getText().toString();
 		invalid(mLastName);
-		final EditText mUsername = (EditText)findViewById(R.id.username);
+		mUsername = (EditText)findViewById(R.id.username);
 		final String username = mUsername.getText().toString();
 		invalid(mUsername);
-		final EditText mPassword = (EditText)findViewById(R.id.password);
+		mPassword = (EditText)findViewById(R.id.password);
 		final String password = mPassword.getText().toString();
 		invalid(mPassword);
-		final EditText mConfirmPassword = (EditText)findViewById(R.id.confirmPassword);
+		mConfirmPassword = (EditText)findViewById(R.id.confirmPassword);
 		String confirm = mConfirmPassword.getText().toString();
 		invalid(mConfirmPassword);
-		final EditText mPhoneNumber = (EditText)findViewById(R.id.phoneNumber);
+		mPhoneNumber = (EditText)findViewById(R.id.phoneNumber);
 		final String phone = mPhoneNumber.getText().toString();
 		invalid(mPhoneNumber);
-		final EditText mEmailAddress = (EditText)findViewById(R.id.emailAddress);
+		mEmailAddress = (EditText)findViewById(R.id.emailAddress);
 		final String email = mEmailAddress.getText().toString();
 		invalid(mEmailAddress);
 
@@ -101,42 +97,21 @@ public class RegisterActivity extends Activity {
 			});
 
 			if(first.length() == 0)
-				Toast.makeText(this, "Please fill in your name", Toast.LENGTH_SHORT).show();
-			else if(last.length() == 0)
-				Toast.makeText(this, "Please fill in your last name", Toast.LENGTH_SHORT).show();
-			else if(username.length() == 0)
-				Toast.makeText(this, "Please fill in your username", Toast.LENGTH_SHORT).show();
-			else if(password.length() == 0)
-				Toast.makeText(this, "Please fill in your password", Toast.LENGTH_SHORT).show();
-			else if(confirm.length() == 0)
-				Toast.makeText(this, "Please confirm your password", Toast.LENGTH_SHORT).show();
+				mFirstName.setError("Please fill in your first name");
+			if(last.length() == 0)
+				mLastName.setError("Please fill in your last name");
+			if(username.length() == 0)
+				mUsername.setError("Please fill in your username");
+			if(password.length() == 0)
+				mPassword.setError("Please fill in your password");
+			if(confirm.length() == 0)
+				mConfirmPassword.setError("Please confirm your password");
 			else if(!confirm.equals(password))
-				Toast.makeText(this, "Check to make sure your passwords are the same", Toast.LENGTH_SHORT).show();
-			else if(phone.length() == 0)
-				Toast.makeText(this, "Please fill in your phone number", Toast.LENGTH_SHORT).show();
-			else if(email.length() == 0)
-				Toast.makeText(this, "Please fill in your email", Toast.LENGTH_SHORT).show();
-			else { 
-	/*			InsertRowData insertRowData = new InsertRowData(TABLE_NAME);
-				insertRowData.setValue("firstname", first);
-				insertRowData.setValue("lastname",  last);
-				insertRowData.setValue("username",  username);
-				insertRowData.setValue("password",  password);
-				insertRowData.setValue("phonenum",  phone);
-				insertRowData.setValue("emailaddr", email);
-				MobDB.getInstance().execute(APP_KEY, insertRowData, null, false, new MobDBResponseListener() {
-					public void mobDBSuccessResponse() {}
-					public void mobDBResponse(Vector<HashMap<String, Object[]>> result) {}
-					public void mobDBResponse(String jsonObj) {}
-					public void mobDBFileResponse(String fileName, byte[] fileData) {}
-					public void mobDBErrorResponse(Integer errValue, String errMsg) {}
-				});
-
-				Toast.makeText(this, "Thanks for registering!", Toast.LENGTH_SHORT).show();
-
-				Intent myIntent = new Intent(this, FirstCategories.class);
-				startService(myIntent);*/
-			}
+				mConfirmPassword.setError("Passwords do not match");
+			if(phone.length() == 0)
+				mPhoneNumber.setError("Please fill in your phone number");
+			if(email.length() == 0)
+				mEmailAddress.setError("Please fill in your email");
 		}
 	}
 
