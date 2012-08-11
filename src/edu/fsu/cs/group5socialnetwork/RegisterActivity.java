@@ -63,12 +63,10 @@ public class RegisterActivity extends Activity {
 			data.whereEqualsTo("username",  username);
 
 			MobDB.getInstance().execute(APP_KEY, data, null, false, new MobDBResponseListener() {
-				public void mobDBSuccessResponse() {
-					//Toast.makeText(RegisterActivity.this, "Username already taken", Toast.LENGTH_SHORT).show();
-				}
+				public void mobDBSuccessResponse() {}
 				public void mobDBResponse(Vector<HashMap<String, Object[]>> result) {
 					if (result.size() > 0)
-						Toast.makeText(RegisterActivity.this, "Username already taken", Toast.LENGTH_SHORT).show();
+						mUsername.setError("Username already taken");
 					else {
 						InsertRowData insertRowData = new InsertRowData(TABLE_NAME);
 						insertRowData.setValue("firstname", first);
