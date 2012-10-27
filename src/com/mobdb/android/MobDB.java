@@ -97,10 +97,10 @@ public class MobDB {
 	 * @param listener MobDBResponseListener object
 	 * @throws InvalidParameterException
 	 */
-	public synchronized void execute(String appKey, GetRowData getRowdata, String bargraph, boolean secure, MobDBResponseListener listener) throws InvalidParameterException{
+	public synchronized void execute(String appKey, String adminKey, GetRowData getRowdata, String bargraph, boolean secure, MobDBResponseListener listener) throws InvalidParameterException{
 		
 		try {
-			execute(appKey, new String[]{getRowdata.getQueryString()}, null, bargraph, secure, listener);
+			execute(appKey, adminKey, new String[]{getRowdata.getQueryString()}, null, bargraph, secure, listener);
 		} catch (Exception e) {
 			
 			throw new InvalidParameterException( e.toString() );
@@ -117,10 +117,10 @@ public class MobDB {
 	 * @param listener MobDBResponseListener object
 	 * @throws InvalidParameterException
 	 */
-	public synchronized void execute(String appKey, InsertRowData insertRowdata, String bargraph, boolean secure, MobDBResponseListener listener) throws InvalidParameterException{
+	public synchronized void execute(String appKey,  String adminKey, InsertRowData insertRowdata, String bargraph, boolean secure, MobDBResponseListener listener) throws InvalidParameterException{
 	
 		try{
-			execute(appKey, new String[]{insertRowdata.getQueryString()}, insertRowdata.getParameters(), bargraph, secure, listener);
+			execute(appKey,adminKey, new String[]{insertRowdata.getQueryString()}, insertRowdata.getParameters(), bargraph, secure, listener);
 		}catch (Exception e) {
 			// TODO: handle exception
 			throw new InvalidParameterException(e.toString());
@@ -137,9 +137,9 @@ public class MobDB {
 	 * @param listener MobDBResponseListener object
 	 * @throws InvalidParameterException
 	 */
-	public synchronized void execute(String appKey, UpdateRowData updateRowdata, String bargraph, boolean secure, MobDBResponseListener listener) throws InvalidParameterException{
+	public synchronized void execute(String appKey, String adminKey, UpdateRowData updateRowdata, String bargraph, boolean secure, MobDBResponseListener listener) throws InvalidParameterException{
 		try{
-			execute(appKey, new String[]{updateRowdata.getQueryString()}, updateRowdata.getParameters(), bargraph, secure, listener);
+			execute(appKey, adminKey, new String[]{updateRowdata.getQueryString()}, updateRowdata.getParameters(), bargraph, secure, listener);
 		}catch (Exception e) {
 			// TODO: handle exception
 			throw new InvalidParameterException(e.toString());
@@ -155,9 +155,9 @@ public class MobDB {
 	 * @param listener MobDBResponseListener object
 	 * @throws InvalidParameterException
 	 */
-	public synchronized void execute(String appKey, DeleteRowData deleteRowdata, String bargraph, boolean secure, MobDBResponseListener listener) throws InvalidParameterException{
+	public synchronized void execute(String appKey, String adminKey, DeleteRowData deleteRowdata, String bargraph, boolean secure, MobDBResponseListener listener) throws InvalidParameterException{
 		try{
-			execute(appKey, new String[]{deleteRowdata.getQueryString()}, null, bargraph, secure, listener);
+			execute(appKey,adminKey, new String[]{deleteRowdata.getQueryString()}, null, bargraph, secure, listener);
 		}catch (Exception e) {
 			// TODO: handle exception
 			throw new InvalidParameterException(e.toString());
@@ -194,10 +194,10 @@ public class MobDB {
 	 * @param listener MobDBResponseListener object
 	 * @throws InvalidParameterException
 	 */
-	public synchronized void execute(String appKey, MultiRequest multiRequest, String bargraph, boolean secure, MobDBResponseListener listener) throws InvalidParameterException{
+	public synchronized void execute(String appKey, String adminKey, MultiRequest multiRequest, String bargraph, boolean secure, MobDBResponseListener listener) throws InvalidParameterException{
 	
 		try{
-			execute(appKey, multiRequest.getQueryString(), null, bargraph, secure, listener);
+			execute(appKey,adminKey, multiRequest.getQueryString(), null, bargraph, secure, listener);
 		}catch (Exception e) {
 			// TODO: handle exception
 			throw new InvalidParameterException(e.toString());
@@ -257,7 +257,7 @@ public class MobDB {
 	 * @param listener MobDBResponseListener class object     
 	 * @throws InvalidParameterException
 	 */
-	public synchronized void execute( String appKey, String[] sql_query, Object[] parameter, String bargraph, boolean secure, MobDBResponseListener listener) throws InvalidParameterException {
+	public synchronized void execute( String appKey, String adminKey, String[] sql_query, Object[] parameter, String bargraph, boolean secure, MobDBResponseListener listener) throws InvalidParameterException {
 		try {
 
 			JSONObject req = new JSONObject();
@@ -268,6 +268,10 @@ public class MobDB {
 
 			req.put( SDKConstants.KEY, appKey );
 
+			if(adminKey != null){
+				req.put( SDKConstants.ADMIN_KEY, adminKey );	
+			}
+			
 			if(bargraph != null){
 				req.put( SDKConstants.BAR_GRAPH, bargraph );	
 			}

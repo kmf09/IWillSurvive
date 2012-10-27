@@ -14,7 +14,6 @@ import org.json.JSONObject;
  * 
  * @version 1.0
  */
-@SuppressWarnings("rawtypes")
 public class Push {
 	
 	public static final String IOS  		 = "ios";
@@ -24,6 +23,7 @@ public class Push {
 	public static final String WHEN 		 = "when";
 	public static final String PUSH    		 = "push";
 	public static final String DEVICE_TYPE   = "device";
+	public static final String DEVICE_LABEL   = "label";
 	
 	//-------------------iOS Payload keys--------------
 	public static final String APS 		 	 	= "aps";
@@ -45,7 +45,9 @@ public class Push {
 	public static final String US_HAWAII   = "GMT-10:00";
 	
 	private	JSONArray androidPayload;
+	private	JSONArray registrationIDs;
 	private	JSONObject iOSPayload;
+	private String label;
 	private String regId;
 	private String when;
 	private String deviceType;
@@ -60,6 +62,14 @@ public class Push {
 		this.regId = registrationID;
 	}
 
+	/**
+	 * Send Push Notification to set of Devices
+	 * @param registrationID Device registrationID
+	 */
+	public  void sendPushTo(JSONArray registrationIDList){
+		this.registrationIDs = registrationIDList;
+	}
+	
 	/**
 	 * Set date and time for Schedule Push Notification. 
 	 * @param date String format must be <strong>MM/dd/yyyy</strong> 
@@ -120,13 +130,14 @@ public class Push {
 			}
 			
 		} catch (JSONException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
 	}
 	
 	/**
-	 * Set iOS pay load JSON Object, its required 
+	 * Set iOS payload JSON Object, its required 
 	 * @param iosPayload JSON object
 	 * @throws InvalidParameterException
 	 */
@@ -143,19 +154,24 @@ public class Push {
 			this.iOSPayload = iosPayload;
 		
 		} catch (Exception e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
 	}
 	
 	/**
-	 * Send received device token to mobDB 
+	 * Send received device token to mobDB
+	 * @param label label device token 
 	 * @param deviceType String value for device type <strong>'ios'</strong> or <strong>'android'</strong>
 	 * @param registrationID device token
 	 * @throws InvalidParameterException
 	 */
-	public void sendDeviceTokenToMobDB(String deviceType, String registrationID) throws InvalidParameterException{
+	public void sendDeviceTokenToMobDB(String label, String deviceType, String registrationID) throws InvalidParameterException{
 		
+		if( label == null || label.length() < 0 ){
+			throw new InvalidParameterException("Label can't be null.");
+		}
 		if( registrationID == null || registrationID.length() < 0 ){
 			throw new InvalidParameterException("Device registration ID can't be null.");
 		}
@@ -164,6 +180,7 @@ public class Push {
 			throw new InvalidParameterException("Device type required.");
 		}
 		
+		this.label = label;
 		this.sendRegIDTomobDB = true;
 		this.deviceType = deviceType;
 		this.regId = registrationID;	
@@ -182,10 +199,13 @@ public class Push {
 			if(this.regId != null)
 			{
 				push.put( DEVICE_TOKEN, this.regId );
+			}else if(this.registrationIDs != null){
+				push.put( DEVICE_TOKEN, this.registrationIDs );
 			}
 
 			if(this.sendRegIDTomobDB){
 				push.put( DEVICE_TYPE, this.deviceType );
+				push.put( DEVICE_LABEL, this.label );
 			}else{
 
 				if(this.androidPayload != null){
@@ -204,10 +224,12 @@ public class Push {
 
 
 		} catch (JSONException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
 		return push.toString();
 	}
+
 
 }

@@ -33,7 +33,6 @@ public class FirstCategories extends Activity {
 					startActivity(myIntent3);
 					break;
 					case 4:  Intent myIntent4 = new Intent(getApplicationContext(), SecondLiteratureCategories.class);
-					//myIntent4.putExtra("subcat", "English");
 					//Literature ends after it is selected so it should go right to a page where questions
 					//will be displayed with Lit stuff and allow users to ask questions
 					startActivity(myIntent4);

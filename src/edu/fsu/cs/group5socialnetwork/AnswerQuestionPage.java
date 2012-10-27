@@ -32,7 +32,7 @@ public class AnswerQuestionPage extends Activity {
 	@Override public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.answerquestionpage);
-	    	    
+	    	     
 	    // get question
 	    Intent myIntent = getIntent();
 	    Bundle myBundle = myIntent.getExtras();
@@ -76,7 +76,7 @@ public class AnswerQuestionPage extends Activity {
 			insertRowData.setValue("question", mQuestion);
 			insertRowData.setValue("username", mUsername);
 			insertRowData.setValue("answer", mAnswer);
-			MobDB.getInstance().execute(APP_KEY, insertRowData, null, false, new MobDBResponseListener() {
+			MobDB.getInstance().execute(APP_KEY, null, insertRowData, null, false, new MobDBResponseListener() {
 				public void mobDBSuccessResponse() {}
 				public void mobDBResponse(Vector<HashMap<String, Object[]>> result) {}
 				public void mobDBResponse(String jsonObj) {}
@@ -98,7 +98,7 @@ public class AnswerQuestionPage extends Activity {
 		data.getField("answer");
 		data.getField("username");
 
-		MobDB.getInstance().execute(APP_KEY, data, null, false, new MobDBResponseListener() {
+		MobDB.getInstance().execute(APP_KEY, null, data, null, false, new MobDBResponseListener() {
 			public void mobDBSuccessResponse() { }
 			public void mobDBResponse(Vector<HashMap<String, Object[]>> result) {
 
@@ -140,7 +140,7 @@ public class AnswerQuestionPage extends Activity {
 		data.getField("username");
 		data.whereEqualsTo("question", mTopQuestion.getText().toString());
 
-		MobDB.getInstance().execute(APP_KEY, data, null, false, new MobDBResponseListener() {
+		MobDB.getInstance().execute(APP_KEY, null, data, null, false, new MobDBResponseListener() {
 			public void mobDBSuccessResponse() { }
 			public void mobDBResponse(Vector<HashMap<String, Object[]>> result) {
 				if (result.size() > 0) {
@@ -160,7 +160,7 @@ public class AnswerQuestionPage extends Activity {
 		data.getField("phonenum");
 		data.whereEqualsTo("username", questionUser);
 
-		MobDB.getInstance().execute(APP_KEY, data, null, false, new MobDBResponseListener() {
+		MobDB.getInstance().execute(APP_KEY, null, data, null, false, new MobDBResponseListener() {
 			public void mobDBSuccessResponse() { }
 			public void mobDBResponse(Vector<HashMap<String, Object[]>> result) {
 				String number;
@@ -170,7 +170,7 @@ public class AnswerQuestionPage extends Activity {
 				if (result.size() > 0) {
 					number = result.get(0).get("phonenum")[0].toString();
 					SmsManager sm = SmsManager.getDefault();
-					// HERE IS WHERE THE DESTINATION OF THE TEXT SHOULD GO
+					// here is where the destination of the text should go
 					sm.sendTextMessage(number, null, mAnswer, null, null);
 				}
 			}

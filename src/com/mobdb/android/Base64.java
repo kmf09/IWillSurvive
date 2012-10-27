@@ -2,7 +2,7 @@ package com.mobdb.android;
 
 /**
  * <p>Encodes and decodes to and from Base64 notation.</p>
- * <p>Home page: <a href="http://iharder.net/base64">http://iharder.net/base64</a>.</p>
+ * <p>Homepage: <a href="http://iharder.net/base64">http://iharder.net/base64</a>.</p>
  * 
  * <p>Example:</p>
  * 
@@ -1357,8 +1357,7 @@ public class Base64
             else {
                 ois = new java.io.ObjectInputStream(bais){
                    
-                    @SuppressWarnings({ "rawtypes", "unchecked" })
-					public Class resolveClass(java.io.ObjectStreamClass streamClass)
+                    public Class resolveClass(java.io.ObjectStreamClass streamClass)
                     throws java.io.IOException, ClassNotFoundException {
                         Class c = Class.forName(streamClass.getName(), false, loader);
                         if( c == null ){

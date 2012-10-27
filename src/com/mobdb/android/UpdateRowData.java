@@ -12,7 +12,7 @@ import org.json.JSONObject;
  * This Class generate UPDATE SQL query
  * @version 1.0
  */
-@SuppressWarnings({"rawtypes", "unchecked"})
+
 public class UpdateRowData {
 
 	private String query = "UPDATE ";
@@ -125,14 +125,18 @@ public class UpdateRowData {
 			
 		}
 		
+
 		String f =  field + "=?" ;
 		fields.add(f);
+		
 		
 		JSONObject file = new JSONObject();
 		try {
 			file.put( SDKConstants.FILE_NAME, fileNameWithFileExtension );
+			//
 			file.put( SDKConstants.FILE_DATA, com.mobdb.android.Base64.encodeBytes(fileBytes) );
 		} catch (JSONException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		

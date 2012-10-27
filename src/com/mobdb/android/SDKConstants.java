@@ -18,6 +18,7 @@ public class SDKConstants {
 	public static final String QUERY   		 = "query";
 	public static final String PARAM   		 = "param";
 	public static final String BAR_GRAPH     = "bargraph";
+	public static final String ADMIN_KEY     = "admin";
 	public static final String PUSH    		 = "push";
 	public static final String DEVICE_TYPE   = "device";
 	public static final String IOS  		 = "ios";
@@ -55,8 +56,7 @@ public class SDKConstants {
     // package
     public static final String PREFERENCE = "com.google.android.c2dm";
     
-    @SuppressWarnings("unused")
-	private static final long DEFAULT_BACKOFF = 30000;
+    private static final long DEFAULT_BACKOFF = 30000;
   //-------------------END------------------------
     
 }

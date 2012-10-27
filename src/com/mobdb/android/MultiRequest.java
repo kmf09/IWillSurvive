@@ -6,7 +6,6 @@ import java.util.Vector;
  * 
  * @version 1.0
  */
-@SuppressWarnings({"rawtypes", "unchecked"})
 public class MultiRequest {
 	
 	private Vector add = null;

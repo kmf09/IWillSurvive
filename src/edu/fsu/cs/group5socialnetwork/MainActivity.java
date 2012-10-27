@@ -57,7 +57,7 @@ public class MainActivity extends Activity {
 			data.whereEqualsTo("username", mUser);
 			data.andEqualsTo("password", mPass);
 
-			MobDB.getInstance().execute(APP_KEY, data, null, false, new MobDBResponseListener() {
+			MobDB.getInstance().execute(APP_KEY, null, data, null, false, new MobDBResponseListener() {
 				public void mobDBSuccessResponse() { }
 				public void mobDBResponse(Vector<HashMap<String, Object[]>> result) {
 					if (result.size() > 0) {

@@ -27,12 +27,12 @@ public class RegisterActivity extends Activity {
 	EditText mConfirmPassword;
 	EditText mPhoneNumber;
 	EditText mEmailAddress;
-	Boolean booly;
+	Boolean mbooly;
 
 	@Override public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.register_layout);
-		booly = true;
+		mbooly = true;
 	}
 
 	public void myRegisterSubmitHandler(View v){
@@ -60,16 +60,14 @@ public class RegisterActivity extends Activity {
 		final String email = mEmailAddress.getText().toString();
 		invalid(mEmailAddress);
 
-		if (booly == true) {
+		if (mbooly == true) {
 			//Will submit the data that the user submitted to the database that we
 			//have setup so we can use that data later. Should work similar to logging in
 			//after the user has created a valid username.
 			data.whereEqualsTo("username",  username);
 
-			MobDB.getInstance().execute(APP_KEY, data, null, false, new MobDBResponseListener() {
-				public void mobDBSuccessResponse() {
-					//Toast.makeText(RegisterActivity.this, "Username already taken", Toast.LENGTH_SHORT).show();
-				}
+			MobDB.getInstance().execute(APP_KEY, null, data, null, false, new MobDBResponseListener() {
+				public void mobDBSuccessResponse() {}
 				public void mobDBResponse(Vector<HashMap<String, Object[]>> result) {
 					if (result.size() > 0)
 						Toast.makeText(RegisterActivity.this, "Username already taken", Toast.LENGTH_SHORT).show();
@@ -81,7 +79,7 @@ public class RegisterActivity extends Activity {
 						insertRowData.setValue("password",  password);
 						insertRowData.setValue("phonenum",  phone);
 						insertRowData.setValue("emailaddr", email);
-						MobDB.getInstance().execute(APP_KEY, insertRowData, null, false, new MobDBResponseListener() {
+						MobDB.getInstance().execute(APP_KEY, null, insertRowData, null, false, new MobDBResponseListener() {
 							public void mobDBSuccessResponse() {}
 							public void mobDBResponse(Vector<HashMap<String, Object[]>> result) {}
 							public void mobDBResponse(String jsonObj) {}
@@ -97,7 +95,10 @@ public class RegisterActivity extends Activity {
 				}
 				public void mobDBResponse(String jsonObj) {}
 				public void mobDBFileResponse(String fileName, byte[] fileData) {}
-				public void mobDBErrorResponse(Integer errValue, String errMsg) {}
+				public void mobDBErrorResponse(Integer errValue, String errMsg) 
+				{
+					return;
+				}
 			});
 
 			if(first.length() == 0)
@@ -116,27 +117,7 @@ public class RegisterActivity extends Activity {
 				Toast.makeText(this, "Please fill in your phone number", Toast.LENGTH_SHORT).show();
 			else if(email.length() == 0)
 				Toast.makeText(this, "Please fill in your email", Toast.LENGTH_SHORT).show();
-			else { 
-	/*			InsertRowData insertRowData = new InsertRowData(TABLE_NAME);
-				insertRowData.setValue("firstname", first);
-				insertRowData.setValue("lastname",  last);
-				insertRowData.setValue("username",  username);
-				insertRowData.setValue("password",  password);
-				insertRowData.setValue("phonenum",  phone);
-				insertRowData.setValue("emailaddr", email);
-				MobDB.getInstance().execute(APP_KEY, insertRowData, null, false, new MobDBResponseListener() {
-					public void mobDBSuccessResponse() {}
-					public void mobDBResponse(Vector<HashMap<String, Object[]>> result) {}
-					public void mobDBResponse(String jsonObj) {}
-					public void mobDBFileResponse(String fileName, byte[] fileData) {}
-					public void mobDBErrorResponse(Integer errValue, String errMsg) {}
-				});
-
-				Toast.makeText(this, "Thanks for registering!", Toast.LENGTH_SHORT).show();
-
-				Intent myIntent = new Intent(this, FirstCategories.class);
-				startService(myIntent);*/
-			}
+			else {}
 		}
 	}
 
@@ -149,11 +130,11 @@ public class RegisterActivity extends Activity {
 					(str.charAt(i) == '\\') || (str.charAt(i) == ';') || (str.charAt(i) == '-') || 
 					(str.charAt(i) == '#')) {
 				edit.setError("must not contain \', \", /, \\, ;, -, #");
-				booly = false; 
+				mbooly = false; 
 			}
 			else if (str.substring(0).equals("NULL")) {
 				edit.setError("must not contain NULL");
-				booly = false;
+				mbooly = false;
 			}
 		}
 	}
