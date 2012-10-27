@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
@@ -16,7 +17,6 @@ import com.mobdb.android.MobDBResponseListener;
 
 public class MainActivity extends Activity {
 	final String APP_KEY = "66TP6D-1Ss-00L7SKWoWLlKpaduIiUiUMIR-BLUuIiZxZpPSCIAeua";
-	final String TABLE_NAME = "users";
 	
 	EditText mUserName; EditText mPassword;
 	String mPass, mUser; Boolean mBooly; 
@@ -25,6 +25,7 @@ public class MainActivity extends Activity {
 	@Override public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 		mUserName = (EditText)findViewById(R.id.mainUsername);
 		mPassword = (EditText)findViewById(R.id.mainPassword);
 		mCheckBox = (CheckBox)findViewById(R.id.rememberCheck);
@@ -53,6 +54,7 @@ public class MainActivity extends Activity {
 		if (mBooly == true) {
 			//Where we check the two against one another to make sure they work
 			//Then proceed to the categories page
+			String TABLE_NAME = "users";
 			GetRowData data = new GetRowData(TABLE_NAME);
 			data.whereEqualsTo("username", mUser);
 			data.andEqualsTo("password", mPass);

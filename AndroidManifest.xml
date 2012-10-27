@@ -1,4 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:configChanges="keyboardHidden|orientation"
+	android:screenOrientation="portrait" 
     package="edu.fsu.cs.group5socialnetwork"
     android:versionCode="1"
     android:versionName="1.0" >
@@ -25,7 +27,7 @@
         </activity>
         <activity android:name="RegisterActivity"></activity>
         <activity android:name="FirstCategories"></activity>
-        <activity android:name="SecondCompSciCategories"></activity>
+        <activity android:name=".Category"></activity>
         <activity android:name="SecondMathCategories"></activity>
         <activity android:name="SecondScienceCategories"></activity>
         <activity android:name="SecondHistoryCategories"></activity>

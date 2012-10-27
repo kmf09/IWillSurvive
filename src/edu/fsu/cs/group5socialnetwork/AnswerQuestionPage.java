@@ -5,14 +5,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Vector;
-import com.mobdb.android.GetRowData;
 
-import com.mobdb.android.InsertRowData;
-import com.mobdb.android.MobDB;
-import com.mobdb.android.MobDBResponseListener;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.telephony.SmsManager;
 import android.view.View;
@@ -20,6 +17,11 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+
+import com.mobdb.android.GetRowData;
+import com.mobdb.android.InsertRowData;
+import com.mobdb.android.MobDB;
+import com.mobdb.android.MobDBResponseListener;
 
 public class AnswerQuestionPage extends Activity {
 	final String APP_KEY = "66TP6D-1Ss-00L7SKWoWLlKpaduIiUiUMIR-BLUuIiZxZpPSCIAeua";
