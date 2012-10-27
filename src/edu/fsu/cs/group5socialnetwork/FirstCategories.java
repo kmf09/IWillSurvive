@@ -20,19 +20,19 @@ public class FirstCategories extends Activity {
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {	
 				switch( position ) 
 				{
-					case 0:  Intent myIntent = new Intent(getApplicationContext(), Category.class);
+					case 0:  Intent myIntent = new Intent(getApplicationContext(), SecondCompSciCategories.class);
 					myIntent.putExtra("category","Computer Science");
 					startActivity(myIntent);
 					break;
-					case 1:  Intent myIntent1 = new Intent(getApplicationContext(), Category.class);
+					case 1:  Intent myIntent1 = new Intent(getApplicationContext(), SecondMathCategories.class);
 					myIntent1.putExtra("category","Math");
 					startActivity(myIntent1);
 					break;
-					case 2:  Intent  myIntent2 = new Intent(getApplicationContext(), Category.class);
+					case 2:  Intent  myIntent2 = new Intent(getApplicationContext(), SecondScienceCategories.class);
 					myIntent2.putExtra("category","Science");
 					startActivity(myIntent2);
 					break;
-					case 3:  Intent myIntent3 = new Intent(getApplicationContext(), Category.class);
+					case 3:  Intent myIntent3 = new Intent(getApplicationContext(), SecondHistoryCategories.class);
 					myIntent3.putExtra("category","History");
 					startActivity(myIntent3);
 					break;
@@ -41,7 +41,7 @@ public class FirstCategories extends Activity {
 					//will be displayed with Lit stuff and allow users to ask questions
 					startActivity(myIntent4);
 					break;
-					case 5:  Intent myIntent5 = new Intent(getApplicationContext(), Category.class);
+					case 5:  Intent myIntent5 = new Intent(getApplicationContext(), SecondOtherCategories.class);
 					myIntent5.putExtra("subcat", "Other");
 					startActivity(myIntent5);
 					break;
