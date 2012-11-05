@@ -33,6 +33,7 @@ public class AnswerQuestionPage extends Activity {
 
 	@Override public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
+	    // set background
 	    setContentView(R.layout.answerquestionpage);
 	    	     
 	    // get question
