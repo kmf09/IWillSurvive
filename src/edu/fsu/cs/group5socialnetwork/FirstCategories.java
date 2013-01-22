@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
@@ -20,31 +21,30 @@ public class FirstCategories extends Activity {
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {	
 				switch( position ) 
 				{
-					case 0:  Intent myIntent = new Intent(getApplicationContext(), SecondCompSciCategories.class);
+					case 0:  
+						Toast.makeText(FirstCategories.this, "You've clicked edit profile!", Toast.LENGTH_SHORT).show();
+					/*Intent myIntent = new Intent(getApplicationContext(), SecondCompSciCategories.class);
 					myIntent.putExtra("category","Computer Science");
-					startActivity(myIntent);
+					startActivity(myIntent);*/
 					break;
-					case 1:  Intent myIntent1 = new Intent(getApplicationContext(), SecondMathCategories.class);
-					myIntent1.putExtra("category","Math");
-					startActivity(myIntent1);
+					case 1:  
+						Toast.makeText(FirstCategories.this, "You've clicked calculate survival rate!", Toast.LENGTH_SHORT).show();
 					break;
-					case 2:  Intent  myIntent2 = new Intent(getApplicationContext(), SecondScienceCategories.class);
-					myIntent2.putExtra("category","Science");
-					startActivity(myIntent2);
+					case 2:  
+						Toast.makeText(FirstCategories.this, "You've clicked share!", Toast.LENGTH_SHORT).show();
 					break;
-					case 3:  Intent myIntent3 = new Intent(getApplicationContext(), SecondHistoryCategories.class);
-					myIntent3.putExtra("category","History");
-					startActivity(myIntent3);
+					case 3:  
+						Toast.makeText(FirstCategories.this, "You've clicked friend list!", Toast.LENGTH_SHORT).show();
 					break;
-					case 4:  Intent myIntent4 = new Intent(getApplicationContext(), SecondLiteratureCategories.class);
-					//Literature ends after it is selected so it should go right to a page where questions
-					//will be displayed with Lit stuff and allow users to ask questions
-					startActivity(myIntent4);
+					case 4:  
+						Toast.makeText(FirstCategories.this, "You've clicked friend requests!", Toast.LENGTH_SHORT).show();
 					break;
-					case 5:  Intent myIntent5 = new Intent(getApplicationContext(), SecondOtherCategories.class);
-					myIntent5.putExtra("subcat", "Other");
-					startActivity(myIntent5);
+					case 5: 
+						Toast.makeText(FirstCategories.this, "You've clicked account settings!", Toast.LENGTH_SHORT).show();
 					break;
+					case 6: 
+						Toast.makeText(FirstCategories.this, "You've clicked logout!", Toast.LENGTH_SHORT).show();
+						break;
 				}
 			}});
 	}

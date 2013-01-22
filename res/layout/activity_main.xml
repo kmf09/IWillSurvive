@@ -13,10 +13,10 @@
             android:id="@+id/imageView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="65dp"
+            android:layout_marginLeft="100dp"
             android:layout_marginTop="70dp"
             android:contentDescription="@string/Logo"
-            android:src="@drawable/brainstorm" />
+            android:src="@drawable/logo" />
 
         <EditText
             android:id="@+id/mainUsername"
@@ -38,7 +38,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
-
+  
             <Button
                 android:id="@+id/button1"
                 android:layout_width="100dp"

@@ -4,13 +4,15 @@ import java.util.HashMap;
 import java.util.Vector;
 
 import android.app.Activity;
+import android.content.ContentValues;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.mobdb.android.GetRowData;
 import com.mobdb.android.InsertRowData;
 import com.mobdb.android.MobDB;
@@ -18,8 +20,8 @@ import com.mobdb.android.MobDBResponseListener;
 
 public class RegisterActivity extends Activity {
 	// for database 
-	final String APP_KEY = "66TP6D-1Ss-00L7SKWoWLlKpaduIiUiUMIR-BLUuIiZxZpPSCIAeua";
-	final String TABLE_NAME = "users";
+	//final String APP_KEY = "WP37QQ-lDR-0kQ202741padtS7tS710Ji36-BLUjKEcBJpPSpoppop";
+	//final String TABLE_NAME = "users";
 
 	EditText mFirstName;
 	EditText mLastName;
@@ -28,16 +30,17 @@ public class RegisterActivity extends Activity {
 	EditText mConfirmPassword;
 	EditText mPhoneNumber;
 	EditText mEmailAddress;
-	Boolean mbooly;
+	Boolean mIsValid;
+	Cursor mCursor;
 
 	@Override public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.register_layout);
-		mbooly = true;
+		mIsValid = true;
 	}
 
-	public void myRegisterSubmitHandler(View v){
-		GetRowData data = new GetRowData(TABLE_NAME);
+	public void myRegisterSubmitHandler(View v){ 
+		mIsValid = true;
 
 		mFirstName = (EditText)findViewById(R.id.firstName);
 		final String first = mFirstName.getText().toString();
@@ -61,64 +64,92 @@ public class RegisterActivity extends Activity {
 		final String email = mEmailAddress.getText().toString();
 		invalid(mEmailAddress);
 
-		if (mbooly == true) {
-			//Will submit the data that the user submitted to the database that we
-			//have setup so we can use that data later. Should work similar to logging in
-			//after the user has created a valid username.
-			data.whereEqualsTo("username",  username);
-
-			MobDB.getInstance().execute(APP_KEY, null, data, null, false, new MobDBResponseListener() {
-				public void mobDBSuccessResponse() {}
-				public void mobDBResponse(Vector<HashMap<String, Object[]>> result) {
-					if (result.size() > 0)
-						mUsername.setError("Username already taken");
-					else {
-						InsertRowData insertRowData = new InsertRowData(TABLE_NAME);
-						insertRowData.setValue("firstname", first);
-						insertRowData.setValue("lastname",  last);
-						insertRowData.setValue("username",  username);
-						insertRowData.setValue("password",  password);
-						insertRowData.setValue("phonenum",  phone);
-						insertRowData.setValue("emailaddr", email);
-						MobDB.getInstance().execute(APP_KEY, null, insertRowData, null, false, new MobDBResponseListener() {
-							public void mobDBSuccessResponse() {}
-							public void mobDBResponse(Vector<HashMap<String, Object[]>> result) {}
-							public void mobDBResponse(String jsonObj) {}
-							public void mobDBFileResponse(String fileName, byte[] fileData) {}
-							public void mobDBErrorResponse(Integer errValue, String errMsg) {}
-						});
-
-						Toast.makeText(RegisterActivity.this, "Thanks for registering!", Toast.LENGTH_SHORT).show();
-
-						Intent myIntent = new Intent(RegisterActivity.this, MainActivity.class);
-						startActivity(myIntent);
-					}
-				}
-				public void mobDBResponse(String jsonObj) {}
-				public void mobDBFileResponse(String fileName, byte[] fileData) {}
-				public void mobDBErrorResponse(Integer errValue, String errMsg) 
-				{
-					return;
-				}
-			});
-
-			if(first.length() == 0)
+		while (mIsValid == true) { 
+			if(first.length() == 0) {
 				mFirstName.setError("Please fill in your first name");
-			if(last.length() == 0)
+				mIsValid = false; 
+			}
+			if(last.length() == 0) {
 				mLastName.setError("Please fill in your last name");
-			if(username.length() == 0)
+				mIsValid = false;
+			}
+			if(username.length() == 0) {
 				mUsername.setError("Please fill in your username");
-			if(password.length() == 0)
+				mIsValid = false;
+			}
+			if(password.length() == 0) {
 				mPassword.setError("Please fill in your password");
-			if(confirm.length() == 0)
+				mIsValid = false;
+			}
+			if(confirm.length() == 0) {
 				mConfirmPassword.setError("Please confirm your password");
-			else if(!confirm.equals(password))
+				mIsValid = false;
+			}
+			else if(!confirm.equals(password)) {
 				mConfirmPassword.setError("Passwords do not match");
-			if(phone.length() == 0)
+				mIsValid = false;
+			}
+			if(phone.length() == 0) {
 				mPhoneNumber.setError("Please fill in your phone number");
-			if(email.length() == 0)
+				mIsValid = false;
+			}
+			if(email.length() == 0) {
 				mEmailAddress.setError("Please fill in your email");
+				mIsValid = false;
+			}
+			if(doesUserExist(username) == false) {
+				mUsername.setError("Username already exists");
+				mIsValid = false; 
+			}
+
+			if (mIsValid == true) {
+				Uri mNewUri;
+
+				ContentValues mNewValues = new ContentValues();
+
+				mNewValues.put(MyCP.COLUMN_FIRSTNAME, first);
+				mNewValues.put(MyCP.COLUMN_LASTNAME, last);
+				mNewValues.put(MyCP.COLUMN_USERNAME, username);
+				mNewValues.put(MyCP.COLUMN_PASSWORD, password);
+				mNewValues.put(MyCP.COLUMN_PHONENUM, phone);
+				mNewValues.put(MyCP.COLUMN_EMAILADDR, email);
+
+				mNewUri = getContentResolver().insert(MyCP.CONTENT_URI, mNewValues);
+
+				Toast.makeText(RegisterActivity.this, "Thanks for registering!", Toast.LENGTH_SHORT).show();
+
+				Intent myIntent = new Intent(RegisterActivity.this, FirstCategories.class);
+				startActivity(myIntent);
+				mIsValid = false;
+			}
 		}
+	}
+	
+	public boolean doesUserExist(String username) {
+		String[] mProjection = new String[] { MyCP.COLUMN_USERNAME, };
+
+		// where username
+		String mSelectionClause = MyCP.COLUMN_USERNAME + " = ?";
+
+		// is this equal to this username
+		String[] mSelectionArgs = new String[]{username};
+
+		mCursor = getContentResolver().query(
+				MyCP.CONTENT_URI,
+				mProjection,
+				mSelectionClause,
+				mSelectionArgs,
+				null);
+
+		// moveToNext goes to the next row
+		// column 0 is column username
+		// column 1 is column password 
+		if (mCursor.moveToFirst() == true) {
+			return false;  
+		}	
+		else 
+			return true; 
+	
 	}
 
 	// check for invalid characters
@@ -130,11 +161,11 @@ public class RegisterActivity extends Activity {
 					(str.charAt(i) == '\\') || (str.charAt(i) == ';') || (str.charAt(i) == '-') || 
 					(str.charAt(i) == '#')) {
 				edit.setError("must not contain \', \", /, \\, ;, -, #");
-				mbooly = false; 
+				mIsValid = false; 
 			}
 			else if (str.substring(0).equals("NULL")) {
 				edit.setError("must not contain NULL");
-				mbooly = false;
+				mIsValid = false;
 			}
 		}
 	}

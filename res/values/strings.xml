@@ -1,15 +1,16 @@
 <resources>
 
-    <string name="app_name">BrainStorm</string>
+    <string name="app_name">I Will Survive</string>
     <string name="menu_settings">Settings</string>
     
     <string-array name="FirstCategoriesList">
-	<item>Computer Science</item>
-	<item>Math</item>
-	<item>Science</item>
-	<item>History</item>
-	<item>Literature</item>
-	<item>Other</item>
+	<item>Edit Profile</item>
+	<item>Calculate Survival Rate</item>
+	<item>Share</item>
+	<item>Friend List</item>
+	<item>Friend Requests</item>
+	<item>Account Settings</item>
+	<item >Logout</item>
 	</string-array>
 	
     <string-array name="SecondCompSciList">
@@ -43,5 +44,6 @@
     <string name="Register">Register</string>
     <string name="LogIn">Log In</string>
     <string name="rememberMe">Remember Me</string>
+    <string name="authority">co.NoCoffee.provider</string>
 
 </resources>
