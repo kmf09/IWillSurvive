@@ -24,6 +24,12 @@ import com.mobdb.android.MobDB;
 import com.mobdb.android.MobDBResponseListener;
 
 public class AnswerQuestionPage extends Activity {
+	// ************************************************************************* //
+	// ************************ TO NO COFFEE GROUP: **************************** //
+	//THIS IS NOT FOR YOU, IT IS FOR ME JUST IN CASE WE NEED TO USE THIS ACTIVITY//
+	// ******************* IT IS NOT NECESSARY TO TOUCH THIS PAGE ************** // 
+	// ************************************************************************* //
+	
 	final String APP_KEY = "66TP6D-1Ss-00L7SKWoWLlKpaduIiUiUMIR-BLUuIiZxZpPSCIAeua";
 
 	String mQuestion, mAnswer, mUsername;

@@ -16,23 +16,29 @@ import android.widget.Toast;
 import com.mobdb.android.GetRowData;
 
 public class MainActivity extends Activity {
-	//final String APP_KEY = "WP37QQ-lDR-0kQ202741padtS7tS710Ji36-BLUjKEcBJpPSpoppop";
-
+	
+	// global variables
 	EditText mUserName; EditText mPassword;
 	String mPass, mUser; Boolean mIsValid; 
 	CheckBox mCheckBox; 
-
 	Cursor mCursor;
 	CursorAdapter mCursorAdapter;
 
+	// always goes into this function first
 	@Override public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		// create the layout on the screen, the layout is called activity_main
 		setContentView(R.layout.activity_main);
+		// lock the orientation to portrait view
+		// if you try to change to landscape mode the app will not rotate with it
 		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+		
+		// get a handler on these items
 		mUserName = (EditText)findViewById(R.id.mainUsername);
 		mPassword = (EditText)findViewById(R.id.mainPassword);
 		mCheckBox = (CheckBox)findViewById(R.id.rememberCheck);
 
+		// get previously saved information
 		SharedPreferences userDetails = MainActivity.this.getSharedPreferences("userdetails", MODE_WORLD_READABLE);
 		mUser = userDetails.getString("username", "");
 		mUserName.setText(mUser);
@@ -42,21 +48,28 @@ public class MainActivity extends Activity {
 		if (!(mUser.equals("") && mPass.equals("")))
 			mCheckBox.setChecked(true);
 
+		// set the bool to make sure the credentials are valid to true
 		mIsValid = true;
 	}
 
+	// event handler for when you click the "login" button
 	public void myLoginHandler(View v){
 		//Logs the person in if they have a valid username, if not then
 		//they are asked to register, we can test this with a query to the database
 		//we set up with the username's and passwords.
 
 		do {
+			// get the username they typed in
 			mUser = mUserName.getText().toString();
+			// get the password they typed in
 			mPass = mPassword.getText().toString();
+			// if either one of these are invalid then mIsValid will be set to false
+			// and the loop will continue
 			invalid(mUserName);
 			invalid(mPassword);
 
-			query();
+			// checks to make sure the user name is in the database 
+			query(); 
 		} while (mIsValid == false);
 
 		if (mIsValid == true) {
@@ -66,7 +79,7 @@ public class MainActivity extends Activity {
 			GetRowData data = new GetRowData(TABLE_NAME);
 			data.whereEqualsTo("username", mUser);
 			data.andEqualsTo("password", mPass);
-
+ 
 			// save preferences if "Remember Me" is checked
 			if (mCheckBox.isChecked()) {
 				SharedPreferences userDetails = MainActivity.this.getSharedPreferences("userdetails", MODE_WORLD_READABLE);
@@ -86,49 +99,12 @@ public class MainActivity extends Activity {
 		}
 		else
 			Toast.makeText(MainActivity.this, "Invalid username/password. \n Please register or try again.", Toast.LENGTH_SHORT).show();
-
-		/*MobDB.getInstance().execute(APP_KEY, null, data, null, false, new MobDBResponseListener() {
-				public void mobDBSuccessResponse() { }
-				public void mobDBResponse(Vector<HashMap<String, Object[]>> result) {
-					if (result.size() > 0) {
-						Intent myIntent = new Intent(MainActivity.this, FirstCategories.class);
-						startActivity(myIntent);	
-
-						// save preferences if "Remember Me" is checked
-						if (mCheckBox.isChecked()) {
-							SharedPreferences userDetails = MainActivity.this.getSharedPreferences("userdetails", MODE_WORLD_READABLE);
-							Editor edit = userDetails.edit();
-							edit.clear();
-							edit.putString("username", mUser);
-							edit.putString("password", mPass);
-							edit.commit();
-						}
-						// otherwise don't save anything
-						else {
-							SharedPreferences userDetails = MainActivity.this.getSharedPreferences("userdetails", MODE_WORLD_READABLE);
-							Editor edit = userDetails.edit();
-							edit.clear();
-							edit.commit();
-						}
-					}
-					else
-						Toast.makeText(MainActivity.this, "Invalid username/password. \n Please register or try again.", Toast.LENGTH_SHORT).show();
-				}
-				public void mobDBResponse(String jsonObj) {}
-				public void mobDBFileResponse(String fileName, byte[] fileData) {}
-				public void mobDBErrorResponse(Integer errValue, String errMsg) {}
-			});
-		}*/
 	}
 
 	public void query() {
-		String[] mProjection = new String[]
-		                                  {
-				MyCP.COLUMN_USERNAME,
-				MyCP.COLUMN_PASSWORD,
-		                                  };
+		String[] mProjection = new String[] { MyCP.COLUMN_USERNAME, MyCP.COLUMN_PASSWORD, };
 
-		// where username
+		// WHERE username
 		String mSelectionClause = MyCP.COLUMN_USERNAME + " = ?";
 
 		// is this equal to this username
@@ -174,8 +150,11 @@ public class MainActivity extends Activity {
 		}
 	}
 
+	// when you click "register" button
 	public void myRegisterHandler(View v){
+		// set a new intent to go to the RegisterActiivty page
 		Intent myIntent = new Intent(this, RegisterActivity.class);
+		// go!
 		startActivity(myIntent);
 	}
 
