@@ -7,7 +7,18 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/logoutTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:clickable="true"
+            android:onClick="logoutNow"
+            android:text="Logout"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="25px" />
 
         <ImageView
             android:id="@+id/imageView1"
@@ -61,7 +72,19 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:text="@string/rememberMe" />
+            android:text="@string/rememberMe" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:onClick="sendReminder"
+            android:text="Forget?"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="30px" />
+
     </LinearLayout>
 
 </ScrollView>

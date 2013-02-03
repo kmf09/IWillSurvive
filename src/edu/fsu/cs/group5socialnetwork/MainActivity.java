@@ -1,6 +1,5 @@
 package edu.fsu.cs.group5socialnetwork;
 import android.app.Activity;
-import android.content.ContentProvider;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
@@ -11,18 +10,20 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CursorAdapter;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.mobdb.android.GetRowData;
 
 public class MainActivity extends Activity {
-	
+
 	// global variables
 	EditText mUserName; EditText mPassword;
 	String mPass, mUser; Boolean mIsValid; 
 	CheckBox mCheckBox; 
 	Cursor mCursor;
 	CursorAdapter mCursorAdapter;
+	TextView logout; 
 
 	// always goes into this function first
 	@Override public void onCreate(Bundle savedInstanceState) {
@@ -32,11 +33,12 @@ public class MainActivity extends Activity {
 		// lock the orientation to portrait view
 		// if you try to change to landscape mode the app will not rotate with it
 		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-		
+
 		// get a handler on these items
 		mUserName = (EditText)findViewById(R.id.mainUsername);
 		mPassword = (EditText)findViewById(R.id.mainPassword);
 		mCheckBox = (CheckBox)findViewById(R.id.rememberCheck);
+		logout = (TextView)findViewById(R.id.logoutTV);
 
 		// get previously saved information
 		SharedPreferences userDetails = MainActivity.this.getSharedPreferences("userdetails", MODE_WORLD_READABLE);
@@ -79,7 +81,7 @@ public class MainActivity extends Activity {
 			GetRowData data = new GetRowData(TABLE_NAME);
 			data.whereEqualsTo("username", mUser);
 			data.andEqualsTo("password", mPass);
- 
+
 			// save preferences if "Remember Me" is checked
 			if (mCheckBox.isChecked()) {
 				SharedPreferences userDetails = MainActivity.this.getSharedPreferences("userdetails", MODE_WORLD_READABLE);
@@ -174,6 +176,26 @@ public class MainActivity extends Activity {
 			Editor edit = userDetails.edit();
 			edit.clear();
 			edit.commit();
+		}	
+	}
+	
+	public void logoutNow(View v) {
+		Intent intent = new Intent(Intent.ACTION_MAIN);
+		intent.addCategory(Intent.CATEGORY_HOME);
+		startActivity(intent);
+	}
+	
+	public void sendReminder(View v) {
+		Intent i = new Intent(Intent.ACTION_SEND);
+		i.setType("message/rfc822");
+		i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"kmf09@my.fsu.edu"});
+		i.putExtra(Intent.EXTRA_SUBJECT, "subject of email");
+		i.putExtra(Intent.EXTRA_TEXT   , "body of email");
+		try {
+		    startActivity(Intent.createChooser(i, "Send mail..."));
+		} catch (android.content.ActivityNotFoundException ex) {
+		    Toast.makeText(MainActivity.this, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
 		}
+		Toast.makeText(this, "E-mail has been sent", Toast.LENGTH_SHORT).show(); 
 	}
 }

@@ -4,9 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class FirstCategories extends Activity {
 
@@ -23,38 +23,45 @@ public class FirstCategories extends Activity {
 		// by opening the first_list in res/layout
 		// this is the ID in the layout that corresponds: android:id="@+id/listView1"
 		mLV = (ListView) findViewById(R.id.listView1);
-		
+
 		// event handler for when you click on a listView item
 		mLV.setOnItemClickListener(new OnItemClickListener(){
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {	
 				switch( position ) 
 				{
-					case 0:  
-						// a toast prints to the screen the grey box with words in it
-						Toast.makeText(FirstCategories.this, "You've clicked edit profile!", Toast.LENGTH_SHORT).show();
+				case 0:  
+					// a toast prints to the screen the grey box with words in it
+					Toast.makeText(FirstCategories.this, "You've clicked edit profile!", Toast.LENGTH_SHORT).show();
 					/*Intent myIntent = new Intent(getApplicationContext(), SecondCompSciCategories.class);
 					myIntent.putExtra("category","Computer Science");
 					startActivity(myIntent);*/
 					break;
-					case 1:  
-						Toast.makeText(FirstCategories.this, "You've clicked calculate survival rate!", Toast.LENGTH_SHORT).show();
+				case 1:  
+					Toast.makeText(FirstCategories.this, "You've clicked calculate survival rate!", Toast.LENGTH_SHORT).show();
 					break;
-					case 2:  
-						Toast.makeText(FirstCategories.this, "You've clicked share!", Toast.LENGTH_SHORT).show();
+				case 2:  
+					Toast.makeText(FirstCategories.this, "You've clicked share!", Toast.LENGTH_SHORT).show();
 					break;
-					case 3:  
-						Toast.makeText(FirstCategories.this, "You've clicked friend list!", Toast.LENGTH_SHORT).show();
+				case 3:  
+					Toast.makeText(FirstCategories.this, "You've clicked friend list!", Toast.LENGTH_SHORT).show();
 					break;
-					case 4:  
-						Toast.makeText(FirstCategories.this, "You've clicked friend requests!", Toast.LENGTH_SHORT).show();
+				case 4:  
+					Toast.makeText(FirstCategories.this, "You've clicked friend requests!", Toast.LENGTH_SHORT).show();
 					break;
-					case 5: 
-						Toast.makeText(FirstCategories.this, "You've clicked account settings!", Toast.LENGTH_SHORT).show();
+				case 5: 
+					Toast.makeText(FirstCategories.this, "You've clicked account settings!", Toast.LENGTH_SHORT).show();
 					break;
-					case 6: 
-						Toast.makeText(FirstCategories.this, "You've clicked logout!", Toast.LENGTH_SHORT).show();
-						break;
+				case 6: 
+					leave(); 
+					break;
 				}
 			}});
+	}
+
+	// exit application
+	public void leave() {
+		Intent intent = new Intent(Intent.ACTION_MAIN);
+		intent.addCategory(Intent.CATEGORY_HOME);
+		startActivity(intent);
 	}
 }
