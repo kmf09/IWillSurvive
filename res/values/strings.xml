@@ -2,42 +2,39 @@
 
     <string name="app_name">I Will Survive</string>
     <string name="menu_settings">Settings</string>
-    
+
     <string-array name="FirstCategoriesList">
-	<item>Edit Profile</item>
-	<item>Calculate Survival Rate</item>
-	<item>Share</item>
-	<item>Friend List</item>
-	<item>Friend Requests</item>
-	<item>Account Settings</item>
-	<item >Logout</item>
-	</string-array>
-	
+        <item>Edit Profile</item>
+        <item>Calculate Survival Rate</item>
+        <item>Share</item>
+        <item>Friend List</item>
+        <item>Friend Requests</item>
+        <item>Account Settings</item>
+        <item>Logout</item>
+    </string-array>
     <string-array name="SecondCompSciList">
-    <item>Mobile Programming</item>    
-    <item>C++ Programming</item>
-    <item>Web Development</item>
-    <item>Theory of Computation</item>
+        <item>Mobile Programming</item>
+        <item>C++ Programming</item>
+        <item>Web Development</item>
+        <item>Theory of Computation</item>
     </string-array>
-    
     <string-array name="SecondMathList">
-    <item>Discrete Math</item>    
-    <item>Calculus</item>
-    <item>Algebra</item>
-    <item>Trigonometry</item>
+        <item>Discrete Math</item>
+        <item>Calculus</item>
+        <item>Algebra</item>
+        <item>Trigonometry</item>
     </string-array>
-    
     <string-array name="SecondScienceList">
-    <item>Physics</item>    
-    <item>Chemistry</item>
-    <item>Biology</item>
+        <item>Physics</item>
+        <item>Chemistry</item>
+        <item>Biology</item>
     </string-array>
-    
     <string-array name="SecondHistoryList">
-    <item>US History</item>    
-    <item>World History</item>
-    <item>History of the Americas</item>
+        <item>US History</item>
+        <item>World History</item>
+        <item>History of the Americas</item>
     </string-array>
+
     <string name="Logo">Logo</string>
     <string name="Username">Username</string>
     <string name="Password">Password</string>
@@ -45,5 +42,7 @@
     <string name="LogIn">Log In</string>
     <string name="rememberMe">Remember Me</string>
     <string name="authority">co.NoCoffee.provider</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_profile">Profile</string>
 
 </resources>
