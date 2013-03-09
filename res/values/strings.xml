@@ -44,5 +44,7 @@
     <string name="authority">co.NoCoffee.provider</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_profile">Profile</string>
+    <string name="title_activity_question">Question</string>
+    <string name="title_activity_answer">Answer</string>
 
 </resources>
