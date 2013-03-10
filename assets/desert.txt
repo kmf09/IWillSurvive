@@ -41,7 +41,7 @@ Of course! I'm like McGyver 3*
 
 what would you use for firewood?*
 what about that stuff from my pack I just threw away? 3*
-a cactus… it's a desert there aren't any real trees 2*
+a cactusï¿½ it's a desert there aren't any real trees 2*
 whatever I didn't eat for dinner 4*
 I wouldn't build a fire, it's hot 1*
 
@@ -69,8 +69,20 @@ yep, I used to grow them in my backyard	4*
 doesn't matter I found a creosote bush 2*
 everyone knows the Opuntia plant can cure almost anything 2*
 
-It's been a while since you've had water…*
+It's been a while since you've had water*
 cut open a cactus 3*
 find some food, desert animals are thick in water 2*
 make a solar still 4*
 dig a hole, there's a high water table 1*
+
+Is that a scorpion?*
+where? I can't recognize venomous creatures 1*
+let's get closer, 'red and yellow kills a fellow' 2*
+to late, I ran away 3*
+yes, but I can avoid them 4* 
+
+The scorpion got you. Your immediate thought is *
+I'm going to die 0*
+I need a tourniquet 1*
+Do you think I have something in my pack for this? 4*
+I'll suck the venom out 1*
