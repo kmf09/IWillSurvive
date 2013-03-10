@@ -1,88 +1,147 @@
 ability to locate  animals in the wild*
-I let them come to me 0*
-I plan on finding a hospitable place and waiting 3*
-I'll wander because I don't have a lot of hunting skills 1*
-I can track like a bloodhound 2*
+I let them come to me*
+0*
+I plan on finding a hospitable place and waiting*
+3*
+I'll wander because I don't have a lot of hunting skills*
+1*
+I can track like a bloodhound*
+2*
 
 ability to catch animals in the wild*
-I have a knife and a stick, what more do I need? 3*
-I can build snares and traps 4*
-I don't catch animals, I'm a vegetarian	1*
-I will scavenge 2*
+I have a knife and a stick, what more do I need?*
+3*
+I can build snares and traps* 
+4*
+I don't catch animals, I'm a vegetarian*
+1*
+I will scavenge* 
+2*
 
 You're going hunting', what sort of animals do you expect to find ?*
-some sheep , maybe a few deer 3*
-birds of prey 2*
-snakes , rats , lizards, and other gross things 3*
-I've got some stuff in my pack I'll live off of 1*
+some sheep , maybe a few deer* 
+3*
+birds of prey* 
+2*
+snakes , rats , lizards, and other gross things* 
+3*
+I've got some stuff in my pack I'll live off of* 
+1*
 
 which plants would you eat?* 
-I wouldn't. A lot of them are low in nutrients or toxic 1*
-there aren't enough plants, I'll focus on something else 3*
-I have no knowledge of plants I wouldn't eat any 2*
-I know a bit, I'd try to eat as many as I could 4*
+I wouldn't. A lot of them are low in nutrients or toxic* 
+1*
+there aren't enough plants, I'll focus on something else* 
+3*
+I have no knowledge of plants I wouldn't eat any* 
+2*
+I know a bit, I'd try to eat as many as I could* 
+4*
 
 you're on your own for shelter.*
-use the thick ( and water proof ) tarp in your pack to build a fort 4*
-try and find some shelter 2*
-start swinging at cacti with your knife until you can build one 1*
-there is no hope for shelter, use the energy on finding water 3*
+use the thick ( and water proof ) tarp in your pack to build a fort* 
+4*
+try and find some shelter* 
+2*
+start swinging at cacti with your knife until you can build one* 
+1*
+there is no hope for shelter, use the energy on finding water*
+3*
 
 your pack is heavy and not entirely useful. What is least important and can be discarded?*
-plastic whistle 3*
-compressed trioxide fuel 2*
-magnetic compass 1*
-insect headnet 4*
+plastic whistle* 
+3*
+compressed trioxide fuel* 
+2*
+magnetic compass* 
+1*
+insect headnet*
+4*
 
 what about fire?* 
-that's a jimi henrick's song right? 1*
-I could start one if I had a match/lighter 2*
-Of course! I'm like McGyver 3*
+that's a jimi henrick's song right?* 
+1*
+I could start one if I had a match/lighter* 
+2*
+Of course! I'm like McGyver*
+3*
 
 what would you use for firewood?*
-what about that stuff from my pack I just threw away? 3*
-a cactus� it's a desert there aren't any real trees 2*
-whatever I didn't eat for dinner 4*
-I wouldn't build a fire, it's hot 1*
+what about that stuff from my pack I just threw away?* 
+3*
+a cactus� it's a desert there aren't any real trees* 
+2*
+whatever I didn't eat for dinner* 
+4*
+I wouldn't build a fire, it's hot* 
+1*
 
 cacti are sharp! Will you suck up that flesh wound and rub some dirt in it or pull out the first aid?*
-yes, after I finish crying 1*
-it could get infected, it's good to be safe 4*
-nah, I don't think many cacti are that harmful 3*
-if by first aid you mean rubbing some dirt in it then yes 2*
+yes, after I finish crying*
+1*
+it could get infected, it's good to be safe* 
+4*
+nah, I don't think many cacti are that harmful* 
+3*
+if by first aid you mean rubbing some dirt in it then yes* 
+2*
 
 The dessert is sparse in life in general how well can you navigate with a compass/stars?*
-it get's cold at night, you don't want to be moving around 1*
-forget the cold and worry about the wildlife 2*
-better cold than hot I'll risk my limited knowledge of the north star 3*
-I know enough to conquer a Jeopardy category 4*
+it get's cold at night, you don't want to be moving around* 
+1*
+forget the cold and worry about the wildlife* 
+2*
+better cold than hot I'll risk my limited knowledge of the north star* 
+3*
+I know enough to conquer a Jeopardy category* 
+4*
 
 I hope you brought some sunscreen or at least not a ginger.*
-I'm fine with getting skin cancer, I need to be searching for water 2*
-that's why I'm hiding under my shelter all day 3*
-there are some plants which provide a canopy 1*
-with my packs supplies I can be protected from the sun 4*
+I'm fine with getting skin cancer, I need to be searching for water* 
+2*
+that's why I'm hiding under my shelter all day* 
+3*
+there are some plants which provide a canopy* 
+1*
+with my packs supplies I can be protected from the sun *
+4*
 
 Can you recognize that Aloe Vera without the fancy supermarket bottle? what about other plants?*
-I thought that was a fabricated chemical 1*
-yep, I used to grow them in my backyard	4*
-doesn't matter I found a creosote bush 2*
-everyone knows the Opuntia plant can cure almost anything 2*
+I thought that was a fabricated chemical* 
+1*
+yep, I used to grow them in my backyard*  
+4*
+doesn't matter I found a creosote bush *
+2*
+everyone knows the Opuntia plant can cure almost anything *
+2*
 
 It's been a while since you've had water*
-cut open a cactus 3*
-find some food, desert animals are thick in water 2*
-make a solar still 4*
-dig a hole, there's a high water table 1*
+cut open a cactus *
+3*
+find some food, desert animals are thick in water* 
+2*
+make a solar still* 
+4*
+dig a hole, there's a high water table* 
+1*
 
 Is that a scorpion?*
-where? I can't recognize venomous creatures 1*
-let's get closer, 'red and yellow kills a fellow' 2*
-to late, I ran away 3*
-yes, but I can avoid them 4* 
+where? I can't recognize venomous creatures* 
+1*
+let's get closer, 'red and yellow kills a fellow'* 
+2*
+to late, I ran away*
+3*
+yes, but I can avoid them* 
+4* 
 
-The scorpion got you. Your immediate thought is *
-I'm going to die 0*
-I need a tourniquet 1*
-Do you think I have something in my pack for this? 4*
-I'll suck the venom out 1*
+The scorpion got you. Your immediate thought is*
+I'm going to die* 
+1*
+I'm bigger than a snake, I'll be alright* 
+3*
+Do you think I have something in my pack for this?*
+4*
+I'll suck the venom out*
+2*
