@@ -4,21 +4,14 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 
-public class Answer extends Activity {
+public class Answer {
 	String answerString;
 	int points; 
 	
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_answer);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.activity_answer, menu);
-        return true;
-    }
+	public Answer(String ans, int pointValue) {
+		setAnswerString(ans);
+		setPoints(pointValue);
+	}
     
     public void setAnswerString(String ans) {
     	answerString = ans; 

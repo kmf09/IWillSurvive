@@ -1,26 +1,30 @@
 package edu.fsu.cs.group5socialnetwork;
 
-import android.app.Activity;
-import android.os.Bundle;
-import android.view.Menu;
+import java.util.ArrayList;
+import java.util.List;
 
-public class Question extends Activity {
-	Answer mAnswer[];
-	int points_awarded; 
+public class Question {
+	ArrayList<Answer> mAnswers;
+	String mQuestionValue; 
+	int mPoints_awarded; 
 	
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_question); 
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.activity_question, menu);
-        return true;
+	public Question() {
+		mAnswers = new ArrayList<Answer>(); 
+	}
+    
+    public void setQuestion(String question) {
+    	mQuestionValue = question; 
     }
     
-    public void setAnswer() {
-    	// This was where I got confused - Katrina
+    public String getQuestion() {
+    	return mQuestionValue;
+    }
+    
+    public void addAnswer(String ans, int pointValue) {
+    	mAnswers.add(new Answer(ans, pointValue)); 
+    }
+    
+    public List<Answer> getAnswers() {
+    	return mAnswers; 
     }
 }
