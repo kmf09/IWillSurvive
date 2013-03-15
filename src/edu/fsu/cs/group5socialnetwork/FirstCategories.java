@@ -30,8 +30,6 @@ public class FirstCategories extends Activity {
 				switch( position ) 
 				{
 				case 0:  
-					// a toast prints to the screen the grey box with words in it
-					Toast.makeText(FirstCategories.this, "You've clicked edit profile!", Toast.LENGTH_SHORT).show();
 					Intent myIntent = new Intent(getApplicationContext(), Profile.class);
 					startActivity(myIntent);
 					/*Intent myIntent = new Intent(getApplicationContext(), SecondCompSciCategories.class);

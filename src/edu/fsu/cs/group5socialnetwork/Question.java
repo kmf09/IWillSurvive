@@ -27,4 +27,8 @@ public class Question {
     public List<Answer> getAnswers() {
     	return mAnswers; 
     }
+    
+    public String getAnswer(int answerNum) {
+    	return mAnswers.get(answerNum).getAnswerString(); 
+    }
 }
