@@ -39,7 +39,7 @@ public class Profile extends Activity {
 	}
 
 	public void addQuestionAnswersToActivity() {
-		int aNum = 0;
+		int aNum = 0, totalPointsAwarded = 0;
 		// Error checking
 		if (mQNum < mQuestion.size()) {
 			mQtv.setText(mQuestion.get(mQNum).getQuestion());
@@ -47,14 +47,18 @@ public class Profile extends Activity {
 			mAns2.setText(mQuestion.get(mQNum).getAnswer(++aNum));
 			mAns3.setText(mQuestion.get(mQNum).getAnswer(++aNum));
 			mAns4.setText(mQuestion.get(mQNum).getAnswer(++aNum));
-			
+
 			mAns1.setChecked(false);
 			mAns2.setChecked(false);
 			mAns3.setChecked(false);
 			mAns4.setChecked(false);
 		}
-		else
-			Toast.makeText(this, "The End!", Toast.LENGTH_SHORT).show();
+		else {
+			// Calculate total points awarded
+			for (int i = 0; i < mQuestion.size(); i++)
+				totalPointsAwarded += mQuestion.get(i).mPoints_awarded;  
+			Toast.makeText(this, "This is your points awarded:" + totalPointsAwarded, Toast.LENGTH_SHORT).show();
+		}
 	}
 
 	// When answer radio button is pressed
@@ -63,21 +67,29 @@ public class Profile extends Activity {
 			mAns2.setChecked(false);
 			mAns3.setChecked(false);
 			mAns4.setChecked(false);
+			mQuestion.get(mQNum).mPoints_awarded = mQuestion.get(mQNum).getAnswerVal(0);
+			Toast.makeText(this, "AnswerVal: " + mQuestion.get(mQNum).getAnswerVal(0), Toast.LENGTH_SHORT).show(); 
 		}
 		else if (v.getId() == mAns2.getId()) {
 			mAns1.setChecked(false);
 			mAns3.setChecked(false);
 			mAns4.setChecked(false);
+			mQuestion.get(mQNum).mPoints_awarded = mQuestion.get(mQNum).getAnswerVal(1);
+			Toast.makeText(this, "AnswerVal: " + mQuestion.get(mQNum).getAnswerVal(1), Toast.LENGTH_SHORT).show();
 		}
 		else if (v.getId() == mAns3.getId()) {
 			mAns1.setChecked(false);
 			mAns2.setChecked(false);
 			mAns4.setChecked(false);
+			mQuestion.get(mQNum).mPoints_awarded += mQuestion.get(mQNum).getAnswerVal(2);
+			Toast.makeText(this, "AnswerVal: " + mQuestion.get(mQNum).getAnswerVal(2), Toast.LENGTH_SHORT).show();
 		}
 		else if (v.getId() == mAns4.getId()) {
 			mAns1.setChecked(false);
 			mAns2.setChecked(false);
 			mAns3.setChecked(false);
+			mQuestion.get(mQNum).mPoints_awarded += mQuestion.get(mQNum).getAnswerVal(3);
+			Toast.makeText(this, "AnswerVal: " + mQuestion.get(mQNum).getAnswerVal(3), Toast.LENGTH_SHORT).show();
 		}
 	}
 

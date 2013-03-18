@@ -1,29 +1,23 @@
 package edu.fsu.cs.group5socialnetwork;
 
-import java.util.HashMap;
-import java.util.Vector;
-
 import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.SpannableStringBuilder;
+import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-import com.mobdb.android.GetRowData;
-import com.mobdb.android.InsertRowData;
-import com.mobdb.android.MobDB;
-import com.mobdb.android.MobDBResponseListener;
 
 public class RegisterActivity extends Activity {
 	EditText mFirstName, mLastName, mUsername, 
 			 mPassword, mConfirmPassword, mPhoneNumber, mEmailAddress;
 	Boolean mIsValid;
 	Cursor mCursor;
-
+ 
 	// comes to this function first
 	@Override public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -35,6 +29,9 @@ public class RegisterActivity extends Activity {
 
 	// when you press "submit"
 	public void myRegisterSubmitHandler(View v){
+		// For setting the text of the error message 
+		SpannableStringBuilder ssbuilder; 
+		
 		// reset mIsValid
 		mIsValid = true;
 
@@ -72,42 +69,52 @@ public class RegisterActivity extends Activity {
 		while (mIsValid == true) {
 			// there's nothing in first name
 			if(first.length() == 0) {
-				// send out an error message
-				mFirstName.setError("Please fill in your first name");
+				// Set error color text
+				// send out an error mesasge 
+				ssbuilder = setErrorColor("Please enter first name");
 				// this makes it not valid
+				mFirstName.setError(ssbuilder);
 				mIsValid = false; 
 			}
 			// must be all if's to have more than one red flag at the same time
 			if(last.length() == 0) {
-				mLastName.setError("Please fill in your last name");
+				ssbuilder = setErrorColor("Please enter last name"); 
+				mLastName.setError(ssbuilder);
 				mIsValid = false;
 			}
 			if(username.length() == 0) {
-				mUsername.setError("Please fill in your username");
+				ssbuilder = setErrorColor("Please enter username"); 
+				mUsername.setError(ssbuilder);
 				mIsValid = false;
 			}
 			if(password.length() == 0) {
-				mPassword.setError("Please fill in your password");
+				ssbuilder = setErrorColor("Please enter password"); 
+				mPassword.setError(ssbuilder);
 				mIsValid = false;
 			}
 			if(confirm.length() == 0) {
-				mConfirmPassword.setError("Please confirm your password");
+				ssbuilder = setErrorColor("Please confirm password"); 
+				mConfirmPassword.setError(ssbuilder);
 				mIsValid = false;
 			}
 			else if(!confirm.equals(password)) {
-				mConfirmPassword.setError("Passwords do not match");
+				ssbuilder = setErrorColor("Passwords do not match"); 
+				mConfirmPassword.setError(ssbuilder);
 				mIsValid = false;
 			}
 			if(phone.length() == 0) {
-				mPhoneNumber.setError("Please fill in your phone number");
+				ssbuilder = setErrorColor("Please enter phone number"); 
+				mPhoneNumber.setError(ssbuilder);
 				mIsValid = false;
 			}
 			if(email.length() == 0) {
-				mEmailAddress.setError("Please fill in your email");
+				ssbuilder = setErrorColor("Please enter email"); 
+				mEmailAddress.setError(ssbuilder);
 				mIsValid = false;
 			}
 			if(doesUserExist(username) == false) {
-				mUsername.setError("Username already exists");
+				ssbuilder = setErrorColor("Username already exists"); 
+				mUsername.setError(ssbuilder);
 				mIsValid = false; 
 			}
 
@@ -138,6 +145,14 @@ public class RegisterActivity extends Activity {
 				mIsValid = false;
 			}
 		}
+	}
+	
+	public SpannableStringBuilder setErrorColor(String estring) {
+		int ecolor = -16777216; // whatever color you want
+		ForegroundColorSpan fgcspan = new ForegroundColorSpan(ecolor);
+		SpannableStringBuilder ssbuilder = new SpannableStringBuilder(estring);
+		ssbuilder.setSpan(fgcspan, 0, estring.length(), 0);
+		return ssbuilder; 
 	}
 	
 	public boolean doesUserExist(String username) {

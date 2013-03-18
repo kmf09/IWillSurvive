@@ -31,4 +31,8 @@ public class Question {
     public String getAnswer(int answerNum) {
     	return mAnswers.get(answerNum).getAnswerString(); 
     }
+    
+    public int getAnswerVal(int answerNum) {
+    	return mAnswers.get(answerNum).getPoints();
+    }
 }
