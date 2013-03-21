@@ -1,0 +1,119 @@
+Is that heat stroke? Which of the following is not a symptom?*
+dizziness and light-headedness*
+1
+red, hot, and dry skin
+3
+dehydration
+4
+throbbing headache
+2@Food is important. What would you plan on eating?*
+I'll catch some animals
+1
+eat some back and acorns there are a lot of trees here
+4
+rabbit food like flowers and seeds
+3
+fruit from the trees
+2@Is there anything you should avoid?
+not a whole lot is toxic here
+3
+Redbud
+2
+White oak
+1
+Dogwood
+4@Do you plan on building a shelter?
+Nope, the trees are enough protection
+1
+I'll find a home somewhere
+3
+There are leaves and branches to build one
+4
+I'll use the low lying canopy 
+2@Are you thirsty yet?
+I'll build a solar still
+2
+I'll find a lake or something
+4
+I'll catch the rain
+3
+I'll get it from my diet
+1@How safe do you think this water is?
+It isn't I have to sterilize everything
+3
+It probably won't kill me to not purify it
+4
+If it's good enough for the animals, it's good enough to me
+2
+I shouldn't drink the water
+1@Bambi's mom has been sighted!
+I'm a vegetarian. I couldn't
+1
+I have no hunting experience
+2
+I'll build a snare!
+3
+I'm already reaching for my makeshift spear.
+4@This pack is heavy, let's trash one item.
+snare wire
+2
+sleeping bag
+1
+waterproof matches
+3
+fishing kit
+4@Someone's done work for you. What should you take?
+a prepared bundle of firewood
+3
+a cooked deer
+4
+two gallons of water
+2
+nothing
+1@This pack doesn't have any allergy medicine. 
+That's ok, I have none.
+4
+I'm only allergic to pollen.
+3
+As long as I avoid the animals fur and dander I'll be ok.
+2@Looks like there's some dark clouds overhead
+Good, I can catch some water
+2
+I should find shelter in case it's a bad storm
+3
+I can read clouds pretty well. I'm not worried.
+4
+How would I know with all these trees?
+1@Is that poison ivy?
+If I get closer I might be able to check.
+2
+I'll just avoid it.
+3
+I'm a wilderness plant expert, you should have asked sooner.
+4
+You're asking the wrong person. 
+1@There are some animal tracks on the ground, but they've been squished. What animal could it not be?
+Fox
+2
+Bear
+3
+Rabbit
+1
+Panther
+4@It'd be disappointing to get this far and then to get rabies. Which mammal won't give it to you?
+Fox
+2
+Bat
+3
+Skunk
+1
+Squirrel
+4@You've managed to secure some food, but can you protect it?
+The animals are more afraid of me than I am of them. I don't need protection.
+1
+I can build a snare, then I'll have more food.
+2
+I can hang my food from a tree.
+4
+I'll place it by the fire. The animals will avoid that area.
+3
