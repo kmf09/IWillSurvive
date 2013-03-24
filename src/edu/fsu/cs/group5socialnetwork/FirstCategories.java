@@ -37,21 +37,15 @@ public class FirstCategories extends Activity {
 					startActivity(myIntent);*/
 					break;
 				case 1:  
-					Toast.makeText(FirstCategories.this, "You've clicked calculate survival rate!", Toast.LENGTH_SHORT).show();
+					Toast.makeText(FirstCategories.this, "You've clicked pick a location!", Toast.LENGTH_SHORT).show();
 					break;
 				case 2:  
-					Toast.makeText(FirstCategories.this, "You've clicked share!", Toast.LENGTH_SHORT).show();
+					Toast.makeText(FirstCategories.this, "You've clicked settings!", Toast.LENGTH_SHORT).show();
 					break;
 				case 3:  
 					Toast.makeText(FirstCategories.this, "You've clicked friend list!", Toast.LENGTH_SHORT).show();
 					break;
 				case 4:  
-					Toast.makeText(FirstCategories.this, "You've clicked friend requests!", Toast.LENGTH_SHORT).show();
-					break;
-				case 5: 
-					Toast.makeText(FirstCategories.this, "You've clicked account settings!", Toast.LENGTH_SHORT).show();
-					break;
-				case 6: 
 					leave(); 
 					break;
 				}

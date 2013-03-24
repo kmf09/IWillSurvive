@@ -4,13 +4,10 @@
     <string name="menu_settings">Settings</string>
 
     <string-array name="FirstCategoriesList">
-        <item>Edit Profile</item>
-        <item>Calculate Survival Rate</item>
-        <item>Share</item>
-        <item>Friend List</item>
-        <item>Friend Requests</item>
-        <item>Account Settings</item>
-        <item>Logout</item>
+        <item>User Profile</item>
+        <item>Pick a Location</item>
+        <item>Settings</item>
+        <item >Logout</item>
     </string-array>
     <string-array name="SecondCompSciList">
         <item>Mobile Programming</item>
