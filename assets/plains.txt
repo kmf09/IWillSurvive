@@ -1,0 +1,121 @@
+You can see for miles. But you can't really see anything. What will you eat?
+Burrowing animals
+3
+Birds
+4
+Bison/Buffalo
+2
+Plants
+1@Great, but how are you going to acquire this food?
+I'll build snares.
+4
+I'll scavenge from other animals.
+2
+I'll make a spear.
+3
+I just said I wasn't going to hunt.
+1@A balanced diet is the best one. But which animal won't you find on the Plains?
+Brown Bear
+2
+Pronghorn deer
+1
+Bison
+3
+Whitetail snapper
+4@You lost your plant guide. What do you know about plants? 
+There's nothing really toxic here. 
+1
+It may not be toxic but it's not really edible anyway. 
+2
+There are a few needles and grains that have nutrients. 
+4
+Flowers and weeds are always a safe bet. 
+3@You have some items in your pack which is the least useful? 
+A 7x7 foot tarp
+1
+Sunburn protective cream 
+3
+Frying pan
+2
+Insect headnet
+4@Before it gets dark you should build a shelter. How do you want to do this?
+I'll weave grass together
+2
+I'll create a mud/grass hut with the reeds
+3
+There isn't enough hazardous conditions to need one
+1
+I really just need a tarp over my head 
+4@The aquifer is scattered and ranges in depth below the ground. But what does that mean for you?
+I'll dig for clean water.
+3
+I can probably find a stream or pond.
+4
+I'll catch precipitation.
+1
+I'll rely on my solar still.
+4@Now that you found water, will you drink it?
+Nope, I'll get water from my food. 
+1
+I'll distill it first.
+4
+It's fine to drink, it's from the aquifer. 
+2
+I'll heat it first.
+3@With all of this water floating around. Should you be worried about quicksand?
+They occur in wet land I'll be alright
+2
+Nope, the ground is to hard here. 
+1
+Definitely, with all of this water
+3
+Not really, I'll be careful
+4@What do you do if you fall into a quicksand pit?
+Swim out
+1
+Float on your back 
+4
+Do nothing, it's probably only a few feat deep
+3
+Drop all your stuff
+2@What would you do if you saw a blowout?
+Play mini-golf on it
+1
+Use it as a shelter
+4
+Move on it's useless
+3
+Dig for water
+2@It gets a little cold at night. Can you make a fire?
+I could burn some grass.
+4
+Not a good idea this whole place is a fire hazard.
+2
+I won't have anything to cook.
+1
+I have some matches.
+3@You've gotten sunburnt. What should you do?
+Drink lots more water. 
+4
+Apply a cool compress. 
+3
+There isn't anything you can do. 
+1
+Take ibuprofen. 
+2@You're on the edge of Tornado Alley, can you detect one?
+If I see the Wizard of Oz I'm in trouble.
+1
+Green clouds
+2
+Listening for a loud consistent sound
+4
+Checking for thunderstorms
+3@Even if you can detect a tornado, do you know what to do?
+Lie at low ground
+4
+Stay in your shelter
+2
+Start Running
+1
+try and tie yourself to the ground
+3
