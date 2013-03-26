@@ -1,0 +1,121 @@
+You've been here for 10 minutes and there's an alligator. What do you do? 
+Run away! ( in a zig zag or diagonal motion ) 
+2
+Run away! ( in a straight line )
+4
+Climb a tree
+1
+Nothing, it'll leave me alone if I leave it alone.
+3@Speaking of gators, you found a nest of eggs. Should you take them? 
+Yea, they'll be good for dinner. 
+1
+They make good firewood. 
+2
+Better leave them be. 
+3
+I should use them for bait.
+4@Sawgrass dominates this area. Do you know anything useful about it? 
+It's sharp… unlike my knowledge of it.
+2
+Bear Grylls ate it, so can I.
+1
+Bear Grylls ate it, so I won't.
+4
+Smokey the Bear says it can start wildfires.
+3@Now that you have food what are you going to do with it?
+Make some sushi.
+1
+Plants can be eaten raw. 
+2
+I'll cook over a fire.
+3
+I'll bake it under a fire.
+4@The Everglades don't sleep, but you do. Do you have a plan for a shelter?
+Its super hot, I'm not building a shelter. 
+1
+I can weave together some of this useless sawgrass. 
+3
+I'll try and build something out of tree branches and my tarp. 
+4
+I don't need one as long as I have dry land.
+2@Being surrounded by all this water is making you thirsty. Can you drink it?
+It's actually not dirty, there's no need to worry. 
+1
+I'll use my pack's purifiers.
+2
+I've got that handy solar still remember?
+4
+I'll catch rain water.
+3@Looks like there are some smudged animals tracks. What do you think it is?
+If I cared I might be able to tell you. 
+1
+Probably an alligator, but maybe a crocodile. 
+2
+Some small animal. AKA Dinner
+4
+Large animals like deer and panthers are pretty common.
+3@You're surrounded by water, but will you drink it?
+Nope, the Everglades are linked to the ocean. It's pretty salty.
+2
+Most water is runoff from the rain, it's safe.
+4
+The water is to hot, it has diseases.
+3
+Contamination from pesticides makes it unsafe.
+1@Can you spot a venomous snake? 
+Red and yellow kills a fellow, right?
+4
+If it's colorful, I'll avoid it.
+2
+I probably wouldn't see a snake until it was on top of me.
+3
+I plan on avoiding all watery areas to avoid them.
+1@Just in case, what do you do if a snake bites you?
+Panic and start digging your grave.
+2
+Suck the poison out. 
+1
+Let the venom bleed out.
+3
+Make a constriction band.
+4@How well can you make your own tools?
+Snake skin makes a good rope.
+4
+Gator skin can be used as a protective layer. 
+3
+Turtle shells can be used for hunting and hand-held tools.
+2
+Deer hide can be tanned for multiple purposes.
+1@Mosquitos often carry diseases and can be a nuisance. What will attract the nasty bugs?
+A low body temperature
+2
+Light colors
+1
+Carbon Dioxide
+4
+Moisture
+3@Florida sun is notoriously hot. What will you do to avoid it?
+I'll drink a lot of water.
+2
+I'll use my sun cream.
+3 
+I'll hide under my shelter.
+4
+I'll create a mud paste.
+1@Are you worried about sinking in the mud? 
+A little only because there could be dangerous animals
+3
+Quicksand is a large possibility 
+1
+Not at all, there's to much water
+4
+Mud is dirty and can ruin my tools
+2@It's Hurricane Season. What is not a good idea during a storm?
+Getting to high ground. 
+3
+Hiding out in your shelter.
+1
+Hiding in a hole
+2
+Staying in the water
+4
