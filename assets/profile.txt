@@ -1,0 +1,121 @@
+Do you have experience in the wilderness?
+Nope, not at all
+1
+A little for basic camping
+2
+I've been in harsh enviornments before
+3
+I am an expert with eco-regions
+4@Do you know what a solar still is?
+It's a made up word.
+3
+It's a heating/cooking method.
+2
+It's a device to capture water.
+4
+It's a wind harnessing method.
+1@Can you recognize dehydration?
+Headache, nausea, exhaustion
+4
+lack of coordination, blurred vision, headache
+3
+nausea, profuse sweating, lack of coordination
+1
+hunger, headaches, exhaustion
+2@Which is not a common symptom of infection?
+Fever
+1
+Swelling
+2
+Dizziness
+3
+Dehydration
+4@How long must water be boiled before it is safe to drink?
+As long as it's boiling it's fine
+4
+5 minutes
+3
+10 minutes
+2
+15 minutes
+1@Can you start a fire?
+I can recognize and use flint.
+2
+I know to burn fresh wood
+4
+Burn dry dead wood
+1
+It's important to build a triangle with the food
+3@Can you read clouds?
+Not at all.
+1
+A little bit
+2
+I can recognize incoming storms
+3
+I know advanced weather patterns
+4@Can you tell time from the sun?
+You can do that?
+1
+I know when it's getting dark. 
+2
+I know roughly what hour it is.
+3
+I can calculate hour including relevance to the Equator.
+4@Can you navigation from stars?
+Not at all. 
+1
+I know the North Star.
+2
+I know the North Star and a few others. 
+3
+I am an expert astronomer. 
+4@How do you treat a burn?
+Remove peeling skin
+1
+Apply a lotion like cream
+3
+Apply cold cloths
+4
+Keep it wet
+2@Do you know how to tie knots?
+I can tie my shoes what more do I need?
+1
+I can make a basic square and granny knot
+2
+I know camping knots, from Boy Scouts
+3
+I was in the Navy
+4@Can you cook over an open fire? 
+I've never tried it. 
+1
+I can BBQ really well. 
+2
+I have a bit of experience.
+3
+It's more about using the right materials.
+4@What sort of wood starts a fire?
+Small twigs, and wood shavings
+4
+freshly cut green branches
+1
+small sticks and branches
+3
+large sticks and branches
+2@Which of the following is not a way to distill water?
+Distilled water is dangerous 
+1
+Using capsules
+2
+Using a solar still
+4
+Boiling Water
+3@What sort of clothing should you be wearing? 
+One layer more than necessary
+4
+One layer of clothing
+2
+Cotton
+1
+Synthetic materials
+3
