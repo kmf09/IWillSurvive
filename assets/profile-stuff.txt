@@ -1,0 +1,33 @@
+User Profile {
+  string username
+	string email 
+	questionItem questionList [ ]
+	int quetionScores[ ]
+	egoRegion stats [ ]
+}
+
+questionItem {
+	Question question  [ ]
+	int AnswersProvided [ ]
+}
+
+egoRegion {
+	string name
+	int highScore
+}
+
+--
+
+calculations algorithms -- 
+
+for (int i=0; i<15; ++i)
+  total +=quiz-questions[i];
+
+total += common-question-scores   // not adding all questions just the appropriate ones
+
+if total > surviveNumber
+  survied
+if total > almostSurvived
+  almostSurvived
+else
+  died
