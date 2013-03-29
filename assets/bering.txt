@@ -46,7 +46,8 @@ Use it to build a shelter from whatever is currently falling from the sky.
 Build a sled to transport everything you acquire.
 2
 Use it as a mat against the cold ground.
-4@Hats are tacky, and I hate them. 
+4@Your ears are getting cold, how do you feel about a hat?
+Hats are tacky, and I hate them. 
 1
 It rarely rains or snows, it's not very useful. 
 2
