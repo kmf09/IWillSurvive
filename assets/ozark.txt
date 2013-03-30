@@ -76,7 +76,9 @@ That's ok, I have none.
 I'm only allergic to pollen.
 3
 As long as I avoid the animals fur and dander I'll be ok.
-2@Looks like there's some dark clouds overhead
+2@
+I'll build a face mask to control dander
+1@Looks like there's some dark clouds overhead
 Good, I can catch some water
 2
 I should find shelter in case it's a bad storm
