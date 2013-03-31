@@ -118,4 +118,12 @@ One layer of clothing
 Cotton
 1
 Synthetic materials
+3@You've gotten a sprain. What do you do?
+Nothing, it's not a problem.
+2
+Put something warm on it to reduce swelling.
+1
+Give it as much rest as possible.
+4
+Massage the sprain and surrounding area.
 3
