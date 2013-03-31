@@ -7,21 +7,21 @@ I'll build a solar still.
 2
 I'll find some water, you can't drink snow. 
 1@You found some berries. What will you do?
-I'll eat them all!
+I'll eat them all.
 4
-This is the arctic. You're lying.
+This is the arctic, You're lying.
 1
 They're probably poisonous.
 2
 I'll ignore them, there are better food sources.
 3@There's quite a bit of wildlife. What is the healthiest animal?
-Polar Bear
+Polar Bear.
 1
-Caribou
+Caribou.
 4
-Rabbit
+Rabbit.
 2
-Seal
+Seal.
 3@This is much colder than that ice cream parlor you worked at as a teenager.
 I should wear lots of clothing to keep warm.
 4
@@ -39,7 +39,7 @@ I'll use the frees to build one.
 3
 Nope. The trees are to sparse.
 1@Your pack has a tarp! You've never been so excited to see waterproof plastic in your life.
-Lay it out and have a picnic!
+Lay it out and have a picnic.
 3
 Use it to build a shelter from whatever is currently falling from the sky. 
 1
@@ -67,11 +67,11 @@ Blocks should overlap to not allow for warm air to escape
 3
 The eskimos do it, not me. 
 1
-Pack snow into crevices removing all holes
+Pack snow into crevices removing all holes.
 4
-I should do it on hard, compact snow
+I should do it on hard, compact snow.
 2@Your skin feels all tingly, is it frostbite?
-It's frostbite!
+It's frostbite.
 1
 It's not frostbite.
 3
@@ -79,27 +79,27 @@ I'm not sure, I should rub it a bit and apply snow.
 2
 Frostbite would leave grey skin.
 4@Help! You've fallen and can't get up! How long until you have hypothermia?
-5 minutes
+5 minutes.
 2
-10 minutes
+10 minutes.
 3
-20 minutes
+20 minutes.
 4
-30 minutes
+30 minutes.
 1@Good job butter fingers, you lost your snow goggles in the water.
 eh, I have more important things to worry about.
 1
-I'll make some new ones! I have some wood
+I'll make some new ones! I have some wood.
 4
-Forget wood, I have metal that's more durable
+Forget wood, I have metal that's more durable.
 2
-I can make some out of cloth
+I can make some out of cloth.
 3@You slipped and now your hand is frozen to a metal pole.
 I'll slowly pull until I'm unstuck.
 2
 I'll wait until my hand cools enough for it to be unstuck.
 1
-Breathe on the pole
+Breathe on the pole.
 4
 Rub some friction around the frozen area.
 3@The watch froze over, you're not sure what time it is anymore. 
