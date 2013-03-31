@@ -1,11 +1,11 @@
 Yellowstone is relatively untouched. What do you expect to find?
-A deciduous forest area
+A deciduous forest area.
 4
-A mix of forest and plains 
+A mix of forest and plains. 
 2
-A forest with lots of rivers and lakes
+A forest with lots of rivers and lakes.
 1
-A rocky forest
+A rocky forest.
 3@Are any of these plants edible?
 Yes, almost anything including bark can be eaten.
 3
@@ -17,19 +17,19 @@ No, most of these plants are somehow toxic.
 1@You're going to have to hunt for something right? 
 Nope, I'm a vegetarian.
 2 
-I'll hunt large mammals like bison and elk
+I'll hunt large mammals like bison and elk.
 4
-I'll hunt small mammals like rabbits and squirrels
+I'll hunt small mammals like rabbits and squirrels.
 3
-I'll catch fish 
+I'll catch fish. 
 1@You can want to catch something all you want, but can you actually do it? 
-I know a lot about hunting 
+I know a lot about hunting. 
 3
-I actually go hunting instead of watching television about it 
+I actually go hunting instead of watching television about it. 
 4
-I am an excellent fisher 
+I am an excellent fisher. 
 2
-I don't know how to hunt
+I don't know how to hunt.
 1@Bears, wolves, and cougars oh my. Do you know how to deal with aggressive animals?
 Bears are curious, but will stay away if I stand my ground and make noise.
 3
@@ -37,53 +37,53 @@ I should avoid wolves or hide from them.
 4
 Cougars are a large threat because little can be done to avoid them.
 1
-Bison spook easily and cause stampedes
+Bison spook easily and cause stampedes.
 2@You have a lot of resources at your disposal are those useful for getting food? 
 Yes, twigs and vines can make snares. 
 4
 I can use branches to make a spear. 
 3
-Rocks lying around can make a sling 
+Rocks lying around can make a sling. 
 2
-They'll get in the way
+They'll get in the way.
 1@How will you gather water? 
 I'll catch it from the rain. 
 3
-I'll stay close to a river
+I'll stay close to a river.
 4
-I'll melt snow
+I'll melt snow.
 2
 I'll dig a few feet down for it.
 1@You hadn't thought of a shelter just yet. Do you need one?
 It's important to have a solid/warm layer on the ground. 
 4
-I need to make sure there is a canopy for the weather
+I need to make sure there is a canopy for the weather.
 3
-I need protection from animals
+I need protection from animals.
 1
-I'll sleep in a tree, like that girl from the Hunger Games
+I'll sleep in a tree, like that girl from the Hunger Games.
 2@What will you use to build your shelter?
-Thick tree branches and rocks 
+Thick tree branches and rocks. 
 2
-Tree branches and lots of pines/leaves
+Tree branches and lots of pines/leaves.
 3
-Animal fur, moss, and floral undergrowth
+Animal fur, moss, and floral undergrowth.
 4
-Just some rope/vines and a few small sticks
+Just some rope/vines and a few small sticks.
 1@Yellowstone has an average temperature below freezing 9 months a year.
 Yikes, I'm in trouble. 
 1
 I'll just camp out in my shelter a lot. 
 3
-I'll use animal furs for insulation
+I'll use animal furs for insulation.
 4
-I'll constantly have a fire
+I'll constantly have a fire.
 2@This makes blizzards pretty common during the winter. Will you be ready? 
 Keeping a fire ring going in my shelter will keep me warm.
 2
 That's why I built my shelter in a wind protected area.
 4 
-I will find a better shelter at high ground
+I will find a better shelter at high ground.
 1
 Yes, I have a strong canopy to protect from ice. 
 3@In addition to the cold, flash floods are a concern. Where should you be if one occurs?
@@ -115,7 +115,7 @@ Yea, geysers empty into them.
 3
 Yes, and I should avoid them. 
 2
-Yep, they are a breeding ground for infections
+Yep, they are a breeding ground for infections.
 4
 Nope, but it sounds like a hot tub.
 1
