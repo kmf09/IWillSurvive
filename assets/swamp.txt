@@ -1,9 +1,9 @@
 You've been here for 10 minutes and there's an alligator. What do you do? 
-Run away! ( in a zig zag or diagonal motion ) 
+Run away! ( in a zig zag or diagonal motion ). 
 2
-Run away! ( in a straight line )
+Run away! ( in a straight line ).
 4
-Climb a tree
+Climb a tree.
 1
 Nothing, it'll leave me alone if I leave it alone.
 3@Speaking of gators, you found a nest of eggs. Should you take them? 
@@ -43,7 +43,7 @@ It's actually not dirty, there's no need to worry.
 1
 I'll use my pack's purifiers.
 2
-I've got that handy solar still remember?
+I've got that handy solar, duh.
 4
 I'll catch rain water.
 3@Looks like there are some smudged animals tracks. What do you think it is?
@@ -51,11 +51,11 @@ If I cared I might be able to tell you.
 1
 Probably an alligator, but maybe a crocodile. 
 2
-Some small animal. AKA Dinner
+Some small animal, AKA dinner.
 4
 Large animals like deer and panthers are pretty common.
 3@You're surrounded by water, but will you drink it?
-Nope, the Everglades are linked to the ocean. It's pretty salty.
+Nope, the Everglades are linked to the ocean - it's pretty salty.
 2
 Most water is runoff from the rain, it's safe.
 4
@@ -63,7 +63,7 @@ The water is to hot, it has diseases.
 3
 Contamination from pesticides makes it unsafe.
 1@Can you spot a venomous snake? 
-Red and yellow kills a fellow, right?
+Red and yellow kills a fellow... I think.
 4
 If it's colorful, I'll avoid it.
 2
@@ -87,13 +87,13 @@ Turtle shells can be used for hunting and hand-held tools.
 2
 Deer hide can be tanned for multiple purposes.
 1@Mosquitos often carry diseases and can be a nuisance. What will attract the nasty bugs?
-A low body temperature
+A low body temperature.
 2
-Light colors
+Light colors.
 1
-Carbon Dioxide
+Carbon Dioxide.
 4
-Moisture
+Moisture.
 3@Florida sun is notoriously hot. What will you do to avoid it?
 I'll drink a lot of water.
 2
@@ -103,19 +103,19 @@ I'll hide under my shelter.
 4
 I'll create a mud paste.
 1@Are you worried about sinking in the mud? 
-A little only because there could be dangerous animals
+A little only because there could be dangerous animals.
 3
-Quicksand is a large possibility 
+Quicksand is a large possibility. 
 1
-Not at all, there's to much water
+Not at all, there's to much water.
 4
-Mud is dirty and can ruin my tools
+Mud is dirty and can ruin my tools.
 2@It's Hurricane Season. What is not a good idea during a storm?
 Getting to high ground. 
 3
 Hiding out in your shelter.
 1
-Hiding in a hole
+Hiding in a hole.
 2
-Staying in the water
+Staying in the water.
 4
