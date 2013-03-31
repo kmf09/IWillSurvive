@@ -103,7 +103,7 @@ Breathe on the pole.
 4
 Rub some friction around the frozen area.
 3@The watch froze over, you're not sure what time it is anymore. 
-I'm afraid to sleep at night, it's to cold to stay put
+I'm afraid to sleep at night, it's to cold to stay put.
 1
 If the sun's up, so should I.
 2
