@@ -6,7 +6,7 @@ Red, hot, and dry skin.
 Dehydration.
 4
 Throbbing headache.
-2@Food is important. What would you plan on eating?*
+2@Food is important. What would you plan on eating?
 I'll catch some animals.
 1
 Eat some back and acorns there are a lot of trees here.
@@ -29,7 +29,7 @@ I'll find a home somewhere.
 3
 There are leaves and branches to build one.
 4
-I'll use the low lying canopy. 
+I'll use the low lying canopy.
 2@Are you thirsty yet?
 I'll build a solar still.
 2
@@ -70,13 +70,13 @@ The cooked deer.
 Two gallons of water.
 2
 Nothing.
-1@This pack doesn't have any allergy medicine. 
+1@This pack doesn't have any allergy medicine.
 That's ok, I have none.
 4
 I'm only allergic to pollen.
 3
 As long as I avoid the animals fur and dander I'll be ok.
-2@
+2
 I'll build a face mask to control dander.
 1@Looks like there's some dark clouds overhead.
 Good, I can catch some water.

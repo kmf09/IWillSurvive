@@ -26,8 +26,8 @@ public class Profile extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_profile);
 		
-		String textInfo = null;
 		String currentQuiz = getIntent().getStringExtra("quizType");
+		String textInfo = null;
 
 		// Retrieves everything from the text file
 		if (currentQuiz.equals("profileQuiz"))
