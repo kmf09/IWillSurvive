@@ -1,7 +1,7 @@
 Yellowstone is relatively untouched. What do you expect to find?
 A deciduous forest area.
 4
-A mix of forest and plains. 
+A mix of forest and plains.
 2
 A forest with lots of rivers and lakes.
 1
@@ -14,26 +14,26 @@ Most of them are, but they don't have enough nutrients.
 Most of them are not, although nothing will really kill me. 
 2
 No, most of these plants are somehow toxic.
-1@You're going to have to hunt for something right? 
+1@You're going to have to hunt for something right?
 Nope, I'm a vegetarian.
-2 
+2
 I'll hunt large mammals like bison and elk.
 4
 I'll hunt small mammals like rabbits and squirrels.
 3
-I'll catch fish. 
+I'll catch fish.
 1@You can want to catch something all you want, but can you actually do it? 
-I know a lot about hunting. 
+I know a lot about hunting.
 3
 I actually go hunting instead of watching television about it. 
 4
-I am an excellent fisher. 
+I am an excellent fisher.
 2
 I don't know how to hunt.
 1@Bears, wolves, and cougars oh my. Do you know how to deal with aggressive animals?
 Bears are curious, but will stay away if I stand my ground and make noise.
 3
-I should avoid wolves or hide from them. 
+I should avoid wolves or hide from them.
 4
 Cougars are a large threat because little can be done to avoid them.
 1
@@ -41,13 +41,13 @@ Bison spook easily and cause stampedes.
 2@You have a lot of resources at your disposal are those useful for getting food? 
 Yes, twigs and vines can make snares. 
 4
-I can use branches to make a spear. 
+I can use branches to make a spear.
 3
 Rocks lying around can make a sling. 
 2
 They'll get in the way.
 1@How will you gather water? 
-I'll catch it from the rain. 
+I'll catch it from the rain.
 3
 I'll stay close to a river.
 4
@@ -55,7 +55,7 @@ I'll melt snow.
 2
 I'll dig a few feet down for it.
 1@You hadn't thought of a shelter just yet. Do you need one?
-It's important to have a solid/warm layer on the ground. 
+It's important to have a solid/warm layer on the ground.
 4
 I need to make sure there is a canopy for the weather.
 3
@@ -63,7 +63,7 @@ I need protection from animals.
 1
 I'll sleep in a tree, like that girl from the Hunger Games.
 2@What will you use to build your shelter?
-Thick tree branches and rocks. 
+Thick tree branches and rocks.
 2
 Tree branches and lots of pines/leaves.
 3
@@ -71,7 +71,7 @@ Animal fur, moss, and floral undergrowth.
 4
 Just some rope/vines and a few small sticks.
 1@Yellowstone has an average temperature below freezing 9 months a year.
-Yikes, I'm in trouble. 
+Yikes, I'm in trouble.
 1
 I'll just camp out in my shelter a lot. 
 3
@@ -82,7 +82,7 @@ I'll constantly have a fire.
 Keeping a fire ring going in my shelter will keep me warm.
 2
 That's why I built my shelter in a wind protected area.
-4 
+4
 I will find a better shelter at high ground.
 1
 Yes, I have a strong canopy to protect from ice. 

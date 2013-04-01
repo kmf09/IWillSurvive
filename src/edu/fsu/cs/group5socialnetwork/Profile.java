@@ -41,7 +41,7 @@ public class Profile extends Activity {
 		else if (currentQuiz.equals("swampQuiz"))
 			textInfo = readTextFile("swamp.txt");
 		else if (currentQuiz.equals("mountainQuiz"))
-			textInfo = readTextFile("mounatin.txt");
+			textInfo = readTextFile("mountain.txt");
 		// Parses the file and sets the question and answer
 		mQuestion = parseFileSetQuestionAndAnswer(textInfo);
 
@@ -123,8 +123,8 @@ public class Profile extends Activity {
 	public ArrayList<Question> parseFileSetQuestionAndAnswer(String textInfo) {
 		ArrayList<Question> question = new ArrayList<Question>(); 
 		String[] questionAndAnswer; 
-		int pointValue, j = 0, questionCount = 0; 
 		String answer; 
+		int pointValue, j = 0, questionCount = 0; 
 
 		// In the file the questions are separated by @ signs 
 		// First, split on the at signs to get the questions and answers together
