@@ -28,12 +28,13 @@ public class Profile extends Activity {
 		
 		String currentQuiz = getIntent().getStringExtra("quizType");
 		String textInfo = null;
+		mQNum = 0; 
 
 		// Retrieves everything from the text file
 		if (currentQuiz.equals("profileQuiz"))
 			textInfo = readTextFile("profile.txt");
 		else if (currentQuiz.equals("articQuiz"))
-			textInfo = readTextFile("bering.txt");
+			textInfo = readTextFile("artic.txt");
 		else if (currentQuiz.equals("desertQuiz"))
 			textInfo = readTextFile("desert.txt");
 		else if (currentQuiz.equals("forestQuiz"))
