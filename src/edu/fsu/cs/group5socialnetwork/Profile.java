@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -18,14 +19,29 @@ public class Profile extends Activity {
 	TextView mQtv; 
 	RadioButton mAns1, mAns2, mAns3, mAns4; 
 	ArrayList<Question> mQuestion; 
+	int mProfileScore, mArticHighScore, mDesertHighScore, mForrestHighScore, mMountainHighScore, mSwampHighScore; 
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_profile);
+		
+		String textInfo = null;
+		String currentQuiz = getIntent().getStringExtra("quizType");
 
 		// Retrieves everything from the text file
-		String textInfo = readTextFile("desertKatrinaVersion.txt");
+		if (currentQuiz.equals("profileQuiz"))
+			textInfo = readTextFile("profile.txt");
+		else if (currentQuiz.equals("articQuiz"))
+			textInfo = readTextFile("bering.txt");
+		else if (currentQuiz.equals("desertQuiz"))
+			textInfo = readTextFile("desert.txt");
+		else if (currentQuiz.equals("forestQuiz"))
+			textInfo = readTextFile("forest.txt");
+		else if (currentQuiz.equals("swampQuiz"))
+			textInfo = readTextFile("swamp.txt");
+		else if (currentQuiz.equals("mountainQuiz"))
+			textInfo = readTextFile("mounatin.txt");
 		// Parses the file and sets the question and answer
 		mQuestion = parseFileSetQuestionAndAnswer(textInfo);
 

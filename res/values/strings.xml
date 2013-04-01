@@ -7,13 +7,13 @@
         <item>User Profile</item>
         <item>Pick a Location</item>
         <item>Settings</item>
-        <item >Logout</item>
+        <item>Logout</item>
     </string-array>
-    <string-array name="SecondCompSciList">
-        <item>Mobile Programming</item>
-        <item>C++ Programming</item>
-        <item>Web Development</item>
-        <item>Theory of Computation</item>
+    <string-array name="LocationCategoriesList">
+        <item>Artic</item>
+        <item>Desert</item>
+        <item>Foreset</item>
+        <item>Mountain</item>
     </string-array>
     <string-array name="SecondMathList">
         <item>Discrete Math</item>
@@ -43,5 +43,6 @@
     <string name="title_activity_profile">Profile</string>
     <string name="title_activity_question">Question</string>
     <string name="title_activity_answer">Answer</string>
+    <string name="title_activity_location_categories">LocationCategories</string>
 
 </resources>

@@ -64,6 +64,15 @@
             android:name=".Answer"
             android:label="@string/title_activity_answer" >
         </activity>
+        <activity
+            android:name=".LocationCategories"
+            android:label="@string/title_activity_location_categories" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

@@ -26,26 +26,25 @@ public class FirstCategories extends Activity {
 
 		// event handler for when you click on a listView item
 		mLV.setOnItemClickListener(new OnItemClickListener(){
-			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {	
+			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+				Intent myIntent;
 				switch( position ) 
 				{
 				case 0:  
-					Intent myIntent = new Intent(getApplicationContext(), Profile.class);
-					startActivity(myIntent);
-					/*Intent myIntent = new Intent(getApplicationContext(), SecondCompSciCategories.class);
-					myIntent.putExtra("category","Computer Science");
+					/*Intent myIntent = new Intent(getApplicationContext(), Profile.class);
 					startActivity(myIntent);*/
+					myIntent = new Intent(getApplicationContext(), Profile.class);
+					myIntent.putExtra("quizType","profileQuiz");
+					startActivity(myIntent);
 					break;
 				case 1:  
-					Toast.makeText(FirstCategories.this, "You've clicked pick a location!", Toast.LENGTH_SHORT).show();
+					myIntent = new Intent(getApplicationContext(), LocationCategories.class);
+					startActivity(myIntent);
 					break;
 				case 2:  
 					Toast.makeText(FirstCategories.this, "You've clicked settings!", Toast.LENGTH_SHORT).show();
 					break;
 				case 3:  
-					Toast.makeText(FirstCategories.this, "You've clicked friend list!", Toast.LENGTH_SHORT).show();
-					break;
-				case 4:  
 					leave(); 
 					break;
 				}
