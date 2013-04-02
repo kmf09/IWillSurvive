@@ -35,22 +35,32 @@ public class Results extends Activity {
 		currentScore += mProfileScore - 20;
 
 		if (mCurrentQuiz.equals("articQuiz") && currentScore > mArticHighScore)
+		{
 				mArticHighScore = currentScore;
+				highScoreItem.setText("" + mArticHighScore);
+		}
 		else if (mCurrentQuiz.equals("desertQuiz") && currentScore > mDesertHighScore)
+		{
 				mDesertHighScore = currentScore;
+				highScoreItem.setText("" + mDesertHighScore);
+		}
 		else if (mCurrentQuiz.equals("forestQuiz") && currentScore > mForrestHighScore)
+		{
 				mForrestHighScore = currentScore;
+				highScoreItem.setText("" + mForrestHighScore);
+		}
 		else if (mCurrentQuiz.equals("mountainQuiz") && currentScore > mMountainHighScore)
+		{
 				mMountainHighScore = currentScore;
+				highScoreItem.setText("" + mMountainHighScore);
+		}
 		else if (mCurrentQuiz.equals("swampQuiz") && currentScore > mSwampHighScore)
+		{
 				mSwampHighScore = currentScore;
+				highScoreItem.setText("" + mSwampHighScore);
+		}
 		
 		currentScoreItem.setText("" + currentScore);
-		highScoreItem.setText   ("" + mArticHighScore);
-		highScoreItem.setText   ("" + mSwampHighScore);
-		highScoreItem.setText   ("" + mMountainHighScore);
-		highScoreItem.setText   ("" + mForrestHighScore);
-		highScoreItem.setText   ("" + mDesertHighScore);
 		
 		if (currentScore >= 80 && currentScore <= 100)
 		{

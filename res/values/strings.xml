@@ -45,5 +45,6 @@
     <string name="title_activity_answer">Answer</string>
     <string name="title_activity_location_categories">LocationCategories</string>
     <string name="title_activity_results">Results</string>
+    <string name="title_activity_profile_options">ProfileOptions</string>
 
 </resources>
