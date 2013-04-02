@@ -6,7 +6,6 @@
     <string-array name="FirstCategoriesList">
         <item>User Profile</item>
         <item>Pick a Location</item>
-        <item>Settings</item>
         <item>Logout</item>
     </string-array>
     <string-array name="LocationCategoriesList">
@@ -15,11 +14,11 @@
         <item>Foreset</item>
         <item>Mountain</item>
     </string-array>
-    <string-array name="SecondMathList">
-        <item>Discrete Math</item>
-        <item>Calculus</item>
-        <item>Algebra</item>
-        <item>Trigonometry</item>
+    <string-array name="ProfileOptionsList">
+        <item>High Scores</item>
+        <item>Basic Information</item>
+        <item></item>
+        <item>Delete Account</item>
     </string-array>
     <string-array name="SecondScienceList">
         <item>Physics</item>
@@ -46,5 +45,6 @@
     <string name="title_activity_location_categories">LocationCategories</string>
     <string name="title_activity_results">Results</string>
     <string name="title_activity_profile_options">ProfileOptions</string>
+    <string name="title_activity_high_scores">HighScores</string>
 
 </resources>

@@ -13,16 +13,16 @@ import android.widget.AdapterView.OnItemClickListener;
 
 public class ProfileOptions extends Activity {
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile_options);
-        
-        TextView username = (TextView) findViewById(R.id.usernameTV);
-        username.setText(MainActivity.mUserName.getText());
-        
-        mLV = (ListView) findViewById(R.id.listView1);
-		
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_profile_options);
+
+		TextView username = (TextView) findViewById(R.id.usernameTV);
+		username.setText(MainActivity.mUserName.getText());
+
+		ListView mLV = (ListView) findViewById(R.id.listView1);
+
 		// event handler for when you click on a listView item
 		mLV.setOnItemClickListener(new OnItemClickListener(){
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -37,32 +37,23 @@ public class ProfileOptions extends Activity {
 					startActivity(myIntent);
 					break;
 				case 1:  
-					if (profileFlag == false)
-						Toast.makeText(FirstCategories.this, "Please select \"Profile\" first", Toast.LENGTH_SHORT).show();
-					else
-					{
-						myIntent = new Intent(getApplicationContext(), LocationCategories.class);
-						startActivity(myIntent);
-					}
+					myIntent = new Intent(getApplicationContext(), Profile.class);
+					myIntent.putExtra("quizType","profileQuiz");
+					startActivity(myIntent);
 					break;
 				case 2:
-					if (profileFlag == false)
-						Toast.makeText(FirstCategories.this, "Please select \"Profile\" first", Toast.LENGTH_SHORT).show();
-					else
-					{
-						Toast.makeText(FirstCategories.this, "You've clicked settings!", Toast.LENGTH_SHORT).show();
-					}
+
 					break;
 				case 3:  
-					leave(); 
+
 					break;
 				}
 			}}); 
-    }
+	}
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.activity_profile_options, menu);
-        return true;
-    }
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getMenuInflater().inflate(R.menu.activity_profile_options, menu);
+		return true;
+	}
 }

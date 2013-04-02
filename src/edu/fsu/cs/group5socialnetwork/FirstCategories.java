@@ -41,7 +41,7 @@ public class FirstCategories extends Activity {
 					break;
 				case 1:  
 					if (profileFlag == false)
-						Toast.makeText(FirstCategories.this, "Please select \"Profile\" first", Toast.LENGTH_SHORT).show();
+						Toast.makeText(FirstCategories.this, "Profile information must first be completed", Toast.LENGTH_SHORT).show();
 					else
 					{
 						myIntent = new Intent(getApplicationContext(), LocationCategories.class);
@@ -50,7 +50,7 @@ public class FirstCategories extends Activity {
 					break;
 				case 2:
 					if (profileFlag == false)
-						Toast.makeText(FirstCategories.this, "Please select \"Profile\" first", Toast.LENGTH_SHORT).show();
+						Toast.makeText(FirstCategories.this, "Profile information must first be completed", Toast.LENGTH_SHORT).show();
 					else
 					{
 						Toast.makeText(FirstCategories.this, "You've clicked settings!", Toast.LENGTH_SHORT).show();
