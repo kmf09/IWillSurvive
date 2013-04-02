@@ -87,7 +87,7 @@ public class Profile extends Activity {
 				myIntent = new Intent(getApplicationContext(), FirstCategories.class);
 				startActivity(myIntent);
 			}
-			else {
+			else { 
 				// Go to results page
 				myIntent = new Intent(getApplicationContext(), Results.class);
 				myIntent.putExtra("quizType", mCurrentQuiz);
