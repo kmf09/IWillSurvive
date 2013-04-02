@@ -18,30 +18,29 @@ public class Profile extends Activity {
 	int mQNum; 
 	TextView mQtv; 
 	RadioButton mAns1, mAns2, mAns3, mAns4; 
-	ArrayList<Question> mQuestion; 
-	int mProfileScore, mArticHighScore, mDesertHighScore, mForrestHighScore, mMountainHighScore, mSwampHighScore; 
+	public static ArrayList<Question> mQuestion = null;  
+	String mCurrentQuiz;
 
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
+	@Override public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_profile);
 		
-		String currentQuiz = getIntent().getStringExtra("quizType");
+		mCurrentQuiz = getIntent().getStringExtra("quizType");
 		String textInfo = null;
 		mQNum = 0; 
 
 		// Retrieves everything from the text file
-		if (currentQuiz.equals("profileQuiz"))
+		if (mCurrentQuiz.equals("profileQuiz"))
 			textInfo = readTextFile("profile.txt");
-		else if (currentQuiz.equals("articQuiz"))
+		else if (mCurrentQuiz.equals("articQuiz"))
 			textInfo = readTextFile("artic.txt");
-		else if (currentQuiz.equals("desertQuiz"))
+		else if (mCurrentQuiz.equals("desertQuiz"))
 			textInfo = readTextFile("desert.txt");
-		else if (currentQuiz.equals("forestQuiz"))
+		else if (mCurrentQuiz.equals("forestQuiz"))
 			textInfo = readTextFile("forest.txt");
-		else if (currentQuiz.equals("swampQuiz"))
+		else if (mCurrentQuiz.equals("swampQuiz"))
 			textInfo = readTextFile("swamp.txt");
-		else if (currentQuiz.equals("mountainQuiz"))
+		else if (mCurrentQuiz.equals("mountainQuiz"))
 			textInfo = readTextFile("mountain.txt");
 		// Parses the file and sets the question and answer
 		mQuestion = parseFileSetQuestionAndAnswer(textInfo);
@@ -57,6 +56,7 @@ public class Profile extends Activity {
 
 	public void addQuestionAnswersToActivity() {
 		int aNum = 0, totalPointsAwarded = 0;
+		Intent myIntent;
 		// Error checking
 		if (mQNum < mQuestion.size()) {
 			mQtv.setText(mQuestion.get(mQNum).getQuestion());
@@ -70,11 +70,23 @@ public class Profile extends Activity {
 			mAns3.setChecked(false);
 			mAns4.setChecked(false);
 		}
+		// End of quiz
 		else {
+			// THIS MUST BE TAKEN OUT LATER
+			// NEED RESULTS PAGE NOW
+			mAns1.setEnabled(false);
+			mAns2.setEnabled(false);
+			mAns3.setEnabled(false);
+			mAns4.setEnabled(false);
+			
 			// Calculate total points awarded
 			for (int i = 0; i < mQuestion.size(); i++)
 				totalPointsAwarded += mQuestion.get(i).mPoints_awarded;  
 			Toast.makeText(this, "This is your points awarded:" + totalPointsAwarded, Toast.LENGTH_SHORT).show();
+			
+			myIntent = new Intent(getApplicationContext(), Results.class);
+			myIntent.putExtra("quizType", mCurrentQuiz);
+			startActivity(myIntent);
 		}
 	}
 
@@ -84,29 +96,25 @@ public class Profile extends Activity {
 			mAns2.setChecked(false);
 			mAns3.setChecked(false);
 			mAns4.setChecked(false);
-			mQuestion.get(mQNum).mPoints_awarded = mQuestion.get(mQNum).getAnswerVal(0);
-			Toast.makeText(this, "AnswerVal: " + mQuestion.get(mQNum).getAnswerVal(0), Toast.LENGTH_SHORT).show(); 
+			mQuestion.get(mQNum).mPoints_awarded = mQuestion.get(mQNum).getAnswerVal(0); 
 		}
 		else if (v.getId() == mAns2.getId()) {
 			mAns1.setChecked(false);
 			mAns3.setChecked(false);
 			mAns4.setChecked(false);
 			mQuestion.get(mQNum).mPoints_awarded = mQuestion.get(mQNum).getAnswerVal(1);
-			Toast.makeText(this, "AnswerVal: " + mQuestion.get(mQNum).getAnswerVal(1), Toast.LENGTH_SHORT).show();
 		}
 		else if (v.getId() == mAns3.getId()) {
 			mAns1.setChecked(false);
 			mAns2.setChecked(false);
 			mAns4.setChecked(false);
-			mQuestion.get(mQNum).mPoints_awarded += mQuestion.get(mQNum).getAnswerVal(2);
-			Toast.makeText(this, "AnswerVal: " + mQuestion.get(mQNum).getAnswerVal(2), Toast.LENGTH_SHORT).show();
+			mQuestion.get(mQNum).mPoints_awarded = mQuestion.get(mQNum).getAnswerVal(2);
 		}
 		else if (v.getId() == mAns4.getId()) {
 			mAns1.setChecked(false);
 			mAns2.setChecked(false);
 			mAns3.setChecked(false);
-			mQuestion.get(mQNum).mPoints_awarded += mQuestion.get(mQNum).getAnswerVal(3);
-			Toast.makeText(this, "AnswerVal: " + mQuestion.get(mQNum).getAnswerVal(3), Toast.LENGTH_SHORT).show();
+			mQuestion.get(mQNum).mPoints_awarded = mQuestion.get(mQNum).getAnswerVal(3);
 		}
 	}
 

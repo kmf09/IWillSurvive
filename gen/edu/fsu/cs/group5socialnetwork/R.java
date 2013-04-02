@@ -31,21 +31,25 @@ public final class R {
     }
     public static final class id {
         public static final int TableLayout1=0x7f09000a;
+        public static final int TableRow01=0x7f090011;
+        public static final int TextView02=0x7f090018;
         public static final int button1=0x7f090006;
         public static final int button2=0x7f090007;
-        public static final int confirmPassword=0x7f09001f;
-        public static final int editText1=0x7f090010;
-        public static final int emailAddress=0x7f090025;
-        public static final int firstName=0x7f090013;
+        public static final int confirmPassword=0x7f090024;
+        public static final int currentScoreTV=0x7f09001a;
+        public static final int editText1=0x7f09001b;
+        public static final int emailAddress=0x7f09002a;
+        public static final int firstName=0x7f09001c;
+        public static final int highScoreTV=0x7f090016;
         public static final int imageView1=0x7f090003;
-        public static final int lastName=0x7f090016;
+        public static final int lastName=0x7f09001e;
         public static final int listView1=0x7f090000;
         public static final int logoutTV=0x7f090002;
         public static final int mainPassword=0x7f090005;
         public static final int mainUsername=0x7f090004;
-        public static final int menu_settings=0x7f090027;
-        public static final int password=0x7f09001c;
-        public static final int phoneNumber=0x7f090022;
+        public static final int menu_settings=0x7f09002c;
+        public static final int password=0x7f090022;
+        public static final int phoneNumber=0x7f090027;
         public static final int questionTV=0x7f09000b;
         public static final int radioButton1=0x7f09000c;
         public static final int radioButton2=0x7f09000d;
@@ -53,32 +57,34 @@ public final class R {
         public static final int radioButton4=0x7f09000f;
         public static final int rememberCheck=0x7f090008;
         public static final int scrollView1=0x7f090001;
-        public static final int tableRow1=0x7f090011;
-        public static final int tableRow2=0x7f090014;
-        public static final int tableRow3=0x7f090017;
-        public static final int tableRow4=0x7f09001a;
-        public static final int tableRow5=0x7f09001d;
-        public static final int tableRow6=0x7f090020;
-        public static final int tableRow7=0x7f090023;
-        public static final int tableRow8=0x7f090026;
+        public static final int tableRow1=0x7f090010;
+        public static final int tableRow2=0x7f090013;
+        public static final int tableRow3=0x7f090019;
+        public static final int tableRow4=0x7f090017;
+        public static final int tableRow5=0x7f090015;
+        public static final int tableRow6=0x7f090025;
+        public static final int tableRow7=0x7f090028;
+        public static final int tableRow8=0x7f09002b;
         public static final int textView1=0x7f090009;
-        public static final int textView2=0x7f090012;
-        public static final int textView3=0x7f090015;
-        public static final int textView4=0x7f090018;
-        public static final int textView5=0x7f09001b;
-        public static final int textView6=0x7f09001e;
-        public static final int textView7=0x7f090021;
-        public static final int textView8=0x7f090024;
-        public static final int username=0x7f090019;
+        public static final int textView2=0x7f090014;
+        public static final int textView3=0x7f09001d;
+        public static final int textView4=0x7f09001f;
+        public static final int textView5=0x7f090021;
+        public static final int textView6=0x7f090023;
+        public static final int textView7=0x7f090026;
+        public static final int textView8=0x7f090029;
+        public static final int username=0x7f090020;
+        public static final int winloseTV=0x7f090012;
     }
     public static final class layout {
         public static final int activity_location_categories=0x7f030000;
         public static final int activity_main=0x7f030001;
         public static final int activity_profile=0x7f030002;
-        public static final int answerquestionpage=0x7f030003;
-        public static final int category_questions=0x7f030004;
-        public static final int first_list=0x7f030005;
-        public static final int register_layout=0x7f030006;
+        public static final int activity_results=0x7f030003;
+        public static final int answerquestionpage=0x7f030004;
+        public static final int category_questions=0x7f030005;
+        public static final int first_list=0x7f030006;
+        public static final int register_layout=0x7f030007;
     }
     public static final class menu {
         public static final int activity_answer=0x7f080000;
@@ -86,6 +92,7 @@ public final class R {
         public static final int activity_main=0x7f080002;
         public static final int activity_profile=0x7f080003;
         public static final int activity_question=0x7f080004;
+        public static final int activity_results=0x7f080005;
     }
     public static final class string {
         public static final int LogIn=0x7f050006;
@@ -102,6 +109,7 @@ public final class R {
         public static final int title_activity_location_categories=0x7f05000d;
         public static final int title_activity_profile=0x7f05000a;
         public static final int title_activity_question=0x7f05000b;
+        public static final int title_activity_results=0x7f05000e;
     }
     public static final class style {
         public static final int AppTheme=0x7f070000;
