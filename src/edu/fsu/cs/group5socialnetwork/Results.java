@@ -18,10 +18,11 @@ public class Results extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results);
         
-        mProfileScore = mArticHighScore = mDesertHighScore = mForrestHighScore = mMountainHighScore = mSwampHighScore = 0;
+        mArticHighScore = mDesertHighScore = mForrestHighScore = mMountainHighScore = mSwampHighScore = 0;
         mCurrentQuiz = getIntent().getStringExtra("quizType");
         ArrayList<Question> mQuestion = Profile.mQuestion;
-        int currentScore = 0; 
+        int currentScore = 0;
+        mProfileScore = Profile.mProfileScore;
         
         TextView currentScoreItem = (TextView) findViewById(R.id.currentScoreTV);
         TextView highScoreItem = (TextView) findViewById(R.id.highScoreTV);
@@ -29,12 +30,7 @@ public class Results extends Activity {
         
 		// Calculate total points awarded
         for (int i = 0; i < mQuestion.size(); i++)
-        {
-            if (mCurrentQuiz == "profile")
-                mProfileScore += mQuestion.get(i).mPoints_awarded;
-            else
                 currentScore += mQuestion.get(i).mPoints_awarded;
-        }
 
         if (mCurrentQuiz != "profile")
         {

@@ -19,6 +19,7 @@ public class Profile extends Activity {
 	TextView mQtv; 
 	RadioButton mAns1, mAns2, mAns3, mAns4; 
 	public static ArrayList<Question> mQuestion = null;  
+	public static int mProfileScore = 0;
 	String mCurrentQuiz;
 
 	@Override public void onCreate(Bundle savedInstanceState) {
@@ -55,8 +56,9 @@ public class Profile extends Activity {
 	}
 
 	public void addQuestionAnswersToActivity() {
-		int aNum = 0, totalPointsAwarded = 0;
+		int aNum = 0; 
 		Intent myIntent;
+		
 		// Error checking
 		if (mQNum < mQuestion.size()) {
 			mQtv.setText(mQuestion.get(mQNum).getQuestion());
@@ -71,22 +73,26 @@ public class Profile extends Activity {
 			mAns4.setChecked(false);
 		}
 		// End of quiz
-		else {
-			// THIS MUST BE TAKEN OUT LATER
-			// NEED RESULTS PAGE NOW
-			mAns1.setEnabled(false);
-			mAns2.setEnabled(false);
-			mAns3.setEnabled(false);
-			mAns4.setEnabled(false);
-			
-			// Calculate total points awarded
-			for (int i = 0; i < mQuestion.size(); i++)
-				totalPointsAwarded += mQuestion.get(i).mPoints_awarded;  
-			Toast.makeText(this, "This is your points awarded:" + totalPointsAwarded, Toast.LENGTH_SHORT).show();
-			
-			myIntent = new Intent(getApplicationContext(), Results.class);
-			myIntent.putExtra("quizType", mCurrentQuiz);
-			startActivity(myIntent);
+		else { 
+			if (mCurrentQuiz.equals("profileQuiz")) {
+				FirstCategories.profileFlag = true;
+				
+				// Calculate total points awarded
+	            if (mCurrentQuiz.equals("profileQuiz")) 
+	            {
+	            	for (int i = 0; i < mQuestion.size(); i++)
+		                mProfileScore += mQuestion.get(i).mPoints_awarded;
+	            } 
+				 
+				myIntent = new Intent(getApplicationContext(), FirstCategories.class);
+				startActivity(myIntent);
+			}
+			else {
+				// Go to results page
+				myIntent = new Intent(getApplicationContext(), Results.class);
+				myIntent.putExtra("quizType", mCurrentQuiz);
+				startActivity(myIntent);
+			}
 		}
 	}
 
