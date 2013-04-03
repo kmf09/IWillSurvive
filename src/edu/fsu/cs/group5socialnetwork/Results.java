@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.TextView;
 
 public class Results extends Activity {
-	static int mProfileScore, mArticHighScore, mDesertHighScore, mForrestHighScore, mMountainHighScore, mSwampHighScore;
+	static int mProfileScore = 0, mArticHighScore = 0, mDesertHighScore = 0, mForrestHighScore = 0, mMountainHighScore = 0, mSwampHighScore = 0;
 	String mCurrentQuiz;
 
 	@Override

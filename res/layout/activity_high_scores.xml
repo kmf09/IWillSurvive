@@ -27,7 +27,7 @@
         android:layout_marginBottom="20dp" >
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/articHighScoreTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Medium Text"
@@ -55,7 +55,7 @@
         android:layout_marginBottom="20dp" >
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/desertHighScoreTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Medium Text"
@@ -83,7 +83,7 @@
         android:layout_marginBottom="20dp" >
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/forestHighScoreTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Medium Text"
@@ -111,7 +111,7 @@
         android:layout_marginBottom="20dp" >
 
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/mountainHighScoreTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Medium Text"
@@ -139,7 +139,7 @@
         android:layout_marginBottom="20dp" >
 
         <TextView
-            android:id="@+id/textView10"
+            android:id="@+id/swampHighScoreTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Medium Text"

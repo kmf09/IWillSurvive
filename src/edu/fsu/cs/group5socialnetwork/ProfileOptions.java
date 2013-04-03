@@ -30,10 +30,11 @@ public class ProfileOptions extends Activity {
 				switch( position ) 
 				{
 				case 0:  
+					// High scores
 					/*myIntent = new Intent(getApplicationContext(), Profile.class);
 					myIntent.putExtra("quizType","profileQuiz");
 					startActivity(myIntent);*/
-					myIntent = new Intent(getApplicationContext(), ProfileOptions.class);
+					myIntent = new Intent(getApplicationContext(), HighScores.class);
 					startActivity(myIntent);
 					break;
 				case 1:  

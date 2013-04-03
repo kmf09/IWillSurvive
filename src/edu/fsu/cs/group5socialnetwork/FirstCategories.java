@@ -49,15 +49,13 @@ public class FirstCategories extends Activity {
 					}
 					break;
 				case 2:
-					if (profileFlag == false)
+					/*if (profileFlag == false)
 						Toast.makeText(FirstCategories.this, "Profile information must first be completed", Toast.LENGTH_SHORT).show();
 					else
 					{
 						Toast.makeText(FirstCategories.this, "You've clicked settings!", Toast.LENGTH_SHORT).show();
-					}
-					break;
-				case 3:  
-					leave(); 
+					}*/
+					leave();
 					break;
 				}
 			}}); 
