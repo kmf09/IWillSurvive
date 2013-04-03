@@ -2,6 +2,7 @@ package edu.fsu.cs.group5socialnetwork;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -46,7 +47,21 @@ public class ProfileOptions extends Activity {
 
 					break;
 				case 3:  
+					// Defines selection criteria for the rows you want to delete
+					String[] mSelectionArgs = {MainActivity.mUserName.getText().toString()};
+					
+					// Defines a variable to contain the number of rows deleted
+					//int mRowsDeleted = 0;
 
+					// Deletes the words that match the selection criteria
+					getContentResolver().delete(
+						Uri.parse("content://co.NoCoffee.provider/" + "users"),   // the user dictionary content URI
+					    "username = ?",                  // the column to select on
+					    mSelectionArgs                      // the value to compare to
+					);
+					
+					myIntent = new Intent(ProfileOptions.this, MainActivity.class);
+					startActivity(myIntent);
 					break;
 				}
 			}}); 
