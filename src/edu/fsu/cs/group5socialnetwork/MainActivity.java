@@ -199,3 +199,4 @@ public class MainActivity extends Activity {
 		Toast.makeText(this, "E-mail has been sent", Toast.LENGTH_SHORT).show(); 
 	}
 }
+
