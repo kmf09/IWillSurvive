@@ -1,19 +1,20 @@
 package edu.fsu.cs.group5socialnetwork;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
 
 public class Results extends Activity {
 	static int mProfileScore = 0, mArticHighScore = 0, mDesertHighScore = 0, mForrestHighScore = 0, mMountainHighScore = 0, mSwampHighScore = 0;
 	String mCurrentQuiz;
-
+	Random mRand = new Random(); 
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -27,6 +28,7 @@ public class Results extends Activity {
 		TextView currentScoreItem = (TextView) findViewById(R.id.currentScoreTV);
 		TextView highScoreItem    = (TextView) findViewById(R.id.highScoreTV);
 		TextView WinOrLose        = (TextView) findViewById(R.id.winloseTV);
+		TextView factsTV          = (TextView) findViewById(R.id.factsTV);
 
 		// Calculate total points awarded
 		for (int i = 0; i < mQuestion.size(); i++)
@@ -69,7 +71,7 @@ public class Results extends Activity {
 		}
 		else if (currentScore >= 40 && currentScore <= 79)
 		{
-			WinOrLose.setText("Barley made it");
+			WinOrLose.setText("Barely made it");
 			WinOrLose.setTextColor(Color.YELLOW);
 		}
 		else if (currentScore >= 0 && currentScore <= 90)
@@ -77,17 +79,14 @@ public class Results extends Activity {
 			WinOrLose.setText("Better luck next time");
 			WinOrLose.setTextColor(Color.RED);
 		}
+		
+		String[] facts = { "A human being can survive an average of three to five days without the intake of water.", "High ground is warmer but a thermometer can't account for wind chill factors which often make high ground more dangerous.", "abcd", "1234", "hello"};
+		factsTV.setText(facts[mRand.nextInt(facts.length)]);
 	}
-
 
 	// When play again is clicked
 	public void playAgainClick(View v) {
 		Intent myIntent = new Intent(Results.this, FirstCategories.class);
 		startActivity(myIntent);
-	}
-
-	@Override public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.activity_results, menu);
-		return true;
 	}
 }

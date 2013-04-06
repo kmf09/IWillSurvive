@@ -66,10 +66,4 @@ public class ProfileOptions extends Activity {
 				}
 			}}); 
 	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.activity_profile_options, menu);
-		return true;
-	}
 }

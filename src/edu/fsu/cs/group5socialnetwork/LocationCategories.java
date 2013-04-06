@@ -63,10 +63,4 @@ public class LocationCategories extends Activity {
 				}
 			}});
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.activity_location_categories, menu);
-        return true;
-    }
 }

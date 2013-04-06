@@ -42,19 +42,12 @@ public class FirstCategories extends Activity {
 				case 1:  
 					if (profileFlag == false)
 						Toast.makeText(FirstCategories.this, "Profile information must first be completed", Toast.LENGTH_SHORT).show();
-					else
-					{
+					else {
 						myIntent = new Intent(getApplicationContext(), LocationCategories.class);
 						startActivity(myIntent);
 					}
 					break;
 				case 2:
-					/*if (profileFlag == false)
-						Toast.makeText(FirstCategories.this, "Profile information must first be completed", Toast.LENGTH_SHORT).show();
-					else
-					{
-						Toast.makeText(FirstCategories.this, "You've clicked settings!", Toast.LENGTH_SHORT).show();
-					}*/
 					leave();
 					break;
 				}
@@ -63,8 +56,9 @@ public class FirstCategories extends Activity {
 
 	// exit application
 	public void leave() {
-		Intent intent = new Intent(Intent.ACTION_MAIN);
+		finish();
+		/*Intent intent = new Intent(Intent.ACTION_MAIN);
 		intent.addCategory(Intent.CATEGORY_HOME);
-		startActivity(intent);
+		startActivity(intent);*/
 	}
 }

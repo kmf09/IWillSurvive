@@ -127,19 +127,18 @@ public class Profile extends Activity {
 	// When enter button is pressed
 	public void enterButton(View v) {
 		// Error checking
-		if (mAns1.isChecked() != false || mAns2.isChecked() != false || mAns3.isChecked() || false || mAns4.isChecked() != false) 
-			// Increment question
-			mQNum++;
+		if (mAns1.isChecked() || mAns2.isChecked() || mAns3.isChecked() || mAns4.isChecked())
+			mQNum++; /* Increment question */
 		else
 			Toast.makeText(getApplicationContext(), "Please select an answer.", Toast.LENGTH_SHORT).show();
 		addQuestionAnswersToActivity(); 
 	}
 
 	public ArrayList<Question> parseFileSetQuestionAndAnswer(String textInfo) {
-		ArrayList<Question> question = new ArrayList<Question>(); 
-		String[] questionAndAnswer; 
-		String answer; 
+		ArrayList<Question> question = new ArrayList<Question>();
 		int pointValue, j = 0, questionCount = 0; 
+		String[] questionAndAnswer; 
+		String answer;
 
 		// In the file the questions are separated by @ signs 
 		// First, split on the at signs to get the questions and answers together
@@ -166,12 +165,6 @@ public class Profile extends Activity {
 		} 
 
 		return question;
-	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.activity_profile, menu);
-		return true;
 	}
 
 	private String readTextFile(String fileName) {

@@ -4,14 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background" >
-
+
     <TableRow
         android:id="@+id/tableRow1"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:gravity="center"
+        android:layout_marginBottom="20dp"
         android:layout_marginTop="100dp"
-        android:layout_marginBottom="20dp" >
+        android:gravity="center" >
+
         <TextView
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
@@ -20,15 +21,15 @@
             android:text="Results"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textSize="30dp" />
-
     </TableRow>
 
     <TableRow
         android:id="@+id/TableRow01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginBottom="20dp" >
+        android:layout_marginBottom="20dp"
+        android:gravity="center" >
+
         <TextView
             android:id="@+id/winloseTV"
             android:layout_width="wrap_content"
@@ -36,7 +37,6 @@
             android:gravity="center"
             android:text="WinOrLose"
             android:textAppearance="?android:attr/textAppearanceMedium" />
-
     </TableRow>
 
     <TableRow
@@ -52,15 +52,14 @@
             android:gravity="center"
             android:text="High Score:"
             android:textAppearance="?android:attr/textAppearanceMedium" />
-
     </TableRow>
 
     <TableRow
         android:id="@+id/tableRow5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center" 
-        android:layout_marginBottom="20dp">
+        android:layout_marginBottom="20dp"
+        android:gravity="center" >
 
         <TextView
             android:id="@+id/highScoreTV"
@@ -69,7 +68,6 @@
             android:gravity="center"
             android:text="Medium Text"
             android:textAppearance="?android:attr/textAppearanceMedium" />
-
     </TableRow>
 
     <TableRow
@@ -85,15 +83,14 @@
             android:gravity="center"
             android:text="Current Score:"
             android:textAppearance="?android:attr/textAppearanceMedium" />
-
     </TableRow>
 
     <TableRow
         android:id="@+id/tableRow3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginBottom="20dp" >
+        android:layout_marginBottom="20dp"
+        android:gravity="center" >
 
         <TextView
             android:id="@+id/currentScoreTV"
@@ -102,7 +99,22 @@
             android:gravity="center"
             android:text="Medium Text"
             android:textAppearance="?android:attr/textAppearanceMedium" />
+    </TableRow>
 
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/factsTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Small Text"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
     </TableRow>
 
     <Button
