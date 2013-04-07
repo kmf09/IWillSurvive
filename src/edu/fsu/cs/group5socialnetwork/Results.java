@@ -80,7 +80,21 @@ public class Results extends Activity {
 			WinOrLose.setTextColor(Color.RED);
 		}
 		
-		String[] facts = { "A human being can survive an average of three to five days without the intake of water.", "High ground is warmer but a thermometer can't account for wind chill factors which often make high ground more dangerous.", "abcd", "1234", "hello"};
+		String[] facts = { "A human being can survive an average of three to five days without the intake of water.", 
+				"High ground is warmer but a thermometer can't account for wind chill factors which often make high ground more dangerous.", 
+				"If water reaches boiling point it's safe to drink regardless of how long it's been boiling.",
+				"ALL fur bearing mammals are safe to eat and will provide you with nutrients and calories.",
+				"All six legged insects are safe to eat and will provide you with nutrients and calories.",
+				"Almost all freshwater fish and birds are safe to eat and will provide you with nutrients and calories.",
+				"Most plants will harm you, make you sick, or poison you.",
+				"A tourniquet should be the last resort and is only a viable choice if someone has lost a limb or a limb has been partially rendered from the body by a horrible accident.",
+				"The pressure that a tourniquet applies will severely damage blood vessels and can often result in tissue death, making it possible that a limb will need to be amputated.",
+				"A rattlesnake does not always warn someone of an impending attack by shaking it’s rattle.",
+				"Sucking the venom out of a snake bite has never been proven effective.",
+				"The proper way to treat snakebite is to clean the wound thoroughly with soap and water and to keep the bitten area below heart level.",
+				"Heat will increase swelling on a sprain.",
+				"Just because an animal ( or Bear Grylls ) eats it, doesn't mean you should. For example, deer and squirrels eat poisonous mushrooms and berries.",
+				"The diverse and plentiful pathogens that cause human illness can be in any water, anywhere.  Boil, filter or chemically treat your water every time to be safe."};
 		factsTV.setText(facts[mRand.nextInt(facts.length)]);
 	}
 
