@@ -60,14 +60,15 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:gravity="center" >
-
+
         <TextView
             android:id="@+id/highScoreTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Medium Text"
+            android:text="&lt;(&apos;.&apos;)>"
             android:textAppearance="?android:attr/textAppearanceMedium" />
+
     </TableRow>
 
     <TableRow
@@ -91,14 +92,15 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:gravity="center" >
-
+
         <TextView
             android:id="@+id/currentScoreTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Medium Text"
+            android:text="&lt;(&apos;.&apos;)>"
             android:textAppearance="?android:attr/textAppearanceMedium" />
+
     </TableRow>
 
     <TableRow

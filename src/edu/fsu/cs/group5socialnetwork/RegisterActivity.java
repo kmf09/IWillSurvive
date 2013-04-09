@@ -164,6 +164,9 @@ public class RegisterActivity extends Activity {
 				// say thanks
 				Toast.makeText(RegisterActivity.this, "Thanks for registering!", Toast.LENGTH_SHORT).show();
 
+				// set user name
+				MainActivity.mUser = username; 
+				
 				// start new activity
 				Intent myIntent = new Intent(RegisterActivity.this, FirstCategories.class);
 				startActivity(myIntent);

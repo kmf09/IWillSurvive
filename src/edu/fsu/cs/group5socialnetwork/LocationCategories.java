@@ -19,7 +19,7 @@ public class LocationCategories extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_location_categories);
         
-     // gets a handle on the id named listView1 which is found
+        // gets a handle on the id named listView1 which is found
 		// by opening the first_list in res/layout
 		// this is the ID in the layout that corresponds: android:id="@+id/listView1"
 		mLV = (ListView) findViewById(R.id.listView1);

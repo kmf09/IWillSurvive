@@ -20,8 +20,9 @@ import com.mobdb.android.GetRowData;
 public class MainActivity extends Activity {
 
 	// global variables
-	public static EditText mUserName; EditText mPassword;
-	String mPass, mUser; Boolean mIsValid; 
+	EditText mUserName; EditText mPassword;
+	public static String mUser; 
+	String mPass; Boolean mIsValid; 
 	CheckBox mCheckBox; 
 	Cursor mCursor;
 	CursorAdapter mCursorAdapter;

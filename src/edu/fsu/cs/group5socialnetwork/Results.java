@@ -14,7 +14,7 @@ public class Results extends Activity {
 	static int mProfileScore = 0, mArticHighScore = 0, mDesertHighScore = 0, mForrestHighScore = 0, mMountainHighScore = 0, mSwampHighScore = 0;
 	String mCurrentQuiz;
 	Random mRand = new Random(); 
-	
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -36,34 +36,39 @@ public class Results extends Activity {
 
 		currentScore += mProfileScore - 20;
 
-		if (mCurrentQuiz.equals("articQuiz") && currentScore > mArticHighScore)
+		if (mCurrentQuiz.equals("articQuiz"))
 		{
+			if (currentScore > mArticHighScore)
 				mArticHighScore = currentScore;
-				highScoreItem.setText("" + mArticHighScore);
+			highScoreItem.setText("" + mArticHighScore);
 		}
-		else if (mCurrentQuiz.equals("desertQuiz") && currentScore > mDesertHighScore)
+		else if (mCurrentQuiz.equals("desertQuiz"))
 		{
+			if (currentScore >  mDesertHighScore)
 				mDesertHighScore = currentScore;
-				highScoreItem.setText("" + mDesertHighScore);
+			highScoreItem.setText("" + mDesertHighScore);
 		}
-		else if (mCurrentQuiz.equals("forestQuiz") && currentScore > mForrestHighScore)
+		else if (mCurrentQuiz.equals("forestQuiz"))
 		{
+			if (currentScore > mForrestHighScore)
 				mForrestHighScore = currentScore;
-				highScoreItem.setText("" + mForrestHighScore);
+			highScoreItem.setText("" + mForrestHighScore);
 		}
-		else if (mCurrentQuiz.equals("mountainQuiz") && currentScore > mMountainHighScore)
+		else if (mCurrentQuiz.equals("mountainQuiz"))
 		{
+			if (currentScore > mMountainHighScore)
 				mMountainHighScore = currentScore;
-				highScoreItem.setText("" + mMountainHighScore);
+			highScoreItem.setText("" + mMountainHighScore);
 		}
-		else if (mCurrentQuiz.equals("swampQuiz") && currentScore > mSwampHighScore)
+		else if (mCurrentQuiz.equals("swampQuiz"))
 		{
+			if (currentScore > mSwampHighScore)
 				mSwampHighScore = currentScore;
-				highScoreItem.setText("" + mSwampHighScore);
+			highScoreItem.setText("" + mSwampHighScore);
 		}
-		
+
 		currentScoreItem.setText("" + currentScore);
-		
+
 		if (currentScore >= 90)
 		{
 			WinOrLose.setText("You survived!");
@@ -79,8 +84,9 @@ public class Results extends Activity {
 			WinOrLose.setText("Better luck next time");
 			WinOrLose.setTextColor(Color.RED);
 		}
-		
-		String[] facts = { "A human being can survive an average of three to five days without the intake of water.", 
+
+		String[] facts = { 
+				"A human being can survive an average of three to five days without the intake of water.", 
 				"High ground is warmer but a thermometer can't account for wind chill factors which often make high ground more dangerous.", 
 				"If water reaches boiling point it's safe to drink regardless of how long it's been boiling.",
 				"ALL fur bearing mammals are safe to eat and will provide you with nutrients and calories.",
