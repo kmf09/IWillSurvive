@@ -1,113 +1,112 @@
-How will you locate animals?
+You find signs of animals in the area. How do you find them?
 I let them come to me.
 1
-I plan on finding a hospitable place and waiting.
+I find a hospitable place and wait.
 4
-I'll wander because I don't have a lot of hunting skills.
+I wander because I don't have a lot of hunting skills.
 2
-I can track like a bloodhound.
-3@How do you plan to catch animals?
-I have a knife and a stick, I don't need any more.
+I can track like a bloodhound and do so!
+3@You finally meet your prey. How do you take them down?
+I have a knife and a stick. What more do I need?
 3
 I can build snares and traps.
 4
-I don't catch animals, I'm a vegetarian.
+I don't catch animals; I'm a vegetarian.
 1
-I will scavenge.
-2@You're going hunting', what sort of animals do you expect to find?
-some sheep , maybe a few deer.
+I try to scavenge instead.
+2@What sort of animals do you prepare to encounter?
+Some sheep and maybe a few deer
 3
-birds of prey.
+Birds of prey mostly.
 2
-snakes, rats, lizards, and other gross things.
+Snakes, rats, lizards, and other such things.
 3
-I've got some stuff in my pack I'll live off of. 
-1@which plants would you eat? 
-I wouldn't; a lot of them are low in nutrients or toxic.
+I ignore them. The food in my pack is plenty.
+1@There's some vegetation! Do you forage for food?
+I wouldn't. A lot of them are probably low in nutrients or toxic.
 1
-there aren't enough plants, I'll focus on something else. 
+There isn't enough to live off of. I'll focus on something else.
 3
-I have no knowledge of plants I wouldn't eat any. 
+I know too little to risk eating anything.
 2
-I know a bit, I'd try to eat as many as I could. 
-4@You're on your own for shelter. What do you do?
-Use the thick ( and water proof ) tarp in your pack to build a fort.
+I know enough, and try to eat as much as I can.
+4@The desert is a hostile place. What do you do for shelter?
+I use the thick, water proof tarp in my pack to build a fort.
 4
-Try and find some shelter. 
+I try and find some natural shelter.
 2
-Start swinging at cacti with your knife until you can build one. 
+I start swinging at cacti with my knife so that I can build one!
 1
-There is no hope for shelter, use the energy on finding water.
-3@your pack is heavy and not entirely useful. What is least important and can be discarded?
-plastic whistle.
+There is little hope for shelter, so I use the energy to finding more water.
+3@Your pack sure is heavy! What can be discarded?
+Plastic whistle
 3
-compressed trioxide fuel.
+Compressed trioxide fuel 
 2
-magnetic compass. 
+Magnetic compass 
 1
-insect headnet.
-4@what would you use for firewood?
-That stuff I just threw out of my pack. 
+Insect headnet
+4@The sun's going down! What do you burn to light up the night?
+What about that stuff from my pack I just threw away? 
 3
-A cactus, since it's a desert there aren't any real trees. 
+I use cactus, since it's a desert there aren't any real trees.
 2
-Whatever I didn't eat for dinner. 
+I burn whatever I didn't eat for dinner.
 4
-I wouldn't build a fire, it's hot. 
-1@Cacti are sharp! Will you suck up that flesh wound and rub some dirt in it or pull out the first aid?
-Yes, after I finish crying.
+I don't build a fire. it's too hot!
+1@Cacti are sharp! Do you break out the first aid?
+Yes, after I finish crying
 1
-It could get infected, it's good to be safe. 
+It could get infected. I treat it to be safe.
 4
-Nah, I don't think many cacti are that harmful.  
+Nah, I don't think many cacti are that harmful to begin with.
 3
-If by first aid you mean rubbing some dirt in it then yes. 
-2@The dessert is sparse in life in general how well can you navigate with a compass/stars?
-It get's cold at night, you don't want to be moving around.
+If by first aid you mean rubbing some dirt in it, then yes!
+2@Are you going in circles? The night stars plot a map for you!
+It gets cold at night. I don't want to be moving around!
 1
-Forget the cold and worry about the wildlife. 
+Forget the cold...what about the wildlife!?
 2
-Better cold than hot I'll risk my limited knowledge of the north star. 
+I'm better off cold than hot! I'll risk my limited knowledge of the north star.
 3
-I know enough to conquer a Jeopardy category. 
-4@I hope you brought some sunscreen or at least not a ginger.
-I'm fine with getting skin cancer, I need to be searching for water. 
+I use to map stars as a child.
+4@The sun just won't quit! What do you do about the burn?
+I'm fine with risking skin cancer. I need to be searching for water!
 2
-That's why I'm hiding under my shelter all day. 
+That's why I hide under my shelter all day!
 3
-There are some plants which provide a canopy. 
+There are some plants which provide cover.
 1
-With my packs supplies I can be protected from the sun.
-4@Can you recognize that Aloe Vera without the fancy supermarket bottle? what about other plants?
-I thought that was a fabricated chemical.
-1
-Yep, I used to grow them in my backyard . 
+With my packs supplies, I protect myself from the sun.
+4@Is that a real Aloe Vera plant? You have some injuries to treat, after all...
+That's a fabricated chemical. It doesn't really do anything!
+Yep, I used to grow them in my backyard!
 4
-Doesn't matter I found a creosote bush.
+It doesn't matter because I found a creosote bush!
 2
-Everyone knows the Opuntia plant can cure almost anything.
-2@It's been a while since you've had water, aren't you thirsty?
-Cut open a cactus.
+Everyone knows the Opuntia plant is a panacea!
+2@You're parched! What do you do for quick water?
+I cut open a cactus and drain water from there.
 3
-Find some food, desert animals are thick in water. 
+I find some food. Desert animals are thick in water!
 2
-Make a solar still. 
+I make a solar still.
 4
-Dig a hole, there's a high water table. 
-1@Is that a scorpion?
-Where? I can't recognize venomous creatures. 
+I dig a hole. There's probably a high water table.
+1@What's that thing with the curled up tail?
+It's probably just a beetle.
 1
-Let's get closer, 'red and yellow kills a fellow'. 
+Let's get closer, 'red and yellow kills a fellow!' 
 2
-To late, I ran away.
+Doesn't matter. I ran away already!
 3
-Yes, but I can avoid them. 
-4@The scorpion got you. What is your immediate thought?
-I'm going to die.
+That's a scorpion, but it's easy to avoid.
+4@The scorpion got you. What do you do?
+Scream, "I'm going to die!"
 1
-I'm bigger than a snake, I'll be alright.
+I realize I'm bigger than a snake, so I'll be alright.
 3
-I might have something for this in my pack.
+I probably have some sort of anti-venom in my pack for such an occasion.
 4
-I'll suck the venom out.
+I suck the venom out.
 2

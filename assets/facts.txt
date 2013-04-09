@@ -1,11 +1,12 @@
-A human being can survive an average of three to five days without the intake of water.
-@High ground is warmer but a thermometer can't account for wind chill factors which often make high ground more dangerous.
-@If water reaches boiling point it's safe to drink regardless of how long it's been boiling.@ALL fur bearing mammars are safe to eat and will provide you with nutrients and calories.
+﻿A human being can usually survive for three to five days without the intake of water.
+@High ground is warmer, but wind chill factors often make high ground more dangerous regardless of what the thermometer says.
+@If water reaches boiling point it's safe to drink regardless of how long it's been boiling.
+@ALL fur bearing mammals are safe to eat and will provide you with nutrients and calories.
 @All six legged insects are safe to eat and will provide you with nutrients and calories.
 @Almost all freshwater fish and birds are safe to eat and will provide you with nutrients and calories.
 @Most plants will harm you, make you sick, or poison you.
-@A tourniquet should be the last resort and is only a viable choice if someone has lost a limb or a limb has been partially rendered from the body by a horrible accident.
-@The pressure that a tourniquet applies will severely damage blood vessels and can often result in tissue death, making it possible that a limb will need to be amputated.
+@Unless you are a medical professional with proper tools, a tourniquet should be the last resort and is only a viable choice if someone has lost a limb or a limb has already been partially rent from the body by a horrible accident.
+@The pressure that a tourniquet applies can severely damage blood vessels and result in tissue death, making it possible that a limb will need to be amputated. Only medical professionals with proper tools should attempt to use tourniquets.
 @A rattlesnake does not always warn someone of an impending attack by shaking it’s rattle.
 @Sucking the venom out of a snake bite has never been proven effective.
 @The proper way to treat snakebite is to clean the wound thoroughly with soap and water and to keep the bitten area below heart level.

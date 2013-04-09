@@ -22,7 +22,7 @@ Pronghorn deer.
 Bison.
 3
 Whitetail snapper.
-4@You lost your plant guide. What do you know about plants? 
+4@You lost your botanical guide. What do you know about plants? 
 There's nothing really toxic here. 
 1
 It may not be toxic but it's not really edible anyway. 
@@ -30,10 +30,10 @@ It may not be toxic but it's not really edible anyway.
 There are a few needles and grains that have nutrients. 
 4
 Flowers and weeds are always a safe bet. 
-3@You have some items in your pack which is the least useful? 
+3@You have some erroneous items in your pack. Which is the least useful? 
 A 7x7 foot tarp.
 1
-Sunburn protective cream. 
+Sunblock. 
 3
 Frying pan.
 2
@@ -46,7 +46,7 @@ I'll create a mud/grass hut with the reeds.
 There isn't enough hazardous conditions to need one.
 1
 I really just need a tarp over my head. 
-4@The aquifer is scattered and ranges in depth below the ground. But what does that mean for you?
+4@Groundwater is sparse and ranges in depth below the ground. But what does that mean for you?
 I'll dig for clean water.
 3
 I can probably find a stream or pond.
@@ -69,15 +69,15 @@ Nope, the ground is to hard here.
 1
 Definitely, with all of this water.
 3
-Not really, I'll be careful.
-4@What do you do if you fall into a quicksand pit?
+Not really, but I'll be careful.
+4@Oh dear! You fell into quicksand! What do you do?
 Swim out.
 1
-Float on your back. 
+I float on my back. 
 4
-Do nothing, it's probably only a few feat deep.
+I do nothing and relax. It's probably only a few feet deep.
 3
-Drop all your stuff.
+I drop all of my stuff!
 2@What would you do if you saw a blowout?
 Play mini-golf on it.
 1
@@ -89,20 +89,20 @@ Dig for water.
 2@It gets a little cold at night. Can you make a fire?
 I could burn some grass.
 4
-Not a good idea this whole place is a fire hazard.
+Not a good idea! This whole place is a fire hazard.
 2
 I won't have anything to cook.
 1
 I have some matches.
 3@You've gotten sunburnt. What should you do?
-Drink lots more water. 
+Drink a lot more water. 
 4
 Apply a cool compress. 
 3
-There isn't anything you can do. 
+There isn't anything I can do. 
 1
 Take ibuprofen. 
-2@You're on the edge of Tornado Alley, can you detect one?
+2@You're on the edge of Tornado Alley! Can you detect one?
 If I see the Wizard of Oz I'm in trouble.
 1
 Green clouds.

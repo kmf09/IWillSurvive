@@ -6,15 +6,15 @@ Red, hot, and dry skin.
 Dehydration.
 4
 Throbbing headache.
-2@Food is important. What would you plan on eating?*
+2@Food is important! What do you plan on eating?
 I'll catch some animals.
 1
-Eat some back and acorns there are a lot of trees here.
+I'll eat some bark and acorns. There are a lot of trees here.
 4
 Rabbit food like flowers and seeds.
 3
 Fruit from the trees.
-2@Is there anything you should avoid?
+2@Is there any food items you should avoid?
 Not a whole lot is toxic here.
 3
 Redbud.
@@ -22,39 +22,39 @@ Redbud.
 White oak.
 1
 Dogwood.
-4@Do you plan on building a shelter?
+4@It can get a little cold at night. Do you plan on building a shelter?
 Nope, the trees are enough protection.
 1
 I'll find a home somewhere.
 3
 There are leaves and branches to build one.
 4
-I'll use the low lying canopy. 
-2@Are you thirsty yet?
-I'll build a solar still.
+I'll use the low lying canopy.
+2@You're starting to get a little thirsty. What do you do for water?
+I build a solar still.
 2
-I'll find a lake or something.
+I find a lake or something.
 4
-I'll catch the rain.
+I catch the rain.
 3
-I'll get it from my diet.
-1@How safe do you think this water is?
-It isn't I have to sterilize everything.
+I get it from my diet.
+1@Ah water. How safe do you think this water is?
+It isn't. I have to sterilize everything.
 3
 It probably won't kill me to not purify it.
 4
 If it's good enough for the animals, it's good enough to me.
 2
 I shouldn't drink the water.
-1@Bambi's mom has been sighted!
-I'm a vegetarian; I couldn't.
+1@Bambi's mom has been sighted! Do you pounce?
+I'm a vegetarian; I couldn't!
 1
-I have no hunting experience.
+I have no hunting experience...
 2
-I'll build a snare.
+I'll build a snare instead of risking a confrontation.
 3
 I'm already reaching for my makeshift spear.
-4@This pack is heavy, let's trash one item.
+4@This pack is heavy, let's get rid of something.
 Snare wire.
 2
 Sleeping bag.
@@ -62,7 +62,7 @@ Sleeping bag.
 Waterproof matches.
 3
 Fishing kit.
-4@Someone's done work for you. What should you take?
+4@Hey! Someone was here recently! What should you take?
 A prepared bundle of firewood.
 3
 The cooked deer.
@@ -70,28 +70,28 @@ The cooked deer.
 Two gallons of water.
 2
 Nothing.
-1@This pack doesn't have any allergy medicine. 
-That's ok, I have none.
+1@Hmm...this pack doesn't have any allergy medicine.
+That's ok, I have no allergies.
 4
-I'm only allergic to pollen.
+I'll be alright. I'm only allergic to pollen.
 3
-As long as I avoid the animals fur and dander I'll be ok.
-2@
-I'll build a face mask to control dander.
-1@Looks like there's some dark clouds overhead.
-Good, I can catch some water.
+As long as I avoid the animal fur and dander, I'll be ok.
 2
-I should find shelter in case it's a bad storm.
+I'll build a face mask to control dander.
+1@Uh oh...Looks like there's some dark clouds overhead.
+Good! I can catch some water.
+2
+I should find shelter in case it turns out to be a bad storm.
 3
 I can read clouds pretty well; I'm not worried.
 4
 I wouldn't know with all these trees.
 1@Is that poison ivy?
-If I get closer I might be able to check.
+If I get closer, I might be able to check.
 2
-I'll just avoid it.
+I'll just avoid it to be safe.
 3
-I'm a wilderness plant expert, you should have asked sooner.
+I'm a wilderness plant expert. You should have asked sooner.
 4
 You're asking the wrong person. 
 1@There are some animal tracks on the ground, but they've been squished. What animal could it not be?
@@ -102,7 +102,7 @@ Bear.
 Rabbit.
 1
 Panther.
-4@It'd be disappointing to get this far and then to get rabies. Which mammal won't give it to you?
+4@You've heard rabies can be an issue in these parts! Which mammal won't give it to you?
 Fox.
 2
 Bat.

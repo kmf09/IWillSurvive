@@ -1,20 +1,20 @@
-What will you drink?
-I'm surrounded by snow… I'll melt some.
+﻿What will you drink?
+I'm surrounded by snow; I'll melt some.
 3
 I'll melt ice instead.
 4
 I'll build a solar still.
 2
-I'll find some water, you can't drink snow. 
-1@You found some berries. What will you do?
-I'll eat them all.
+I'll find some water. You can't drink snow!
+1@You found some berries. What do you do?
+I eat them all.
 4
-This is the arctic, You're lying.
+This is the arctic, and you're lying!
 1
-They're probably poisonous.
+They're probably poisonous so I don't eat them.
 2
-I'll ignore them, there are better food sources.
-3@There's quite a bit of wildlife. What is the healthiest animal?
+I'll ignore them because there are better food sources.
+3@There's quite a bit of wildlife. Which is the healthiest animal?
 Polar Bear.
 1
 Caribou.
@@ -22,7 +22,7 @@ Caribou.
 Rabbit.
 2
 Seal.
-3@This is much colder than that ice cream parlor you worked at as a teenager.
+3@It's much colder than in that ice cream parlor you worked at as a teenager.
 I should wear lots of clothing to keep warm.
 4
 I should focus on keeping a fire going constantly.
@@ -30,26 +30,26 @@ I should focus on keeping a fire going constantly.
 I should eat as much fat as possible. 
 2
 I should keep my heart rate up.
-1@The sun is going down. Should you build a shelter?
+1@The sun is going down. Will you build a shelter?
 I'll use the landscape to protect me.
 4
 There are trees to protect me. 
 2
-I'll use the frees to build one.
+I'll use the trees to build one.
 3
-Nope. The trees are to sparse.
+Nope. The trees are too sparse.
 1@Your pack has a tarp! You've never been so excited to see waterproof plastic in your life.
-Lay it out and have a picnic.
+I lay it out and have a picnic.
 3
-Use it to build a shelter from whatever is currently falling from the sky. 
+I use it to build a shelter from whatever is currently falling from the sky. 
 1
-Build a sled to transport everything you acquire.
+I build a sled to transport everything you acquire.
 2
-Use it as a mat against the cold ground.
-4@Your ears are getting cold, how do you feel about a hat?
+I use it as a mat against the cold ground.
+4@Your ears are getting cold. How do you feel about a hat?
 Hats are tacky, and I hate them. 
 1
-It rarely rains or snows, it's not very useful. 
+It rarely rains or snows, so it's not very useful. 
 2
 It might keep me a little warm at night. 
 3
@@ -57,25 +57,25 @@ I'll wear it all the time.
 4@Since you have nothing else to do. Why don't you create a new fashion trend?
 I should wear the thickest coat-like object possible.
 1
-Layers with the inner lining fluffy and porous. 
+I should wear layers with the inner lining fluffy and porous. 
 4
-Layers with the outer lining fluffy and porous.
+I should wear layers with the outer lining fluffy and porous.
 3
-Tight clothing that limits warm air from escaping.
+I should wear tight clothing that limits warm air from escaping.
 2@What do you know about building igloos? 
-Blocks should overlap to not allow for warm air to escape.
+The blocks should overlap to prevent warm air from escaping.
 3
 The eskimos do it, not me. 
 1
-Pack snow into crevices removing all holes.
+I pack snow into crevices to remove all holes.
 4
 I should do it on hard, compact snow.
-2@Your skin feels all tingly, is it frostbite?
+2@Your skin feels all tingly. Is it frostbite?
 It's frostbite.
 1
 It's not frostbite.
 3
-I'm not sure, I should rub it a bit and apply snow.
+I'm not sure. I should rub it a bit and apply snow.
 2
 Frostbite would leave grey skin.
 4@Help! You've fallen and can't get up! How long until you have hypothermia?
@@ -87,11 +87,11 @@ Frostbite would leave grey skin.
 4
 30 minutes.
 1@Good job butter fingers, you lost your snow goggles in the water.
-eh, I have more important things to worry about.
+Eh, I have more important things to worry about.
 1
-I'll make some new ones! I have some wood.
+I'll make some new ones since I have some wood!
 4
-Forget wood, I have metal that's more durable.
+Forget wood. I have metal that's more durable!
 2
 I can make some out of cloth.
 3@You slipped and now your hand is frozen to a metal pole.
@@ -99,19 +99,19 @@ I'll slowly pull until I'm unstuck.
 2
 I'll wait until my hand cools enough for it to be unstuck.
 1
-Breathe on the pole.
+I breathe on the pole.
 4
-Rub some friction around the frozen area.
-3@The watch froze over, you're not sure what time it is anymore. 
-I'm afraid to sleep at night, it's to cold to stay put.
+Rub around the frozen area, making use of friction.
+3@Your watch froze over, and you're not sure what time it is anymore. 
+I'm afraid to sleep at night, and it's too cold to stay put.
 1
-If the sun's up, so should I.
+If the sun's up, so am I.
 2
-Depends if I can see wildlife moving.
+Sleep depends if I can see wildlife moving.
 3
-I need lots of sleep, I'll get up in a bit.
+I need lots of sleep; I'll get up in a bit.
 4@There's a shovel in your pack.
-It takes up space, I'll leave it behind.
+It takes up too much space, so I'll leave it behind.
 1
 I'll use it to dig a hole for sleeping.
 2
