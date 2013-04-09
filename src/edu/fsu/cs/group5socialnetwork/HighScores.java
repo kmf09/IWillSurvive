@@ -23,10 +23,4 @@ public class HighScores extends Activity {
         swampHighScore.setText(""+Results.mSwampHighScore);
         forestHighScore.setText(""+Results.mForrestHighScore);
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.activity_high_scores, menu);
-        return true;
-    }
 }

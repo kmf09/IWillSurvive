@@ -6,6 +6,8 @@ import android.content.SharedPreferences.Editor;
 import android.content.pm.ActivityInfo;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.text.SpannableStringBuilder;
+import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CursorAdapter;
@@ -18,8 +20,9 @@ import com.mobdb.android.GetRowData;
 public class MainActivity extends Activity {
 
 	// global variables
-	public static EditText mUserName; EditText mPassword;
-	String mPass, mUser; Boolean mIsValid; 
+	EditText mUserName; EditText mPassword;
+	public static String mUser; 
+	String mPass; Boolean mIsValid; 
 	CheckBox mCheckBox; 
 	Cursor mCursor;
 	CursorAdapter mCursorAdapter;
@@ -39,7 +42,11 @@ public class MainActivity extends Activity {
 		mPassword = (EditText)findViewById(R.id.mainPassword);
 		mCheckBox = (CheckBox)findViewById(R.id.rememberCheck);
 		logout = (TextView)findViewById(R.id.logoutTV);
-
+	}
+	
+	public void onResume() {
+		super.onResume();
+		
 		// get previously saved information
 		SharedPreferences userDetails = MainActivity.this.getSharedPreferences("userdetails", MODE_WORLD_READABLE);
 		mUser = userDetails.getString("username", "");
@@ -49,7 +56,7 @@ public class MainActivity extends Activity {
 
 		if (!(mUser.equals("") && mPass.equals("")))
 			mCheckBox.setChecked(true);
-
+		
 		// set the bool to make sure the credentials are valid to true
 		mIsValid = true;
 	}
@@ -60,19 +67,17 @@ public class MainActivity extends Activity {
 		//they are asked to register, we can test this with a query to the database
 		//we set up with the username's and passwords.
 
-		do {
-			// get the username they typed in
-			mUser = mUserName.getText().toString();
-			// get the password they typed in
-			mPass = mPassword.getText().toString();
-			// if either one of these are invalid then mIsValid will be set to false
-			// and the loop will continue
-			invalid(mUserName);
-			invalid(mPassword);
+		// get the username they typed in
+		mUser = mUserName.getText().toString();
+		// get the password they typed in
+		mPass = mPassword.getText().toString();
+		// if either one of these are invalid then mIsValid will be set to false
+		// and the loop will continue
+		invalid(mUserName);
+		invalid(mPassword);
 
-			// checks to make sure the user name is in the database 
-			query(); 
-		} while (mIsValid == false);
+		// checks to make sure the user name is in the database 
+		query(); 
 
 		if (mIsValid == true) {
 			//Where we check the two against one another to make sure they work
@@ -124,6 +129,8 @@ public class MainActivity extends Activity {
 		// column 1 is column password 
 		if (mCursor.moveToFirst() == true) {
 			if (mCursor.getString(1).equals(mPass)) {
+				mUserName.setText("");
+				mPassword.setText("");
 				Intent myIntent = new Intent(MainActivity.this, FirstCategories.class);
 				startActivity(myIntent);
 			}
@@ -136,20 +143,32 @@ public class MainActivity extends Activity {
 
 	// check for invalid characters
 	public void invalid (EditText edit) {
+		SpannableStringBuilder ssbuilder; 
+		
 		String str = edit.getText().toString();
 		str = str.toUpperCase();
 		for (int i = 0; i < edit.length(); i++) {
 			if ((str.charAt(i) == '\'') || (str.charAt(i) == '"') || (str.charAt(i) == '/') || 
 					(str.charAt(i) == '\\') || (str.charAt(i) == ';') || (str.charAt(i) == '-') || 
 					(str.charAt(i) == '#')) {
-				edit.setError("must not contain \', \", /, \\, ;, -, #");
+				ssbuilder = setErrorColor("must not contain \', \", /, \\, ;, -, #");
+				edit.setError(ssbuilder);
 				mIsValid = false; 
 			}
 			else if (str.substring(0).equals("NULL")) {
-				edit.setError("must not contain NULL");
+				ssbuilder = setErrorColor("must not contain NULL");
+				edit.setError(ssbuilder);
 				mIsValid = false;
 			}
 		}
+	}
+	
+	public SpannableStringBuilder setErrorColor(String estring) {
+		int ecolor = -16777216; // whatever color you want
+		ForegroundColorSpan fgcspan = new ForegroundColorSpan(ecolor);
+		SpannableStringBuilder ssbuilder = new SpannableStringBuilder(estring);
+		ssbuilder.setSpan(fgcspan, 0, estring.length(), 0);
+		return ssbuilder; 
 	}
 
 	// when you click "register" button
@@ -163,7 +182,7 @@ public class MainActivity extends Activity {
 	@Override protected void onDestroy() {
 		super.onDestroy();
 		// save preferences if "Remember Me" is checked
-		if (mCheckBox.isChecked()) {
+		/*if (mCheckBox.isChecked()) {
 			SharedPreferences userDetails = MainActivity.this.getSharedPreferences("userdetails", MODE_WORLD_READABLE);
 			Editor edit = userDetails.edit();
 			edit.clear();
@@ -176,15 +195,16 @@ public class MainActivity extends Activity {
 			Editor edit = userDetails.edit();
 			edit.clear();
 			edit.commit();
-		}	
+		}	*/
 	}
-	
+
 	public void logoutNow(View v) {
-		Intent intent = new Intent(Intent.ACTION_MAIN);
+		finish();
+		/*Intent intent = new Intent(Intent.ACTION_MAIN);
 		intent.addCategory(Intent.CATEGORY_HOME);
-		startActivity(intent);
+		startActivity(intent);*/
 	}
-	
+
 	public void sendReminder(View v) {
 		Intent i = new Intent(Intent.ACTION_SEND);
 		i.setType("message/rfc822");
@@ -192,9 +212,9 @@ public class MainActivity extends Activity {
 		i.putExtra(Intent.EXTRA_SUBJECT, "subject of email");
 		i.putExtra(Intent.EXTRA_TEXT   , "body of email");
 		try {
-		    startActivity(Intent.createChooser(i, "Send mail..."));
+			startActivity(Intent.createChooser(i, "Send mail..."));
 		} catch (android.content.ActivityNotFoundException ex) {
-		    Toast.makeText(MainActivity.this, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
+			Toast.makeText(MainActivity.this, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
 		}
 		Toast.makeText(this, "E-mail has been sent", Toast.LENGTH_SHORT).show(); 
 	}

@@ -20,7 +20,7 @@ public class ProfileOptions extends Activity {
 		setContentView(R.layout.activity_profile_options);
 
 		TextView username = (TextView) findViewById(R.id.usernameTV);
-		username.setText(MainActivity.mUserName.getText());
+		username.setText(MainActivity.mUser);
 
 		ListView mLV = (ListView) findViewById(R.id.listView1);
 
@@ -48,7 +48,7 @@ public class ProfileOptions extends Activity {
 					break;
 				case 3:  
 					// Defines selection criteria for the rows you want to delete
-					String[] mSelectionArgs = {MainActivity.mUserName.getText().toString()};
+					String[] mSelectionArgs = {MainActivity.mUser};
 					
 					// Defines a variable to contain the number of rows deleted
 					//int mRowsDeleted = 0;
@@ -65,11 +65,5 @@ public class ProfileOptions extends Activity {
 					break;
 				}
 			}}); 
-	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.activity_profile_options, menu);
-		return true;
 	}
 }
