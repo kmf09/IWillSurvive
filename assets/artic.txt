@@ -9,7 +9,7 @@ I'll find some water, you can't drink snow.
 1@You found some berries. What will you do?
 I'll eat them all.
 4
-This is the arctic, You're lying.
+This is the arctic, you're lying.
 1
 They're probably poisonous.
 2
@@ -35,9 +35,9 @@ I'll use the landscape to protect me.
 4
 There are trees to protect me. 
 2
-I'll use the frees to build one.
+I'll use the trees to build one.
 3
-Nope. The trees are to sparse.
+Nope. The trees are too sparse.
 1@Your pack has a tarp! You've never been so excited to see waterproof plastic in your life.
 Lay it out and have a picnic.
 3
@@ -47,25 +47,25 @@ Build a sled to transport everything you acquire.
 2
 Use it as a mat against the cold ground.
 4@Your ears are getting cold, how do you feel about a hat?
-Hats are tacky, and I hate them. 
+Hats are tacky and I hate them. 
 1
-It rarely rains or snows, it's not very useful. 
+It rarely rains or snows; it's not very useful. 
 2
 It might keep me a little warm at night. 
 3
 I'll wear it all the time.
-4@Since you have nothing else to do. Why don't you create a new fashion trend?
+4@Since you have nothing else to do, why don't you create a new fashion trend?
 I should wear the thickest coat-like object possible.
 1
-Layers with the inner lining fluffy and porous. 
+I'll wear layers with the inner lining fluffy and porous. 
 4
-Layers with the outer lining fluffy and porous.
+I'll wear layers with the outer lining fluffy and porous.
 3
 Tight clothing that limits warm air from escaping.
 2@What do you know about building igloos? 
 Blocks should overlap to not allow for warm air to escape.
 3
-The eskimos do it, not me. 
+The Eskimos do it, not me. 
 1
 Pack snow into crevices removing all holes.
 4
@@ -102,14 +102,14 @@ I'll wait until my hand cools enough for it to be unstuck.
 Breathe on the pole.
 4
 Rub some friction around the frozen area.
-3@The watch froze over, you're not sure what time it is anymore. 
-I'm afraid to sleep at night, it's to cold to stay put.
+3@The watch froze over. You're not sure what time it is anymore. 
+I'm afraid to sleep at night, it's too cold to stay put.
 1
-If the sun's up, so should I.
+If the sun is up, so am I.
 2
 Depends if I can see wildlife moving.
 3
-I need lots of sleep, I'll get up in a bit.
+I need lots of sleep. I'll get up in a bit.
 4@There's a shovel in your pack.
 It takes up space, I'll leave it behind.
 1

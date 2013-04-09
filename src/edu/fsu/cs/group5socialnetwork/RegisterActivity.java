@@ -1,4 +1,5 @@
 package edu.fsu.cs.group5socialnetwork;
+import java.util.regex.Pattern;
 
 import android.app.Activity;
 import android.content.ContentValues;
@@ -34,7 +35,13 @@ public class RegisterActivity extends Activity {
 		
 		// reset mIsValid
 		mIsValid = true;
-
+		
+		// E-mail verification regex rfc 2822 official standard
+		final Pattern rfc2822 = Pattern.compile("^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}$");
+				
+		// Password verification regex. Passwords must be between 5 and 20 characters long
+		final Pattern passwordRegex = Pattern.compile("^.*(?=.)(?=.*\\d)(?=.*[a-zA-Z]).*$");
+		
 		// get a hold on the handler for firstName
 		mFirstName = (EditText)findViewById(R.id.firstName);
 		// set the string 'first' to be the text found in the handler
@@ -65,6 +72,7 @@ public class RegisterActivity extends Activity {
 		mEmailAddress = (EditText)findViewById(R.id.emailAddress);
 		final String email = mEmailAddress.getText().toString();
 		invalid(mEmailAddress);
+		
 
 		while (mIsValid == true) {
 			// there's nothing in first name
@@ -92,6 +100,17 @@ public class RegisterActivity extends Activity {
 				mPassword.setError(ssbuilder);
 				mIsValid = false;
 			}
+			if(!passwordRegex.matcher(password).matches()) {
+				ssbuilder = setErrorColor("Password must contain one letter and one digit"); 
+				mPassword.setError(ssbuilder);
+				mIsValid = false;
+			}
+			if(password.length() < 4 || password.length() > 20) {
+				ssbuilder = setErrorColor("Password must be at least 4 and at most 20 characters"); 
+				mPassword.setError(ssbuilder);
+				mIsValid = false;
+			}
+			
 			if(confirm.length() == 0) {
 				ssbuilder = setErrorColor("Please confirm password"); 
 				mConfirmPassword.setError(ssbuilder);
@@ -112,13 +131,19 @@ public class RegisterActivity extends Activity {
 				mEmailAddress.setError(ssbuilder);
 				mIsValid = false;
 			}
+			else if (!rfc2822.matcher(email).matches()) { // Invalid e-mail address format
+			    ssbuilder = setErrorColor("Please enter a valid e-mail address");
+			    mEmailAddress.setError(ssbuilder);
+			    mIsValid = false;
+			}
+			
 			if(doesUserExist(username) == false) {
 				ssbuilder = setErrorColor("Username already exists"); 
 				mUsername.setError(ssbuilder);
 				mIsValid = false; 
 			}
 
-			// contrats, you've made it to the end
+			// congrats, you've made it to the end
 			if (mIsValid == true) {
 				Uri mNewUri;
 

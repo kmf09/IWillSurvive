@@ -69,7 +69,7 @@ public class Results extends Activity {
 			WinOrLose.setText("You survived!");
 			WinOrLose.setTextColor(Color.GREEN);
 		}
-		else if (currentScore >= 70
+		else if (currentScore >= 70)
 		{
 			WinOrLose.setText("Barely made it");
 			WinOrLose.setTextColor(Color.YELLOW);
