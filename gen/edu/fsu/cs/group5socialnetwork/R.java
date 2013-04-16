@@ -12,8 +12,6 @@ public final class R {
         public static final int FirstCategoriesList=0x7f060000;
         public static final int LocationCategoriesList=0x7f060001;
         public static final int ProfileOptionsList=0x7f060002;
-        public static final int SecondHistoryList=0x7f060004;
-        public static final int SecondScienceList=0x7f060003;
     }
     public static final class attr {
     }
