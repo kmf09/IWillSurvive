@@ -33,8 +33,8 @@ public class Profile extends Activity {
 		// Retrieves everything from the text file
 		if (mCurrentQuiz.equals("profileQuiz"))
 			textInfo = readTextFile("profile.txt");
-		else if (mCurrentQuiz.equals("articQuiz"))
-			textInfo = readTextFile("artic.txt");
+		else if (mCurrentQuiz.equals("arcticQuiz"))
+			textInfo = readTextFile("arctic.txt");
 		else if (mCurrentQuiz.equals("desertQuiz"))
 			textInfo = readTextFile("desert.txt");
 		else if (mCurrentQuiz.equals("forestQuiz"))
