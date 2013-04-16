@@ -1,4 +1,4 @@
-package edu.fsu.cs.group5socialnetwork;
+﻿package edu.fsu.cs.group5socialnetwork;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.TextView;
 
 public class Results extends Activity {
-	static int mProfileScore = 0, mArcticHighScore = 0, mDesertHighScore = 0, mForrestHighScore = 0, mMountainHighScore = 0, mSwampHighScore = 0;
+	static int mProfileScore = 0, mArcticHighScore = 0, mDesertHighScore = 0, mForestHighScore = 0, mMountainHighScore = 0, mSwampHighScore = 0;
 	String mCurrentQuiz;
 	Random mRand = new Random(); 
 
@@ -50,9 +50,9 @@ public class Results extends Activity {
 		}
 		else if (mCurrentQuiz.equals("forestQuiz"))
 		{
-			if (currentScore > mForrestHighScore)
-				mForrestHighScore = currentScore;
-			highScoreItem.setText("" + mForrestHighScore);
+			if (currentScore > mForestHighScore)
+				mForestHighScore = currentScore;
+			highScoreItem.setText("" + mForestHighScore);
 		}
 		else if (mCurrentQuiz.equals("mountainQuiz"))
 		{

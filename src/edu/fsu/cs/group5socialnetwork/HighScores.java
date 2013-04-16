@@ -11,16 +11,16 @@ public class HighScores extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_high_scores);
         
-        TextView articHighScore = (TextView) findViewById(R.id.articHighScoreTV);
+        TextView arcticHighScore = (TextView) findViewById(R.id.arcticHighScoreTV);
         TextView desertHighScore = (TextView) findViewById(R.id.desertHighScoreTV);
         TextView moutainHighScore = (TextView) findViewById(R.id.mountainHighScoreTV);
         TextView swampHighScore = (TextView) findViewById(R.id.swampHighScoreTV);
         TextView forestHighScore = (TextView) findViewById(R.id.forestHighScoreTV);
         
-        articHighScore.setText(""+Results.mArticHighScore);
+        arcticHighScore.setText(""+Results.mArcticHighScore);
         desertHighScore.setText(""+Results.mDesertHighScore);
         moutainHighScore.setText(""+Results.mMountainHighScore);
         swampHighScore.setText(""+Results.mSwampHighScore);
-        forestHighScore.setText(""+Results.mForrestHighScore);
+        forestHighScore.setText(""+Results.mForestHighScore);
     }
 }

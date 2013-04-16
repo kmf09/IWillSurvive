@@ -31,7 +31,7 @@ public final class R {
         public static final int TableLayout1=0x7f090000;
         public static final int TableRow01=0x7f090024;
         public static final int TextView02=0x7f090028;
-        public static final int articHighScoreTV=0x7f090004;
+        public static final int arcticHighScoreTV=0x7f090004;
         public static final int button1=0x7f09001b;
         public static final int button2=0x7f09001c;
         public static final int confirmPassword=0x7f090032;
