@@ -31,9 +31,9 @@ public class LocationCategories extends Activity {
 				switch( position ) 
 				{
 				case 0:  
-					// You've clicked artic
+					// You've clicked arctic
 					myIntent = new Intent(getApplicationContext(), Profile.class);
-					myIntent.putExtra("quizType","articQuiz");
+					myIntent.putExtra("quizType","arcticQuiz");
 					startActivity(myIntent);
 					break;
 				case 1:  
