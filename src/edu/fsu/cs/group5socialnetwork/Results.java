@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.TextView;
 
 public class Results extends Activity {
-	static int mProfileScore = 0, mArticHighScore = 0, mDesertHighScore = 0, mForrestHighScore = 0, mMountainHighScore = 0, mSwampHighScore = 0;
+	static int mProfileScore = 0, mArcticHighScore = 0, mDesertHighScore = 0, mForrestHighScore = 0, mMountainHighScore = 0, mSwampHighScore = 0;
 	String mCurrentQuiz;
 	Random mRand = new Random(); 
 
@@ -36,11 +36,11 @@ public class Results extends Activity {
 
 		currentScore += mProfileScore - 20;
 
-		if (mCurrentQuiz.equals("articQuiz"))
+		if (mCurrentQuiz.equals("arcticQuiz"))
 		{
-			if (currentScore > mArticHighScore)
-				mArticHighScore = currentScore;
-			highScoreItem.setText("" + mArticHighScore);
+			if (currentScore > mArcticHighScore)
+				mArcticHighScore = currentScore;
+			highScoreItem.setText("" + mArcticHighScore);
 		}
 		else if (mCurrentQuiz.equals("desertQuiz"))
 		{
