@@ -1,4 +1,4 @@
-﻿You've been here for 10 minutes and there's an alligator. What do you do? 
+You've been here for 10 minutes and there's an alligator. What do you do? 
 Run away! ( in a zig zag or diagonal motion ). 
 2
 Run away! ( in a straight line ).
@@ -31,7 +31,7 @@ I'll cook over a fire.
 3
 I'll bake it under a fire.
 4@The Everglades don't sleep, but you do. Do you have a plan for a shelter?
-Its super hot. I'm not building a shelter!
+Its super hot, I'm not building a shelter. 
 1
 I can weave together some of this useless sawgrass. 
 3
@@ -43,11 +43,11 @@ It's actually not dirty, there's no need to worry.
 1
 I'll use my pack's purifiers.
 2
-I've got that handy solar still, duh.
+I've got that handy solar, duh.
 4
 I'll catch rain water.
 3@Looks like there are some smudged animals tracks. What do you think it is?
-If I cared, I might be able to tell you. 
+If I cared I might be able to tell you. 
 1
 Probably an alligator, but maybe a crocodile. 
 2
@@ -59,7 +59,7 @@ Nope, the Everglades are linked to the ocean - it's pretty salty.
 2
 Most water is runoff from the rain, it's safe.
 4
-The water is too hot, it has diseases.
+The water is to hot, it has diseases.
 3
 Contamination from pesticides makes it unsafe.
 1@Can you spot a venomous snake? 
@@ -97,19 +97,19 @@ Moisture.
 3@Florida sun is notoriously hot. What will you do to avoid it?
 I'll drink a lot of water.
 2
-I'll use my sun screen.
-3 
+I'll use my sun cream.
+3
 I'll hide under my shelter.
 4
 I'll create a mud paste.
 1@Are you worried about sinking in the mud? 
-A little, but only because there could be dangerous animals.
+A little only because there could be dangerous animals.
 3
 Quicksand is a large possibility. 
 1
-Not at all. There's to much water!
+Not at all, there's to much water.
 4
-Mud is dirty and can ruin my tools!
+Mud is dirty and can ruin my tools.
 2@It's Hurricane Season. What is not a good idea during a storm?
 Getting to high ground. 
 3
