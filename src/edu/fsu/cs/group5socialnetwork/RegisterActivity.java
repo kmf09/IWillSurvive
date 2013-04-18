@@ -147,6 +147,8 @@ public class RegisterActivity extends Activity {
 			if (mIsValid == true) {
 				Uri mNewUri;
 
+				Results.mArcticHighScore = Results.mDesertHighScore = Results.mForestHighScore = Results.mMountainHighScore = Results.mProfileScore = Results.mSwampHighScore = 0;
+				
 				ContentValues mNewValues = new ContentValues();
 
 				// now insert the information into the database
@@ -158,7 +160,7 @@ public class RegisterActivity extends Activity {
 				mNewValues.put(MyCP.COLUMN_PHONENUM, phone);
 				mNewValues.put(MyCP.COLUMN_EMAILADDR, email);
 
-				// insert here
+				// insert hereqq
 				mNewUri = getContentResolver().insert(MyCP.CONTENT_URI, mNewValues);
 
 				// say thanks
